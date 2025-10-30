@@ -1,16 +1,27 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import { Menu, X, Phone } from "lucide-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navItems = [
+    { label: "Inicio", href: "/"},
+    { label: "Servicios", href: "/"},
+    { label: "Nosotros", href: "/"},
+    { label: "Medicos", href: "/"},
+    { label: "Blog", href: "/"},
+    { label: "Pacientes", href: "/"},
+    { label: "Contacto", href: "/"}
+  ]
 
   return (
     <>
       {/* === NAVBAR DESKTOP (>=1100px) === */}
-      <nav className="hidden lg:flex justify-between items-center w-full">
+      <nav className="hidden pb-8 pr-16 pl-16 pt-11 min-[1106]:flex justify-between items-center w-full bg-white">
         {/* Logo */}
         <Image
             src="/Images/logohorizontal.png"
@@ -21,23 +32,35 @@ export default function Navbar() {
         />
 
         {/* Menú principal */}
-        <ul className="flex flex-row gap-[31px] items-center text-sm">
-          <li className="hover:text-[var(--btn_primary)] cursor-pointer">Inicio</li>
-          <li className="hover:text-[var(--btn_primary)] cursor-pointer">Nosotros</li>
-          <li className="hover:text-[var(--btn_primary)] cursor-pointer">Servicios</li>
-          <li className="hover:text-[var(--btn_primary)] cursor-pointer">Especialidades</li>
-          <li className="hover:text-[var(--btn_primary)] cursor-pointer">Preguntas Frecuentes</li>
-          <li className="text-sm">
-            <a className="flex flex-row pr-3.5 pt-2 pb-2 pl-3.5 gap-3 text-white rounded-sm" style={{backgroundColor: "var(--btn_primary)"}}>
-                Contáctanos
-                <FontAwesomeIcon icon={faPhone} className="w-4 h-4"/>
-            </a>
-          </li>
+        <ul className="hidden min-[1106]:flex flex-row gap-[31px] items-center text-sm">
+          {navItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="text-sm font-bold hover:text-[#0061A6] transition-colors cursor-pointer"
+            >
+              {item.label}
+            </Link>
+          ))}
         </ul>
+
+          {/* Emergency Contact */}
+        <div className="hidden min-[1106]:flex items-center gap-4">
+          <div className="text-right">
+            <p className="text-xs text-muted-foreground">Emergencias 24h</p>
+            <a
+              href="tel:+59343750000"
+              className="text-lg font-bold text-[#0061A6] hover:text-[#1D70B7] transition-colors flex items-center gap-2"
+            >
+              <Phone className="w-4 h-4" />
+              (04) 375 0000
+            </a>
+          </div>
+        </div>
       </nav>
 
       {/* === NAVBAR MOBILE (<=1099px) === */}
-      <nav className="lg:hidden w-full flex justify-between items-center">
+      <nav className="pb-8 pr-16 pl-16 pt-11 min-[1106]:hidden w-full flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
           <Image
@@ -88,17 +111,26 @@ export default function Navbar() {
 
         {/* Opciones del menú */}
         <ul className="flex flex-col mt-6 space-y-2 text-gray-800 text-sm font-medium">
-          <li className="hover:bg-green-50 px-6 py-2">Inicio</li>
-          <li className="hover:bg-green-50 px-6 py-2">Nosotros</li>
-          <li className="hover:bg-green-50 px-6 py-2">Servicios</li>
-          <li className="hover:bg-green-50 px-6 py-2">Especialidades</li>
-          <li className="hover:bg-green-50 px-6 py-2 ">Preguntas Frecuentes</li>
+          {navItems.map((index) => (
+            <Link
+              key={index.label}
+              href={index.href}
+              className="hover:bg-green-50 px-6 py-2"
+            >
+              {index.label}
+            </Link>
+          ))}
+
+
         </ul>
 
-        <div className='flex flex-row text-sm px-6 py-2 items-center mt-4 border-gray-200 border-t'>
-            <a className="flex flex-row mt-2 pr-3.5 pt-2 pb-2 pl-3.5 gap-3 items-center text-white rounded-sm w-full justify-center" style={{backgroundColor: "var(--btn_primary)"}}>
-                Contáctanos
+        <div className='flex flex-col text-sm px-6 py-2 items-center mt-4 border-gray-200 border-t'>
+            <p className='text-sm font-bold mt-2'> Emergencias 24h </p>
+            <a className="flex flex-row mt-2 pr-3.5 pt-2 pb-2 pl-3.5 gap-3 items-center text-white rounded-sm w-full justify-center hover:text-[#1D70B7]" 
+              style={{backgroundColor: "#0061A6"}}
+              href="tel:+59343750000">
                 <FontAwesomeIcon icon={faPhone} className="w-4 h-4"/>
+                (04) 375 0000
             </a>
         </div>
       </div>
