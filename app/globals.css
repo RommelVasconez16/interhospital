@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -12,6 +9,7 @@
   --text-color-one: #0061A6;
   --btnfondo: #D5EBFF;
   --textlinear: linear-gradient(90deg, #006C00 0%, #6B66FF 100%);
+  --textColor: #5D5D5D;
 }
 
 @theme inline {
@@ -33,4 +31,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+
+
 

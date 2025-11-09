@@ -38,13 +38,13 @@ export default function BannerInfo() {
         <div className='flex flex-row gap-3 flex-wrap'>
           <button
             className='pl-[40px] pr-[40px] pt-[18px] pb-[18px] text-white rounded-4xl w-[209px] cursor-pointer 
-                       bg-[#0061A6]/80 hover:bg-[#0061A6] transition-colors duration-300'
+                       bg-[#0061A6]/80 hover:bg-[#0061A6] transition-colors duration-300 font-bold'
           >
             Ver Resultados
           </button>
           <button
             className='pl-[30px] pr-[30px] pt-[18px] pb-[18px] text-black rounded-4xl w-[209px] cursor-pointer 
-                       bg-white transition-colors duration-300'
+                       bg-white transition-colors duration-300 font-bold'
           >
             Ver Especialidades
           </button>
@@ -65,23 +65,38 @@ export default function BannerInfo() {
           <h3 className='font-semibold text-gray-900 mb-3 text-sm'>
             Horario de visitas
           </h3>
-          <ul className='text-sm text-gray-700 space-y-1'>
+          <ul className='text-xs text-gray-700 space-y-1'>
             <li className='flex items-center gap-2'>
-              <span className='text-green-600 text-sm'>●</span>
+              <Image 
+                src='/Images/hospitalizacion.png'
+                alt='Hospitalizacion Icon'
+                height={15}
+                width={15}
+              />
               <b>Hospitalización:</b> 08:00 - 20:00
             </li>
             <li className='flex items-center gap-2'>
-              <span className='text-green-600 text-sm'>●</span>
+              <Image 
+                src='/Images/terapiaintensiva.png'
+                alt='Terapia Intensiva Icon'
+                height={15}
+                width={15}
+              />
               <b>Terapia Intensiva:</b> 13:00 - 13:30
             </li>
             <li className='flex items-center gap-2'>
-              <span className='text-green-600 text-sm'>●</span>
+              <Image 
+                src='/Images/terapianeonantal.png'
+                alt='Terapia Neonatal Icon'
+                height={15}
+                width={15}
+              />
               <b>Terapia Neonatal:</b> 12:00 - 12:30
                                        17:00 - 17:30
             </li>
           </ul>
 
-          <div className='mt-4 pt-3 border-t border-gray-200 text-xs text-gray-600'>
+          <div className='mt-4 pt-3 border-t border-gray-200 text-xs text-gray-600 text-center'>
             Emergencias / Laboratorio / Farmacia 911
             <p className='font-semibold text-green-600 mt-1'>🕓 24 horas</p>
           </div>
