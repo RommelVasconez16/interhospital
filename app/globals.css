@@ -10,6 +10,7 @@
   --btnfondo: #D5EBFF;
   --textlinear: linear-gradient(90deg, #006C00 0%, #6B66FF 100%);
   --textColor: #5D5D5D;
+  --card: oklch(1 0 0);
 }
 
 @theme inline {

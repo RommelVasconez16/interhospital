@@ -11,7 +11,7 @@ export default function Navbar() {
   const navItems = [
     { label: "Inicio", href: "/"},
     { label: "Servicios", href: "/"},
-    { label: "Nosotros", href: "/"},
+    { label: "Nosotros", href: "/pages/nosotros"},
     { label: "Medicos", href: "/"},
     { label: "Blog", href: "/"},
     { label: "Pacientes", href: "/"},
@@ -20,8 +20,9 @@ export default function Navbar() {
 
   return (
     <>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       {/* === NAVBAR DESKTOP (>=1100px) === */}
-      <nav className="hidden pb-8 pr-16 pl-16 pt-11 min-[1106]:flex justify-between items-center w-full bg-white">
+      <nav className="hidden pb-5 pr-16 pl-16 pt-5 min-[1106]:flex justify-between items-center w-full bg-white">
         {/* Logo */}
         <Image
             src="/Images/logohorizontal.png"
@@ -134,6 +135,7 @@ export default function Navbar() {
             </a>
         </div>
       </div>
+    </header>
     </>
   );
 }
