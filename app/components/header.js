@@ -12,9 +12,9 @@ export default function Navbar() {
     { label: "Inicio", href: "/"},
     { label: "Servicios", href: "/"},
     { label: "Nosotros", href: "/pages/nosotros"},
-    { label: "Medicos", href: "/"},
+    { label: "Medicos", href: "/pages/medicos"},
     { label: "Blog", href: "/"},
-    { label: "Pacientes", href: "/"},
+    { label: "Pacientes", href: "/pages/pacientes"},
     { label: "Contacto", href: "/"}
   ]
 
