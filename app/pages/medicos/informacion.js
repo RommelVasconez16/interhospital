@@ -176,7 +176,7 @@ export default function InfoMedicos({ medicos }) {
               ← Volver a la lista
             </button>
 
-            <div className="bg-card rounded-3xl overflow-hidden border-2 border-border shadow-xl">
+            <div className="bg-card rounded-3xl overflow-hidden border-2 border-border shadow-xl" style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}>
               <div className="grid md:grid-cols-2 gap-8 p-8">
                 <div>
                   <img
@@ -199,30 +199,39 @@ export default function InfoMedicos({ medicos }) {
                   <div className="space-y-4">
                     <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#0061A6]/5">
                       <Phone className="w-5 h-5 text-[#0061A6]" />
-                      <a
-                        href={`tel:${selectedDoctorData?.numeroContacto}`}
-                        className="font-semibold"
-                      >
-                        {selectedDoctorData?.numeroContacto}
-                      </a>
+                      <div>
+                        <div className="text-sm text-gray-500 mb-1"> Teléfono</div>
+                        <a
+                          href={`tel:${selectedDoctorData?.numeroContacto}`}
+                          className="font-semibold"
+                        >
+                          {selectedDoctorData?.numeroContacto}
+                        </a>
+                      </div>
                     </div>
 
                     <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#008D36]/5">
                       <Clock className="w-5 h-5 text-[#008D36]" />
-                      <p className="font-semibold">
-                        {selectedDoctorData?.horario}
-                      </p>
+                      <div>
+                        <div className="text-sm text-gray-500 mb-1">Horario de atención</div>
+                        <p className="font-semibold">
+                          {selectedDoctorData?.horario}
+                        </p>
+                      </div>
                     </div>
 
                     <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#1D70B7]/5">
                       <MapPin className="w-5 h-5 text-[#1D70B7]" />
-                      <p className="font-semibold">
-                        Piso {selectedDoctorData?.piso}
-                      </p>
+                      <div>
+                        <div className="text-sm text-gray-500 mb-1">Ubicación</div>
+                        <p className="font-semibold">
+                          Piso {selectedDoctorData?.piso}
+                        </p>
+                      </div>
                     </div>
                   </div>
 
-                  <button className="w-full rounded-full h-12 bg-gradient-to-r from-[#0061A6] to-[#008D36] hover:opacity-90">
+                  <button className="w-full rounded-full h-12 bg-gradient-to-r from-[#0061A6] to-[#008D36] hover:opacity-90 text-white text-sm">
                     Agendar Cita
                   </button>
                 </div>
@@ -242,6 +251,7 @@ export default function InfoMedicos({ medicos }) {
                       key={doctor.id}
                       onClick={() => setSelectedDoctor(doctor.id)}
                       className="bg-card rounded-3xl overflow-hidden border-2 border-border hover:border-[#0061A6]/20 transition-all hover:shadow-xl cursor-pointer group"
+                      style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
                     >
                       <img
                         src={doctor.imagen || "/placeholder.svg"}
@@ -250,15 +260,11 @@ export default function InfoMedicos({ medicos }) {
 
                       <div className="p-6">
                         <h4 className="text-lg font-bold mb-2 group-hover:text-[#0061A6] transition-colors">
-                          {capitalizar(doctor.nombreCompleto)}
+                          Dr. {capitalizar(doctor.nombreCompleto)}
                         </h4>
 
                           <p className="text-[#008D36] font-semibold mb-2">
                           {capitalizar(doctor.especialidad.join(", "))}
-                        </p>
-
-                        <p className="text-sm text-muted-foreground">
-                          Consultorio {doctor.consultorio}
                         </p>
                       </div>
                     </div>

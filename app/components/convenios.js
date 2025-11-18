@@ -30,7 +30,7 @@ export default function Convenios(){
                         >
                         <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <p className="text-xs font-bold" style={{color: "var(--text-color-one)"}}> Nuestros Servicios </p>
+                    <p className="text-xs font-bold" style={{color: "var(--text-color-one)"}}> Nuestros Convenios </p>
                 </div>
                 <p className='text-center md:text-left'>
                     Aceptamos las principales aseguradoras y convenios médicos del país

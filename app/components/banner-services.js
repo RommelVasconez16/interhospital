@@ -1,6 +1,12 @@
 export default function BannerServices(){
     return (
-        <section className="flex flex-col p-10 gap-8 h-[500] justify-center" style={{backgroundImage: "url('/Images/fondoservices.png')"}}>
+        <section
+        className="flex flex-col p-10 gap-8 h-[300px] md:h-[400px] lg:h-[500px] justify-center bg-cover bg-center"
+        style={{
+            backgroundImage: "url('/Images/fondoservices.png')",
+            backgroundRepeat: "no-repeat",
+        }}
+        >
             <div className="flex flex-row items-center p-2.5 pr-3.5 pl-3.5 w-fit rounded-4xl gap-1" style={{backgroundColor: "rgba(128, 159, 181, 0.41)"}}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
