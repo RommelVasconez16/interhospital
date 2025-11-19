@@ -24,7 +24,6 @@ export default function InfoMedicos({ medicos }) {
     return nameMatch || specialtyMatch;
   });
 
-  // 🔢 Paginación
   const totalPages = Math.max(
     1,
     Math.ceil(filteredDoctors.length / ITEMS_PER_PAGE)
@@ -36,10 +35,8 @@ export default function InfoMedicos({ medicos }) {
     startIndex + ITEMS_PER_PAGE
   );
 
-  // Doctor seleccionado
   const selectedDoctorData = medicos.find((d) => d.id === selectedDoctor);
 
-  // Doctores similares por especialidad
   const similarDoctors = selectedDoctorData
     ? medicos.filter(
         (d) =>
@@ -51,9 +48,9 @@ export default function InfoMedicos({ medicos }) {
     : [];
 
   return (
-    <section className="py-20">
+    <section className="py-14">
       <div className="container mx-auto px-4">
-        {/* 🔍 BARRA DE BÚSQUEDA UNIFICADA */}
+        {/* BARRA DE BÚSQUEDA UNIFICADA */}
         <div className="max-w-2xl mx-auto mb-12">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
@@ -113,7 +110,7 @@ export default function InfoMedicos({ medicos }) {
                     </p>
 
                     <button
-                      className="flex flex-row p-2 items-center text-sm font-semibold justify-center w-full rounded-full group/btn text-[#0061A6] hover:text-black hover:bg-[#0061A6]/10"
+                      className="flex flex-row p-2 cursor-pointer items-center text-sm font-semibold justify-center w-full rounded-full group/btn text-[#0061A6] hover:text-black hover:bg-[#0061A6]/10"
                     >
                       Ver Perfil
                       <ChevronRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -135,7 +132,7 @@ export default function InfoMedicos({ medicos }) {
                 <button
                   onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                   disabled={safePage === 1}
-                  className={`px-4 py-2 rounded-full border text-sm ${
+                  className={`px-4 py-2 rounded-full border cursor-pointer text-sm ${
                     safePage === 1
                       ? "opacity-50 cursor-not-allowed"
                       : "hover:bg-[#0061A6]/10"
@@ -154,7 +151,7 @@ export default function InfoMedicos({ medicos }) {
                     setCurrentPage((p) => Math.min(totalPages, p + 1))
                   }
                   disabled={safePage === totalPages}
-                  className={`px-4 py-2 rounded-full border text-sm ${
+                  className={`px-4 py-2 cursor-pointer rounded-full border text-sm ${
                     safePage === totalPages
                       ? "opacity-50 cursor-not-allowed"
                       : "hover:bg-[#0061A6]/10"
@@ -171,7 +168,7 @@ export default function InfoMedicos({ medicos }) {
           <div className="max-w-5xl mx-auto">
             <button
               onClick={() => setSelectedDoctor(null)}
-              className="mb-6 rounded-full hover:bg-[#0061A6]/10 px-4 py-2 text-sm"
+              className="mb-6 rounded-full cursor-pointer  hover:bg-[#0061A6]/10 px-4 py-2 text-sm"
             >
               ← Volver a la lista
             </button>
@@ -231,7 +228,7 @@ export default function InfoMedicos({ medicos }) {
                     </div>
                   </div>
 
-                  <button className="w-full rounded-full h-12 bg-gradient-to-r from-[#0061A6] to-[#008D36] hover:opacity-90 text-white text-sm">
+                  <button className="w-full rounded-full cursor-pointer h-12 bg-gradient-to-r from-[#0061A6] to-[#008D36] hover:opacity-90 text-white text-sm">
                     Agendar Cita
                   </button>
                 </div>

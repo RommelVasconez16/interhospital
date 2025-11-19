@@ -49,12 +49,12 @@ export default function InfoPacientes() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
               Documentos para <span className="text-[#008D36]">Pacientes</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <p className="text-lg text-gray-500 max-w-2xl mx-auto text-pretty">
               Descarga los formularios que necesitas para tus trámites médicos
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto items-stretch h-full">
             {Forms.map((form, index) => (
               <div
                 key={index}
@@ -62,8 +62,8 @@ export default function InfoPacientes() {
                   isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                } h-full flex flex-col justify-between`}
+                style={{ transitionDelay: `${index * 100}ms`, borderColor: "lab(90.952% 0 -.0000119209)" }}
               >
                 <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
@@ -78,13 +78,13 @@ export default function InfoPacientes() {
                 <h3 className="text-lg font-bold mb-3 text-balance">
                   {form.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                <p className="text-sm text-gray-500 leading-relaxed mb-6">
                   {form.description}
                 </p>
 
                 <button
                   variant="outline"
-                  className="w-full rounded-full border-2 hover:bg-[#0061A6]/5 bg-transparent"
+                  className="flex flex-row items-center cursor-pointer justify-center text-sm font-semibold py-2 w-full rounded-full border-2 hover:bg-[#0061A6]/5 bg-transparent"
                   style={{ borderColor: `${form.color}30` }}
                 >
                   <Download className="w-4 h-4 mr-2" />
@@ -105,7 +105,7 @@ export default function InfoPacientes() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
               Acceso a <span className="text-[#008D36]">Resultados</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
+            <p className="text-lg text-gray-500 max-w-2xl mx-auto text-pretty">
               Consulta tus resultados médicos de forma rápida y segura
             </p>
           </div>
@@ -118,6 +118,7 @@ export default function InfoPacientes() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-card rounded-3xl p-8 border-2 border-border hover:border-[#008D36]/20 transition-all hover:shadow-xl group block"
+                style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
               >
                 <div
                   className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
@@ -151,17 +152,17 @@ export default function InfoPacientes() {
             <h3 className="text-2xl font-bold mb-4 text-center">
               ¿Necesitas Ayuda?
             </h3>
-            <p className="text-center text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-center text-gray-500 mb-6 leading-relaxed">
               Si tienes problemas para acceder a tus resultados o descargar
               formularios, nuestro equipo está disponible para asistirte
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <button className="rounded-full bg-gradient-to-r from-[#0061A6] to-[#008D36] hover:opacity-90">
+              <button className="px-4 py-2 text-white text-sm cursor-pointer font-semibold rounded-full bg-gradient-to-r from-[#0061A6] to-[#008D36] hover:opacity-90">
                 Contactar Soporte
               </button>
               <button
                 variant="outline"
-                className="rounded-full border-2 border-[#0061A6]/20 hover:bg-[#0061A6]/5 bg-transparent"
+                className="px-4 py-2 text-sm cursor-pointer rounded-full border-2 border-[#0061A6]/20 hover:bg-[#0061A6]/5 bg-transparent"
               >
                 Preguntas Frecuentes
               </button>

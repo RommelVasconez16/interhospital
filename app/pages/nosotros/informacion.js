@@ -3,23 +3,11 @@
 import Image from 'next/image'
 import valores from './valores'
 import politicas from './politicas'
-import Header from '../../components/header'
-import Footer from '../../components/footer'
 import { Building2, Target, Heart, Award, Shield, Users } from "lucide-react"
 
 export default function InfoNosotros(){
     return (
-        <section className='flex flex-col min-h-screen'>
-            <Header/>
-            
-            <section className='flex flex-col text-center justify-center '>
-                <h1 className='text-5xl md:text-6xl font-bold mb-6 text-balance'>
-                    Sobre <span className='text-[#0061A6]'>Nosotros</span>
-                </h1>
-                <p className='text-lg text-muted-foreground text-pretty text-gray-500'>
-                    Más de 20 años brindando atención médica de excelencia en Ecuador
-                </p>
-            </section>
+        <section className='flex flex-col min-h-screen'>            
 
             <section className='container grid lg:grid-cols-2 py-20 px-4 gap-12 items-center mx-auto'>
                 <aside>
@@ -120,7 +108,6 @@ export default function InfoNosotros(){
 
             </section>
 
-            <Footer/>
         </section>
     )
 }

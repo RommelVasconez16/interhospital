@@ -10,7 +10,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = [
     { label: "Inicio", href: "/"},
-    { label: "Servicios", href: "/"},
+    { label: "Servicios", href: "/pages/servicios"},
     { label: "Nosotros", href: "/pages/nosotros"},
     { label: "Medicos", href: "/pages/medicos"},
     { label: "Pacientes", href: "/pages/pacientes"},
