@@ -1,32 +1,32 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { MapPin, Star } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import { MapPin, Star } from "lucide-react";
 
 export default function LocationShowcase() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting)
+        setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section ref={sectionRef} className="py-20 relative overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/modern-hospital-building-exterior-wide.jpg"
+          src="/Images/interlab.jpg"
           alt="Hospital background"
           className="w-full h-full object-cover"
         />
@@ -47,7 +47,8 @@ export default function LocationShowcase() {
             Instalaciones de Primera Clase
           </h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto text-pretty">
-            Espacios modernos y equipados con la última tecnología para tu comodidad
+            Espacios modernos y equipados con la última tecnología para tu
+            comodidad
           </p>
         </div>
 
@@ -55,12 +56,14 @@ export default function LocationShowcase() {
           {/* Hospital Ceibos */}
           <div
             className={`group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform duration-700 ${
-              isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-10 opacity-0"
             }`}
           >
             <div className="aspect-video relative">
               <img
-                src="/modern-hospital-building-exterior-ceibos-ecuador-b.jpg"
+                src="/Images/instalacioninterhospital.jpg"
                 alt="Hospital Ceibos"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -74,8 +77,12 @@ export default function LocationShowcase() {
                   <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Hospital Principal - Ceibos</h3>
-                <p className="text-white/90 mb-3">Av. del Bombero km 6.5, vía a la costa</p>
+                <h3 className="text-2xl font-bold mb-2">
+                  Hospital Principal - Ceibos
+                </h3>
+                <p className="text-white/90 mb-3">
+                  Av. del Bombero km 6.5, vía a la costa
+                </p>
                 <div className="inline-flex items-center gap-2 bg-[#008D36] px-4 py-2 rounded-full text-sm font-semibold">
                   Abierto 24/7
                 </div>
@@ -86,13 +93,15 @@ export default function LocationShowcase() {
           {/* Centro de Imágenes Boloña */}
           <div
             className={`group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform duration-700 ${
-              isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "translate-x-10 opacity-0"
             }`}
             style={{ transitionDelay: "200ms" }}
           >
             <div className="aspect-video relative">
               <img
-                src="/modern-medical-imaging-center-interior-ecuador.jpg"
+                src="/Images/medicosportada.jpg"
                 alt="Centro de Imágenes Boloña"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -119,22 +128,24 @@ export default function LocationShowcase() {
         {/* Video section */}
         <div className="mt-12 max-w-4xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video">
-            <img
-              src="/hospital-interior-tour-video-thumbnail-ecuador.jpg"
-              alt="Video tour"
+            <video
+              src="/videos/hospital-interior-tour.mp4"
               className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <button className="w-20 h-20 rounded-full bg-white/90 hover:bg-white flex items-center justify-center group transition-all hover:scale-110">
-                <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-[#0061A6] border-b-[12px] border-b-transparent ml-1" />
-              </button>
-            </div>
+
+            {/* Si quieres mantener el overlay oscuro, puedes dejarlo */}
+            <div className="absolute inset-0 bg-black/20" />
           </div>
+
           <p className="text-center mt-6 text-lg text-white/90">
             Conoce nuestras instalaciones en un recorrido virtual
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }

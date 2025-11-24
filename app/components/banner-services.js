@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function BannerServices(){
     return (
         <section
@@ -29,7 +31,9 @@ export default function BannerServices(){
                 atención personalizada
             </p>
             <button className="text-md p-3 pr-5 pl-5 rounded-4xl text-white w-fit" style={{backgroundColor: "var(--text-color-one)"}}>
-                Conoce todos nuestros servicios ➤
+                <Link href="pages/servicios">
+                    Conoce todos nuestros servicios ➤
+                </Link>
             </button>
         </section>
     )

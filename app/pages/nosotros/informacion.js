@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import valores from './valores'
+import GamaInstalaciones from './gama-instalaciones'
 import politicas from './politicas'
 import { Building2, Target, Heart, Award, Shield, Users } from "lucide-react"
 
@@ -35,14 +36,14 @@ export default function InfoNosotros(){
             <section className='flex py-20 text-center px-4 justify-center from-[#0061A6]/5 to-[#008D36]/5' style={{backgroundColor: "#F2F8F8"}}>
                 <div className='max-w-4xl'>
                     <div className='inline-flex items-center gap-2 bg-[#008D36]/10 text-[#008D36] px-4 py-2 rounded-full mb-6'>
-                        <Target className="w-5 h-5" />
-                        <span className="font-semibold">Nuestra Visión</span>
+                        <Award className="w-5 h-5" />
+                        <span className="font-semibold">Nuestra Misión</span>
                     </div>
                     <h2 className="text-4xl font-bold mb-6">
-                        Visión Institucional
+                        Nuestra razón de ser
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed" style={{color: "var(--textColor)"}}>
-                        Ser el hospital líder en Ecuador, reconocido por nuestra excelencia en atención médica, innovación tecnológica y compromiso con la salud y bienestar de nuestros pacientes.
+                        Somos una corporación médica vanguardista que ofrece servicios especializados de salud, asegurnado a la comunidad un tratamiento oportuno y eficaz, cumpliendo estándares de calidad con calidez en su atención.
                     </p>
                 </div>
             </section>
@@ -81,13 +82,33 @@ export default function InfoNosotros(){
               </div>
             </section>
 
+            <section className='flex py-20 text-center px-4 justify-center from-[#0061A6]/5 to-[#008D36]/5' style={{backgroundColor: "#F2F8F8"}}>
+                <div className='max-w-4xl'>
+                    <div className='inline-flex items-center gap-2 bg-[#008D36]/10 text-[#008D36] px-4 py-2 rounded-full mb-6'>
+                        <Target className="w-5 h-5" />
+                        <span className="font-semibold">Nuestra Visión</span>
+                    </div>
+                    <h2 className="text-4xl font-bold mb-6">
+                        Hacia donde vamos
+                    </h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed" style={{color: "var(--textColor)"}}>
+                        Ser líderes en innovación y transformación en servicios de salud, convirtiéndonos en un complejo hospitalario con reconomiento nacional e internacional, basados en atención prfesional en busca del bienestar de los pacientes y la comunidad.
+                    </p>
+                </div>
+            </section>
+
+            <GamaInstalaciones/>
+
             <section className='py-20 px-4 text-center bg-gradient-to-br from-[#008D36]/5 to-[#0061A6]/5'>
                 <div className='max-w-4xl mx-auto'>
                     <div className='inline-flex items-center gap-2 bg-[#008D36]/10 text-[#008D36] px-4 py-2 rounded-full mb-6'>
                         <Shield className="w-5 h-5" />
                         <span className="font-semibold">Políticas de Calidad</span>
                     </div>
-                    <h2 className="text-4xl font-bold mb-12">Compromiso con la Calidad</h2>
+                    <h2 className="text-4xl font-bold mb-6">Compromiso con la Calidad</h2>
+                    <p className='text-lg text-gray-500 mb-12'>
+                        Interhospital es una corporación médica vanguardista que trabaja para ofrecer a nuestros clientes servicios especializados de salud, por lo cual se compromete a:
+                    </p>
                     
                     <div 
                         className="bg-white rounded-3xl p-8 md:p-12 border-2"
@@ -95,11 +116,11 @@ export default function InfoNosotros(){
                     >
                         <ul className='space-y-6'>
                             {politicas.map((policy, index) => (
-                                <li key={index} className='flex items-start gap-4'>
+                                <li key={index} className='flex items-center gap-4'>
                                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#0061A6] to-[#008D36] flex items-center justify-center flex-shrink-0 mt-1">
                                         <span className="text-white font-bold">{index + 1}</span>
                                     </div>
-                                    <p className="text-lg leading-relaxed">{policy}</p>
+                                    <p className="text-sm md:text-lg text-left leading-relaxed">{policy}</p>
                                 </li>
                             ))}
                         </ul>

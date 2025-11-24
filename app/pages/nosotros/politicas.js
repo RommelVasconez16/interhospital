@@ -1,11 +1,8 @@
 const politicas = [
-    "Cumplimiento estricto de protocolos médicos internacionales",
-    "Capacitación continua de nuestro personal médico y administrativo",
-    "Implementación de tecnología médica de última generación",
-    "Evaluación constante de la satisfacción del paciente",
-    "Mejora continua de nuestros procesos y servicios",
-    "Respeto a los derechos y dignidad de cada paciente",
-    "Confidencialidad y protección de datos médicos",
+    "Ofrecer a nuestros usuarios un tratamiento oportuno y eficaz mediante altos estándares de calidad y calidez en el servicio, cumplimiento con los requisitos aplicables y la excelencia en la atención a las partes interesadas",
+    "Ser eficientes e innovadores, participando en la mejora continua de nuestros procesos a través de objetivos, metas de calidad y la participación activa de todo el personal",
+    "Mantener y mejorar la eficacia del sistema de gestión de la calidad de acuerdo a los requisitos aplicables y la norma ISO 9001:2015",
+    "Contar con talento humano comprometido, en constante aprendizaje para asegurar un ambiente laboral seguro y saludable"
 ]
 
 export default politicas;

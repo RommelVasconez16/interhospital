@@ -1,8 +1,8 @@
-import Header from '../../components/header'
-import Footer from '../../components/footer'
-import InformacionServicios from './informacion'
+import Header from '../../../components/header'
+import Footer from '../../../components/footer'
+import InfoTerapia from './terapia'
 
-export default function Servicios(){
+export default function Terapia(){
     return (
         <section className='flex flex-col pt-[100px]'>
             <Header/>
@@ -22,7 +22,7 @@ export default function Servicios(){
                 </div>
                 </div>
             </section>
-            <InformacionServicios/>
+            <InfoTerapia/>
             <Footer/>
         </section>
     )

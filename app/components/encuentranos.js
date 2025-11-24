@@ -25,7 +25,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
             <span className="gradient-text">Contáctanos</span>
           </h2>
-          <p className="text-xl text-muted-foreground text-pretty">
+          <p className="text-lg text-gray-500 text-pretty">
             Estamos aquí para atenderte. Escríbenos y te responderemos a la brevedad.
           </p>
         </div>
@@ -42,7 +42,9 @@ export default function Contact() {
                   id="name"
                   placeholder="Tu nombre"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="file:text-black placeholder:text-gray-500 text-sm h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}  
                   required
                 />
               </div>
@@ -55,6 +57,8 @@ export default function Contact() {
                   id="email"
                   type="email"
                   placeholder="tu@email.com"
+                  className="file:text-black placeholder:text-gray-500 text-sm h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
@@ -70,6 +74,8 @@ export default function Contact() {
                   type="tel"
                   placeholder="+593 99 999 9999"
                   value={formData.phone}
+                  className="file:text-black placeholder:text-gray-500 text-sm h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   required
                 />
@@ -84,6 +90,8 @@ export default function Contact() {
                   placeholder="¿En qué podemos ayudarte?"
                   rows={5}
                   value={formData.message}
+                  className="file:text-black placeholder:text-gray-500 text-sm h-16 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                 />
@@ -97,39 +105,39 @@ export default function Contact() {
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <div className="p-6 hover:shadow-lg transition-shadow">
+            <div className="p-6 hover:shadow-lg transition-shadow border-2 rounded-2xl"  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1">Teléfonos</h3>
-                  <p className="text-muted-foreground mb-2">Hospital: (04) 375 0000</p>
-                  <p className="text-muted-foreground">Centro de Imágenes Kennedy: (04) 239 0556</p>
+                  <p className="text-gray-500 text-sm mb-2">Hospital: (04) 375 0000</p>
+                  <p className="text-gray-500 text-sm">Centro de Imágenes Kennedy: (04) 239 0556</p>
                 </div>
               </div>
             </div>
 
-            <div className="p-6 hover:shadow-lg transition-shadow">
+            <div className="p-6 hover:shadow-lg transition-shadow border-2 rounded-2xl"  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1">Email</h3>
-                  <p className="text-muted-foreground">serviciocliente@interhospital.com.ec</p>
+                  <p className="text-gray-500 text-sm">serviciocliente@interhospital.com.ec</p>
                 </div>
               </div>
             </div>
 
-            <div className="p-6 hover:shadow-lg transition-shadow">
+            <div className="p-6 hover:shadow-lg transition-shadow border-2 rounded-2xl"  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1">Ubicación</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-500 text-sm">
                     Av. Del Bombero Km. 6.5 Vía a la Costa
                     <br />
                     Guayaquil, Ecuador
@@ -138,16 +146,16 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-6 hover:shadow-lg transition-shadow">
+            <div className="p-6 hover:shadow-lg transition-shadow border-2 rounded-2xl"  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-1">Horarios de Atención</h3>
-                  <p className="text-muted-foreground mb-1">Emergencias: 24 horas</p>
-                  <p className="text-muted-foreground mb-1">Laboratorio: 24 horas</p>
-                  <p className="text-muted-foreground">Farmacia y Centro de Imágenes: 24 horas</p>
+                  <p className="text-gray-500 text-sm mb-1">Emergencias: 24 horas</p>
+                  <p className="text-gray-500 text-sm mb-1">Laboratorio: 24 horas</p>
+                  <p className="text-gray-500 text-sm">Farmacia y Centro de Imágenes: 24 horas</p>
                 </div>
               </div>
             </div>

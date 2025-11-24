@@ -23,13 +23,15 @@ export default function Navbar() {
       {/* === NAVBAR DESKTOP (>=1100px) === */}
       <nav className="hidden pb-5 pr-16 pl-16 pt-5 min-[1106]:flex justify-between items-center w-full bg-white">
         {/* Logo */}
-        <Image
-            src="/Images/logohorizontal.png"
-            alt="Logo Hospital"
-            width={224}
-            height={50}
-            priority
-        />
+        <Link href="/">
+          <Image
+              src="/Images/logohorizontal.png"
+              alt="Logo Hospital"
+              width={224}
+              height={50}
+              priority
+          />
+        </Link>
 
         {/* Menú principal */}
         <ul className="hidden min-[1106]:flex flex-row gap-[31px] items-center text-sm">
@@ -60,16 +62,18 @@ export default function Navbar() {
       </nav>
 
       {/* === NAVBAR MOBILE (<=1099px) === */}
-      <nav className="pb-8 pr-16 pl-16 pt-11 min-[1106]:hidden w-full flex justify-between items-center">
+      <nav className="px-6 py-4 min-[1106]:hidden w-full flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <Image
-            src="/Images/logohorizontal.png"
-            alt="Logo Hospital"
-            width={224}
-            height={40}
-            priority
-          />
+          <Link href="/">
+            <Image
+              src="/Images/logohorizontal.png"
+              alt="Logo Hospital"
+              width={224}
+              height={40}
+              priority
+            />
+          </Link>
         </div>
 
         {/* Botón hamburguesa (a la derecha) */}
@@ -98,7 +102,7 @@ export default function Navbar() {
           <Image
             src="/Images/logovertical.png"
             alt="Logo Hospital"
-            width={120}
+            width={50}
             height={50}
           />
           <button
