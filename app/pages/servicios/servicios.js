@@ -39,7 +39,7 @@ const servicios = [
     {
         image: "",
         title: "Intergastro",
-        description: "Interhospital tiene una unidad de gastroenterología que cuenta equipos de alta tecnología",
+        description: "Interhospital tiene una unidad de gastroenterología que consta equipos de alta tecnología",
         url: ""
     },
     {
