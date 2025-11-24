@@ -1,6 +1,11 @@
 export function parseMedicos(response) {
-
-  const rows = response.data;
+  // Algunas respuestas pueden venir como { data: [...] } y otras directamente como [...]
+  // También puede venir "[]" desde el catch del fetch. Normalizamos a un array siempre.
+  const rows = Array.isArray(response?.data)
+    ? response.data
+    : Array.isArray(response)
+    ? response
+    : [];
 
   return rows.map((m) => ({
     id: m.id,
@@ -18,6 +23,6 @@ export function parseMedicos(response) {
     consultorio: m.CONSULTORIO,
     numeroContacto: m.NUMERO_CONTACTO,
     horario: m.HORARIO_ATENCION,
-    imagen: m.IMAGEN
+    imagen: m.IMAGEN,
   }));
 }
