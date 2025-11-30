@@ -45,7 +45,7 @@ const priceChequeos = [
     },
     {
         name: "Mujer",
-        description: "Ideal para mujeres menores de 45 años",
+        description: "Ideal para mujeres menores 45 años",
         price: "$139,99",
         features: [
             "Hemograma",
@@ -60,7 +60,7 @@ const priceChequeos = [
     },
     {
         name: "Mujer Plus",
-        description: "Ideal para mujeres mayores de 45 años",
+        description: "Ideal para mujeres mayores 45 años",
         price: "$234,99",
         features: [
             "Hemograma",
