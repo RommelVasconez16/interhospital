@@ -3,6 +3,7 @@ import Footer from '../../components/footer'
 import { getMedicos } from '../../lib/medicoService';
 import { parseMedicos } from '../../lib/parseMedicos';
 import InfoMedico from './informacion'
+import Whatsapp from '../../components/whatsapp'
 
 export default async function Medicos(){
 
@@ -29,7 +30,8 @@ export default async function Medicos(){
                 </div>
             </section>
             <InfoMedico medicos={medicos} />
-            <Footer/>            
+            <Footer/>     
+            <Whatsapp/>       
         </section>
     )
 }

@@ -1,6 +1,7 @@
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
 import InfoCirugia from './cirugia'
+import Whatsapp from '../../../components/whatsapp'
 
 export default function Cirugia(){
     return (
@@ -24,6 +25,7 @@ export default function Cirugia(){
             </section>
             <InfoCirugia/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

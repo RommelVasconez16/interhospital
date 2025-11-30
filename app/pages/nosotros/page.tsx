@@ -1,6 +1,7 @@
 import InfoNosotros from './informacion'
 import Header from '../../components/header'
 import Footer from '../../components/footer'
+import Whatsapp from '../../components/whatsapp'
 
 export default function Nosotros(){
     return(
@@ -24,6 +25,7 @@ export default function Nosotros(){
             </section>
             <InfoNosotros/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

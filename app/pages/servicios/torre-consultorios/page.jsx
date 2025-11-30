@@ -1,5 +1,6 @@
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
+import Whatsapp from '../../../components/whatsapp'
 import InfoTorresConsultorios from './torreconsultorios'
 
 export default function TorreConsultorios(){
@@ -24,6 +25,7 @@ export default function TorreConsultorios(){
             </section>
             <InfoTorresConsultorios/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

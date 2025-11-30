@@ -1,6 +1,7 @@
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import InformacionServicios from './informacion'
+import Whatsapp from '../../components/whatsapp'
 
 export default function Servicios(){
     return (
@@ -24,6 +25,7 @@ export default function Servicios(){
             </section>
             <InformacionServicios/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

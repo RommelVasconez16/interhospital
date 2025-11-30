@@ -1,5 +1,6 @@
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
+import Whatsapp from '../../../components/whatsapp'
 import InfoFarmacia from './farmacia'
 
 export default function Interlab(){
@@ -24,6 +25,7 @@ export default function Interlab(){
             </section>
             <InfoFarmacia/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

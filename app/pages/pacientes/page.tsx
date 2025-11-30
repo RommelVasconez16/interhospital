@@ -1,6 +1,7 @@
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import InforPacientes from './informacion'
+import Whatsapp from '../../components/whatsapp'
 
 export default function Pacientes(){
     return (
@@ -24,6 +25,7 @@ export default function Pacientes(){
             </section>
             <InforPacientes/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

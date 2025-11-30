@@ -1,6 +1,7 @@
 import InfoContact from './contactanos'
 import Header from '../../components/header'
 import Footer from '../../components/footer'
+import Whatsapp from '../../components/whatsapp'
 
 export default function Contact(){
     return(
@@ -24,6 +25,7 @@ export default function Contact(){
             </section>
             <InfoContact/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

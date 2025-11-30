@@ -1,6 +1,7 @@
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
 import InfoClinicaMujer from './clinicaMujer'
+import Whatsapp from '../../../components/whatsapp'
 
 export default function ClinicaMujer(){
     return (
@@ -24,6 +25,7 @@ export default function ClinicaMujer(){
             </section>
             <InfoClinicaMujer/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

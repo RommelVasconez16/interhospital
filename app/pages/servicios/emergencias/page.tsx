@@ -1,6 +1,7 @@
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
 import InfoEmergencia from './emergencia'
+import Whatsapp from '../../../components/whatsapp'
 
 export default function Emergencia(){
     return (
@@ -24,6 +25,7 @@ export default function Emergencia(){
             </section>
             <InfoEmergencia/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

@@ -1,5 +1,6 @@
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
+import Whatsapp from '../../../components/whatsapp'
 import InfoTerapia from './terapia'
 
 export default function Terapia(){
@@ -24,6 +25,7 @@ export default function Terapia(){
             </section>
             <InfoTerapia/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

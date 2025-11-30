@@ -1,5 +1,6 @@
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
+import Whatsapp from '../../../components/whatsapp'
 import InfoHemodinamia from './hemodinamia'
 
 export default function Emergencia(){
@@ -24,6 +25,7 @@ export default function Emergencia(){
             </section>
             <InfoHemodinamia/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }

@@ -1,5 +1,6 @@
 import Header from '../../../components/header'
 import Footer from '../../../components/footer'
+import Whatsapp from '../../../components/whatsapp'
 import InfoIntergastro from './intergastro'
 
 export default function InterGastro(){
@@ -24,6 +25,7 @@ export default function InterGastro(){
             </section>
             <InfoIntergastro/>
             <Footer/>
+            <Whatsapp/>
         </section>
     )
 }
