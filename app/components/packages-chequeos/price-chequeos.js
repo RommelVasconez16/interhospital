@@ -9,7 +9,7 @@ const priceChequeos = [
             "Coproparasitológico",
             "Consulta médica"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/fondo.jpg"
     },
     {
         name: "Tiroides",
@@ -56,7 +56,7 @@ const priceChequeos = [
             "Ecografía abdomen inferior",
             "Consulta Ginecológica"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/chequeos/clinicamujer.jpg"
     },
     {
         name: "Mujer Plus",
@@ -78,7 +78,7 @@ const priceChequeos = [
     },
     {
         name: "Mujer Premium",
-        description: "Paquete de mujer más completo, incluye almuerzo y hospitalización",
+        description: "Paquete de mujer más completo",
         price: "$1690,00",
         features: [
             "Hemograma",
@@ -125,7 +125,7 @@ const priceChequeos = [
     },
     {
         name: "Hombre",
-        description: "Ideal para hombres menores de 45 años",
+        description: "Ideal para hombres menores 45 años",
         price: "$122,99",
         features: [
             "Hemograma",
@@ -148,7 +148,7 @@ const priceChequeos = [
     },
     {
         name: "Hombre Plus",
-        description: "Ideal para hombres mayores de 45 años",
+        description: "Ideal para hombres mayores 45 años",
         price: "$219,99",
         features: [
             "Hemograma",
@@ -173,7 +173,7 @@ const priceChequeos = [
     },
     {
         name: "Hombre Premium",
-        description: "Paquete de hombre más completo, incluye almuerzo y hospitalización",
+        description: "Paquete de hombre más completo",
         price: "$1665,00",
         features: [
             "Hemograma",

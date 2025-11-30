@@ -14,7 +14,7 @@ export default function Navbar() {
     { label: "Nosotros", href: "/pages/nosotros"},
     { label: "Medicos", href: "/pages/medicos"},
     { label: "Pacientes", href: "/pages/pacientes"},
-    { label: "Contacto", href: "/"}
+    { label: "Contacto", href: "/pages/contactanos"}
   ]
 
   return (
@@ -129,13 +129,11 @@ export default function Navbar() {
         </ul>
 
         <div className='flex flex-col text-sm px-6 py-2 items-center mt-4 border-gray-200 border-t'>
-            <p className='text-sm font-bold mt-2'> Emergencias 24h </p>
-            <a className="flex flex-row mt-2 pr-3.5 pt-2 pb-2 pl-3.5 gap-3 items-center text-white rounded-sm w-full justify-center hover:text-[#1D70B7]" 
-              style={{backgroundColor: "#0061A6"}}
-              href="tel:+59343750000">
-                <FontAwesomeIcon icon={faPhone} className="w-4 h-4"/>
-                (04) 375 0000
-            </a>
+            <p className='text-sm text-center font-semibold mt-2'> 
+              Centro de Imágenes <br/>
+              Av. Francisco Boloña #715 <br/>
+              Lunes a Viernes 07h00 - 20h00
+            </p>
         </div>
       </div>
     </header>

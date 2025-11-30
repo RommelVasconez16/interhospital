@@ -227,10 +227,6 @@ export default function InfoMedicos({ medicos }) {
                       </div>
                     </div>
                   </div>
-
-                  <button className="w-full rounded-full cursor-pointer h-12 bg-gradient-to-r from-[#0061A6] to-[#008D36] hover:opacity-90 text-white text-sm">
-                    Agendar Cita
-                  </button>
                 </div>
               </div>
             </div>

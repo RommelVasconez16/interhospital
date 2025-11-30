@@ -24,7 +24,6 @@ export default function Home() {
       <PackageQuirurgicos/>
       <Convenios/>
       <Instalaciones/>
-      <Encuentranos/>
       <Footer/>
       <Whatsapp/>
     </main>

@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowLeft } from "lucide-react";
 import PackageQuirurgicos from "@/app/components/packages-quirurgicos";
+import { useRouter } from "next/navigation";
 
 export default function PageCirugia() {
   const quirurgico = [
@@ -37,9 +38,21 @@ export default function PageCirugia() {
     "Equipos para medición de tiempo de coagulación activada",
   ];
 
+  const router = useRouter();
+
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
+
+        <button
+          onClick={() => router.back()}
+          className="mb-10 inline-flex items-center gap-2 bg-[#0061A6]/10 
+                     text-[#0061A6] px-5 py-2 rounded-full font-medium
+                     hover:bg-[#0061A6]/20 transition cursor-pointer"
+        >
+          <ArrowLeft size={18} />
+          Volver
+        </button>
 
         {/* TÍTULO PRINCIPAL */}
         <h2 className="text-4xl font-bold text-[#0061A6] text-center mb-6">

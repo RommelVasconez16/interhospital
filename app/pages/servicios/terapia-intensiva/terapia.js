@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { CheckCircle, ArrowLeft } from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -11,9 +12,21 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function PageTerapia() {
+  const router = useRouter();
+
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
+  
+        <button
+          onClick={() => router.back()}
+          className="mb-10 inline-flex items-center gap-2 bg-[#0061A6]/10 
+                     text-[#0061A6] px-5 py-2 rounded-full font-medium
+                     hover:bg-[#0061A6]/20 transition cursor-pointer"
+        >
+          <ArrowLeft size={18} />
+          Volver
+        </button>
 
         {/* TÍTULO */}
         <h2 className="text-4xl font-bold text-[#0061A6] text-center mb-6">
