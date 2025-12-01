@@ -2,6 +2,8 @@
 
 import Forms from "./descargaForms";
 import Portals from "./resultPortals";
+import PopupInstructivo from "./popupinstructivo";
+import PopupPoliticas from "./politicas"
 import { useEffect, useRef, useState } from "react";
 import {
   FileText,
@@ -12,6 +14,8 @@ import {
 export default function InfoPacientes() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const [showInstructivo, setShowInstructivo] = useState(false);
+  const [showInstructivoPoliticas, setShowInstructivoPoliticas] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,6 +31,24 @@ export default function InfoPacientes() {
 
     return () => observer.disconnect();
   }, []);
+
+  const ACTIONS = {
+    "popup-pre": (form, setShowInstructivo) => {
+      setShowInstructivo(true);
+    },
+
+    "popup-politicas": (form, _, setShowInstructivoPoliticas) => {
+      setShowInstructivoPoliticas(true);
+    },
+
+    "pdf": (form) => {
+      if (form.file) window.open("/PDFS/" + form.file, "_blank");
+    },
+
+    "link": (form) => {
+      if (form.url) window.location.href = form.url;
+    }
+  };
 
   return (
     <section ref={sectionRef} className="py-20 relative overflow-hidden">
@@ -83,13 +105,26 @@ export default function InfoPacientes() {
                 </p>
 
                 <button
-                  variant="outline"
-                  className="flex flex-row items-center cursor-pointer justify-center text-sm font-semibold py-2 w-full rounded-full border-2 hover:bg-[#0061A6]/5 bg-transparent"
+                  onClick={() => {
+                    const actionFn = ACTIONS[form.action];
+
+                    if (actionFn) {
+                      actionFn(
+                        form,
+                        setShowInstructivo,
+                        setShowInstructivoPoliticas
+                      );
+                    }
+                  }}
+                  className="flex flex-row items-center cursor-pointer justify-center 
+                            text-sm font-semibold py-2 w-full rounded-full border-2 
+                            hover:bg-[#0061A6]/5 bg-transparent"
                   style={{ borderColor: `${form.color}30` }}
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Descargar PDF
+                  {form.textbtn}
                 </button>
+
               </div>
             ))}
           </div>
@@ -170,6 +205,17 @@ export default function InfoPacientes() {
           </div>
         </div>
       </div>
+
+      <PopupInstructivo 
+        open={showInstructivo} 
+        onClose={() => setShowInstructivo(false)}
+      />
+
+      <PopupPoliticas 
+        open={showInstructivoPoliticas} 
+        onClose={() => setShowInstructivoPoliticas(false)}
+      />
     </section>
+
   );
 }
