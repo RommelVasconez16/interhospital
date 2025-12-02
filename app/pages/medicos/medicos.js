@@ -1,9 +1,21 @@
-import { getMedicos, parseMedicos } from "@/lib/parseMedicos";
+export async function getServerSideProps() {
+  const res = await fetch("https://interhospital.com.ec/api/medicos", {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${process.env.API_MEDICOS_TOKEN}`,
+    },
+  });
 
-export const dynamic = "force-dynamic"; // para evitar que Next.js llame la API en build
+  const data = await res.json();
 
-export default async function Page() {
-  const data = await getMedicos();
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+export default function Page({ data }) {
   const medicos = parseMedicos(data);
 
   return (
