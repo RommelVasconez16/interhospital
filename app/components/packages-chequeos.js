@@ -109,7 +109,13 @@ export default function PackagesChequeos() {
                           alt={pkg.name}
                           width={600}
                           height={300}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover rounded-t-3xl"
+                          style={{
+                            WebkitMaskImage:
+                              "linear-gradient(to bottom, black 70%, transparent 100%)",
+                            maskImage:
+                              "linear-gradient(to bottom, black 70%, transparent 100%)"
+                          }}
                         />
                       </div>
                     </div>
@@ -119,9 +125,6 @@ export default function PackagesChequeos() {
                       <h3 className="text-xl sm:text-2xl font-bold mb-2">
                         {pkg.name}
                       </h3>
-                      <p className="text-xs xl:text-sm text-gray-600 mb-3 sm:mb-4">
-                        {pkg.description}
-                      </p>
                       <div
                         className="text-3xl sm:text-4xl font-bold"
                         style={{ color }}
@@ -148,15 +151,13 @@ export default function PackagesChequeos() {
 
                     {/* BOTONES */}
                     <div className="flex flex-col gap-3">
-                      {pkg.features.length > 4 && (
-                        <button
-                          onClick={() => setSelectedPkg({ ...pkg, color })}
-                          className="w-full rounded-full h-10 border text-sm font-medium"
-                          style={{ borderColor: color, color }}
-                        >
-                          Ver más
-                        </button>
-                      )}
+                      <button
+                        onClick={() => setSelectedPkg({ ...pkg, color })}
+                        className="w-full rounded-full h-10 border text-sm font-medium"
+                        style={{ borderColor: color, color }}
+                      >
+                        Ver más
+                      </button>
                       <button
                         className="w-full rounded-full h-10 text-sm font-medium"
                         style={{ backgroundColor: color, color: 'white' }}

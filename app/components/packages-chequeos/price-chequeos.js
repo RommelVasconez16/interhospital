@@ -41,7 +41,7 @@ const priceChequeos = [
             "Ecocardiograma",
             "Valoración Cardiológica"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/Electrofisiologia-scaled.jpg"
     },
     {
         name: "Mujer",

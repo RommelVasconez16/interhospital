@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image'
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Star } from "lucide-react";
 
@@ -147,7 +148,6 @@ export default function LocationShowcase() {
             Conoce nuestras instalaciones en un recorrido virtual
           </p>
         </div>
-
       </div>
     </section>
   );
