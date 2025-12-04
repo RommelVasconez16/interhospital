@@ -1,6 +1,7 @@
 "use client";
 
 import capitalizar from "../../utils/capitalizar";
+import {getDoctorImage} from "../../helper/doctorimage"
 import { useState } from "react";
 import { Search, Phone, Clock, MapPin, ChevronRight } from "lucide-react";
 
@@ -93,7 +94,7 @@ export default function InfoMedicos({ medicos }) {
                   {/* Imagen */}
                   <div className="aspect-square relative overflow-hidden">
                     <img
-                      src={doctor.imagen || "/placeholder.svg"}
+                      src={getDoctorImage(doctor)}
                       alt={doctor.nombreCompleto}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -178,7 +179,7 @@ export default function InfoMedicos({ medicos }) {
               <div className="grid md:grid-cols-2 gap-8 p-8">
                 <div>
                   <img
-                    src={selectedDoctorData?.imagen || "/placeholder.svg"}
+                    src={getDoctorImage(selectedDoctorData)}
                     className="rounded-2xl w-full h-auto"
                   />
                 </div>
@@ -248,7 +249,7 @@ export default function InfoMedicos({ medicos }) {
                       style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
                     >
                       <img
-                        src={doctor.imagen || "/placeholder.svg"}
+                        src={getDoctorImage(doctor)}
                         className="aspect-square w-full object-cover"
                       />
 

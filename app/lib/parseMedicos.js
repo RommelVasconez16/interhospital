@@ -24,5 +24,6 @@ export function parseMedicos(response) {
     numeroContacto: m.NUMERO_CONTACTO,
     horario: m.HORARIO_ATENCION,
     imagen: m.IMAGEN,
+    genero: m.GENERO,
   }));
 }
