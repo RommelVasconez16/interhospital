@@ -1,4 +1,4 @@
-export default function getDoctorImage(doctor) {
+export function getDoctorImage(doctor) {
   if (doctor.imagen && doctor.imagen.trim() !== "") {
     return doctor.imagen;
   }
