@@ -9,7 +9,11 @@ export async function getMedicos() {
     });
 
     if (!res.ok) {
-      console.error("Respuesta del servidor médicos:", res.status, await res.text());
+      console.error(
+        "Respuesta del servidor médicos:", 
+        res.status, 
+        await res.text()
+      );
       throw new Error("Error al obtener médicos");
     }
 
