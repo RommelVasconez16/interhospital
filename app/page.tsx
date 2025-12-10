@@ -24,13 +24,26 @@ export default function Home() {
       <PackageQuirurgicos/>
       <Convenios/>
       <Instalaciones/>
-      <Image 
-        src="/Images/INTERHOSPITAL_REDES.jpg"
-        width={1000}
-        height={1000}
-        alt="Logo Imagen"
-        className="w-full h-[500px] object-cover object-[center_10%]"
-      />
+      <>
+        {/* Imagen para desktop */}
+        <Image
+          src="/Images/INTERHOSPITAL_REDES_WEB.png"
+          width={1000}
+          height={1000}
+          alt="Banner Desktop"
+          className="hidden md:block w-full h-[500px] object-cover object-[center_10%]"
+        />
+
+        {/* Imagen para mobile */}
+        <Image
+          src="/Images/INTERHOSPITAL_REDES_MOBILE.png"
+          width={600}
+          height={600}
+          alt="Banner Mobile"
+          className="block md:hidden w-full h-[500px] object-cover object-center"
+        />
+      </>
+
       <Footer/>
       <Whatsapp/>
     </main>

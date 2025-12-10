@@ -42,6 +42,7 @@ export default function Convenios(){
                 spaceBetween={16}
                 slidesPerView={4}
                 pagination={{ clickable: true }}
+                loop={true}
                 autoplay={{ delay: 2500 }}
                 breakpoints={{
                     0: { slidesPerView: 1 },
@@ -55,15 +56,15 @@ export default function Convenios(){
                 const color = index % 2 === 0 ? '#0061A6' : '#008D36';
                 return (
                     <SwiperSlide key={index}>
-                    <div className="flex flex-col items-center">
-                        <Image
-                            src={item}
-                            alt={item}
-                            width={200}
-                            height={200}
-                            className="p-2 rounded-xl"
-                        />
-                    </div>
+                        <div className="flex items-center justify-center w-full h-[100px]">
+                            <Image
+                                src={item}
+                                alt={item}
+                                width={160}
+                                height={160}
+                                className="object-contain max-h-[80px]"
+                            />
+                        </div>
                     </SwiperSlide>
                 );
                 })}

@@ -144,7 +144,7 @@ export default function InfoContact() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="grayscale hover:grayscale-0 transition-all"
+                  className="transition-all"
                 />
               </div>
               <div className="p-6 bg-gradient-to-br from-[#0061A6]/10 to-[#008D36]/10">
@@ -167,7 +167,7 @@ export default function InfoContact() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="grayscale hover:grayscale-0 transition-all"
+                  className="transition-all"
                 />
               </div>
               <div className="p-6 bg-gradient-to-br from-[#008D36]/10 to-[#0061A6]/10">

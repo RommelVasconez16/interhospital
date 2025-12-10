@@ -78,65 +78,110 @@ export default function BannerInfo() {
         </p>
       </aside>
 
-      {/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ BLOQUE DE 3 COLUMNAS (NUEVO) ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */}
-      <div
-        className="
-          w-full 
-          bg-[#595959]/95
-          rounded-2xl
-          grid grid-cols-1 md:grid-cols-3
-          text-white
-        "
-      >
-        {/* Horario */}
-        <div className="p-6 flex flex-col items-center border-b md:border-b-0 md:border-r border-white/10">
-          <div className="w-20 h-20 rounded-full bg-[#4D4D4D] flex items-center justify-center -mt-10 shadow-lg">
-            <Image src="/Images/icon-clock-white.png" width={38} height={38} alt="clock" />
+      {/* ▬▬▬▬▬ BLOQUE DE 3 CARDS RE-DISEÑADO ▬▬▬▬▬ */}
+      <div className="
+        grid grid-cols-1 md:grid-cols-3 
+        gap-6 mt-10
+      ">
+
+        {/* CARD — Horario */}
+        <div className="
+          bg-white rounded-xl p-6 
+          border border-gray-200 
+          shadow-sm hover:shadow-md 
+          transition
+        ">
+          <h3 className="text-lg font-semibold text-[#0061A6]">
+            Horario de Atención
+          </h3>
+
+          <div className="mt-4 text-sm text-gray-700 space-y-2">
+            <p className="flex justify-between">
+              <span>Lunes a Viernes</span>
+              <span className="font-medium">8:00 – 17:00</span>
+            </p>
+
+            <p className="flex justify-between">
+              <span>Sábado</span>
+              <span className="font-medium">9:00 – 14:00</span>
+            </p>
+
+            <p className="flex justify-between">
+              <span>Domingo</span>
+              <span className="font-medium text-red-600">Cerrado</span>
+            </p>
           </div>
-
-          <h3 className="text-lg font-semibold mt-4">Horario de atención</h3>
-
-          <ul className="mt-4 text-sm space-y-1 text-white/90 text-center">
-            <li>Mon - Fri <span className="ml-4">8:00 AM - 5:00 PM</span></li>
-            <li>Saturday <span className="ml-4">9:00 AM - 2:00 PM</span></li>
-            <li>Sunday <span className="ml-4">Cerrado</span></li>
-          </ul>
         </div>
 
-        {/* Resultados */}
-        <div className="p-6 flex flex-col items-center border-b md:border-b-0 md:border-r border-white/10">
-          <div className="w-20 h-20 rounded-full bg-[#0A82C8] flex items-center justify-center -mt-10 shadow-lg">
-            <Image src="/Images/icon-user-group.png" width={40} height={40} alt="patients" />
-          </div>
+        {/* CARD — Resultados */}
+        <div className="
+          bg-white rounded-xl p-6 
+          border border-gray-200 
+          shadow-sm hover:shadow-md 
+          transition flex flex-col
+        ">
+          <h3 className="text-lg font-semibold text-[#008D36]">
+            Resultados de Exámenes
+          </h3>
 
-          <h3 className="text-lg font-semibold mt-4">Resultados</h3>
+          <p className="text-gray-600 text-sm mt-2">
+            Consulta tus resultados de laboratorio de manera rápida y segura.
+          </p>
 
-          <button className="mt-4 bg-white text-black px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
+          <button className="
+            mt-4 py-2 w-full 
+            bg-[#008D36] text-white 
+            rounded-lg font-semibold 
+            hover:bg-[#00742c] 
+            transition shadow
+          ">
             Ver Resultados
           </button>
-
-          <div className="text-sm mt-4 text-white/80">
-            Preparaciones • Políticas de facturación
-          </div>
         </div>
 
-        {/* Buscador por Médico */}
-        <div className="p-6 flex flex-col items-center">
-          <div className="w-20 h-20 rounded-full bg-[#4D4D4D] flex items-center justify-center -mt-10 shadow-lg">
-            <Image src="/Images/icon-search-white.png" width={38} height={38} alt="search" />
-          </div>
+        {/* CARD — Buscador Médico */}
+        <div className="
+          bg-white rounded-xl p-6 
+          border border-gray-200 
+          shadow-sm hover:shadow-md 
+          transition flex flex-col
+        ">
 
-          <h3 className="text-lg font-semibold mt-4">Buscador por Médico</h3>
-
-          <button className="mt-4 bg-white text-black px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100">
+          <h3 className="text-lg font-semibold text-[#1D70B7]">
             Buscar Médico
-          </button>
+          </h3>
 
-          <div className="text-sm mt-4 text-white/80">
-            Accede y encuentra especialistas por área
-          </div>
+          <p className="text-gray-600 text-sm mt-2">
+            Encuentra especialistas por nombre o área médica.
+          </p>
+
+          {/* Campo de búsqueda */}
+          <input 
+            type="text"
+            placeholder="Ej: Cardiología, Pérez..."
+            className="
+              mt-4 px-4 py-2 w-full
+              border border-gray-300 rounded-lg
+              text-sm outline-none
+              focus:ring-2 focus:ring-[#1D70B7]/40 
+              focus:border-[#1D70B7]
+              transition
+            "
+          />
+
+          <button className="
+            mt-3 py-2 w-full 
+            bg-[#1D70B7] text-white 
+            rounded-lg font-semibold 
+            hover:bg-[#155991] 
+            transition shadow
+          ">
+            Buscar
+          </button>
         </div>
+
       </div>
+
     </section>
   );
 }

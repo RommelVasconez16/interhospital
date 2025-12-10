@@ -1,8 +1,25 @@
 const convenios = [
-    "/Images/convenio1.png",
-    "/Images/convenio2.png",
-    "/Images/convenio3.png",
-    "/Images/convenio4.png"
+    "/Images/convenios/Asisken.png",
+    "/Images/convenios/Best-doctors.png",
+    "/Images/convenios/BMI.png",
+    "/Images/convenios/bupa.png",
+    "/Images/convenios/cinfiamed.png",
+    "/Images/convenios/EcuaSanitas.png",
+    "/Images/convenios/Humana.png",
+    "/Images/convenios/ISSFA.png",
+    "/Images/convenios/ISSPOL.jpeg",
+    "/Images/convenios/Latina-Salud-Convenio.jpg",
+    "/Images/convenios/lhs.png",
+    "/Images/convenios/mas-ecuador.png",
+    "/Images/convenios/Medec.png",
+    "/Images/convenios/Mediken.png",
+    "/Images/convenios/Pan-americana-life.png",
+    "/Images/convenios/plan-vital.png",
+    "/Images/convenios/RB-logo.jpg",
+    "/Images/convenios/Saludsa.png",
+    "/Images/convenios/SPPAT.jpeg",
+    "/Images/convenios/sweaden.png",
+    "/Images/convenios/vumi.png",
 ]
 
 export default convenios;

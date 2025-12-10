@@ -3,13 +3,16 @@
 import capitalizar from "../../utils/capitalizar";
 import {getDoctorImage} from "../../helper/doctorimage"
 import { useState } from "react";
-import { Search, Phone, Clock, MapPin, ChevronRight } from "lucide-react";
+import { Search, Phone, Clock, MapPin, ChevronRight, Mail, Hospital} from "lucide-react";
 
 export default function InfoMedicos({ medicos }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const [similarPage, setSimilarPage] = useState(1);
+  
+  const SIMILAR_ITEMS_PER_PAGE = 3;
   const ITEMS_PER_PAGE = 8;
 
   // Filtro NOMBRE + ESPECIALIDAD
@@ -47,6 +50,20 @@ export default function InfoMedicos({ medicos }) {
           )
       )
     : [];
+
+  const totalSimilarPages = Math.max(
+    1,
+    Math.ceil(similarDoctors.length / SIMILAR_ITEMS_PER_PAGE)
+  );
+
+  const safeSimilarPage = Math.min(similarPage, totalSimilarPages);
+
+  const similarStartIndex = (safeSimilarPage - 1) * SIMILAR_ITEMS_PER_PAGE;
+
+  const paginatedSimilarDoctors = similarDoctors.slice(
+    similarStartIndex,
+    similarStartIndex + SIMILAR_ITEMS_PER_PAGE
+  );
 
   return (
     <section className="py-14">
@@ -228,6 +245,26 @@ export default function InfoMedicos({ medicos }) {
                         </p>
                       </div>
                     </div>
+
+                    <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#008D36]/5">
+                      <Mail className="w-5 h-5 text-[#008D36]" />
+                      <div>
+                        <div className="text-sm text-gray-500 mb-1">Correo Electrónico</div>
+                        <p className="font-semibold">
+                          {selectedDoctorData?.correo}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#1D70B7]/5">
+                      <Hospital className="w-5 h-5 text-[#1D70B7]" />
+                      <div>
+                        <div className="text-sm text-gray-500 mb-1">Consultorio</div>
+                        <p className="font-semibold">
+                          Consultorio {selectedDoctorData?.consultorio}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -241,7 +278,7 @@ export default function InfoMedicos({ medicos }) {
                 </h3>
 
                 <div className="grid md:grid-cols-3 gap-6">
-                  {similarDoctors.map((doctor) => (
+                  {paginatedSimilarDoctors.map((doctor) => (
                     <div
                       key={doctor.id}
                       onClick={() => setSelectedDoctor(doctor.id)}
@@ -267,6 +304,42 @@ export default function InfoMedicos({ medicos }) {
                 </div>
               </div>
             )}
+
+            {/* PAGINACIÓN DE SIMILARES */}
+            {totalSimilarPages > 1 && (
+              <div className="flex items-center justify-center gap-4 mt-6">
+                <button
+                  onClick={() => setSimilarPage((p) => Math.max(1, p - 1))}
+                  disabled={safeSimilarPage === 1}
+                  className={`px-4 py-2 rounded-full border cursor-pointer text-sm ${
+                    safeSimilarPage === 1
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:bg-[#0061A6]/10"
+                  }`}
+                  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
+                >
+                  Anterior
+                </button>
+
+                <span className="text-sm text-muted-foreground">
+                  Página {safeSimilarPage} de {totalSimilarPages}
+                </span>
+
+                <button
+                  onClick={() => setSimilarPage((p) => Math.min(totalSimilarPages, p + 1))}
+                  disabled={safeSimilarPage === totalSimilarPages}
+                  className={`px-4 py-2 rounded-full border cursor-pointer text-sm ${
+                    safeSimilarPage === totalSimilarPages
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:bg-[#0061A6]/10"
+                  }`}
+                  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
+                >
+                  Siguiente
+                </button>
+              </div>
+            )}
+
           </div>
         )}
       </div>

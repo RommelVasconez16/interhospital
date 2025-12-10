@@ -6,8 +6,8 @@ export default function useCountUp(end, speed = 20) {
 
   useEffect(() => {
     let start = 0;
-    const totalDuration = speed; // milisegundos por incremento
-    const increment = end / 40; // velocidad del conteo
+    const totalDuration = speed; 
+    const increment = end / 250; 
 
     const counter = setInterval(() => {
       start += increment;
