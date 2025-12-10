@@ -78,7 +78,7 @@ export default function BannerInfo() {
         </p>
       </aside>
 
-      {/* ▬▬▬▬▬ BLOQUE DE 3 CARDS RE-DISEÑADO ▬▬▬▬▬ */}
+      {/* ▬▬▬▬ BLOQUE DE 3 CARDS RE-DISEÑADO ▬▬▬▬ */}
       <div className="
         grid grid-cols-1 md:grid-cols-3 
         gap-6 mt-10
