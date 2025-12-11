@@ -1,12 +1,16 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import capitalizar from "../../utils/capitalizar";
-import {getDoctorImage} from "../../helper/doctorimage"
-import { useState } from "react";
-import { Search, Phone, Clock, MapPin, ChevronRight, Mail, Hospital} from "lucide-react";
+import { getDoctorImage } from "../../helper/doctorimage";
+import { Search, Phone, Clock, MapPin, ChevronRight, Mail, Hospital } from "lucide-react";
 
 export default function InfoMedicos({ medicos }) {
-  const [searchTerm, setSearchTerm] = useState("");
+  const searchParams = useSearchParams();
+  const initialSearch = searchParams.get("search") || "";
+
+  const [searchTerm, setSearchTerm] = useState(initialSearch);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -14,6 +18,11 @@ export default function InfoMedicos({ medicos }) {
   
   const SIMILAR_ITEMS_PER_PAGE = 3;
   const ITEMS_PER_PAGE = 8;
+
+  useEffect(() => {
+    setSearchTerm(initialSearch);
+    setCurrentPage(1);
+  }, [initialSearch]);
 
   // Filtro NOMBRE + ESPECIALIDAD
   const filteredDoctors = medicos.filter((doctor) => {

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from './components/header'
 import BannerInfo from './components/banner-info'
+import ContenedorCard from './components/contenedorCard'
 import NuestrasCifras from './components/nuestras-cifras'
 import Nosotros from './components/sobrenosotros'
 import BannerServices from './components/banner-services'
@@ -17,6 +18,7 @@ export default function Home() {
     <main className="flex flex-col pt-[100px]">
       <Header/>
       <BannerInfo/>
+      <ContenedorCard/>
       <NuestrasCifras/>
       <Nosotros/>
       <PackageChequeos/>

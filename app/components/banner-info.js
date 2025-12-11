@@ -7,7 +7,7 @@ export default function BannerInfo() {
         relative 
         flex flex-col
         gap-12
-        px-6 pt-14
+        px-6 pt-14 pb-44
         md:px-10 
         lg:px-20 lg:pt-20
         overflow-hidden
@@ -17,15 +17,15 @@ export default function BannerInfo() {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: "url('/Images/PORTADA.jpg')",
+          backgroundImage: "url('/Images/INTERHOSPITAL_BANNER.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "blur(3px)",
-          opacity: 0.45,
+          backgroundPosition: "70% center",
+          opacity: 0.9,
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 80%, black 100%)",
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 50%, black 60%, black 100%)",
           maskImage:
-            "linear-gradient(to right, transparent 0%, black 80%, black 100%)",
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 50%, black 60%, black 100%)",
+
         }}
       />
 
@@ -77,110 +77,6 @@ export default function BannerInfo() {
           especialistas y tecnología de última generación en Ecuador.
         </p>
       </aside>
-
-      {/* ▬▬▬▬ BLOQUE DE 3 CARDS RE-DISEÑADO ▬▬▬▬ */}
-      <div className="
-        grid grid-cols-1 md:grid-cols-3 
-        gap-6 mt-10
-      ">
-
-        {/* CARD — Horario */}
-        <div className="
-          bg-white rounded-xl p-6 
-          border border-gray-200 
-          shadow-sm hover:shadow-md 
-          transition
-        ">
-          <h3 className="text-lg font-semibold text-[#0061A6]">
-            Horario de Atención
-          </h3>
-
-          <div className="mt-4 text-sm text-gray-700 space-y-2">
-            <p className="flex justify-between">
-              <span>Lunes a Viernes</span>
-              <span className="font-medium">8:00 – 17:00</span>
-            </p>
-
-            <p className="flex justify-between">
-              <span>Sábado</span>
-              <span className="font-medium">9:00 – 14:00</span>
-            </p>
-
-            <p className="flex justify-between">
-              <span>Domingo</span>
-              <span className="font-medium text-red-600">Cerrado</span>
-            </p>
-          </div>
-        </div>
-
-        {/* CARD — Resultados */}
-        <div className="
-          bg-white rounded-xl p-6 
-          border border-gray-200 
-          shadow-sm hover:shadow-md 
-          transition flex flex-col
-        ">
-          <h3 className="text-lg font-semibold text-[#008D36]">
-            Resultados de Exámenes
-          </h3>
-
-          <p className="text-gray-600 text-sm mt-2">
-            Consulta tus resultados de laboratorio de manera rápida y segura.
-          </p>
-
-          <button className="
-            mt-4 py-2 w-full 
-            bg-[#008D36] text-white 
-            rounded-lg font-semibold 
-            hover:bg-[#00742c] 
-            transition shadow
-          ">
-            Ver Resultados
-          </button>
-        </div>
-
-        {/* CARD — Buscador Médico */}
-        <div className="
-          bg-white rounded-xl p-6 
-          border border-gray-200 
-          shadow-sm hover:shadow-md 
-          transition flex flex-col
-        ">
-
-          <h3 className="text-lg font-semibold text-[#1D70B7]">
-            Buscar Médico
-          </h3>
-
-          <p className="text-gray-600 text-sm mt-2">
-            Encuentra especialistas por nombre o área médica.
-          </p>
-
-          {/* Campo de búsqueda */}
-          <input 
-            type="text"
-            placeholder="Ej: Cardiología, Pérez..."
-            className="
-              mt-4 px-4 py-2 w-full
-              border border-gray-300 rounded-lg
-              text-sm outline-none
-              focus:ring-2 focus:ring-[#1D70B7]/40 
-              focus:border-[#1D70B7]
-              transition
-            "
-          />
-
-          <button className="
-            mt-3 py-2 w-full 
-            bg-[#1D70B7] text-white 
-            rounded-lg font-semibold 
-            hover:bg-[#155991] 
-            transition shadow
-          ">
-            Buscar
-          </button>
-        </div>
-
-      </div>
 
     </section>
   );

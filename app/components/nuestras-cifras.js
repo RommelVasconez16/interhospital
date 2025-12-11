@@ -53,21 +53,34 @@ export default function NuestrasCifras() {
           
           return (
             <SwiperSlide key={item.label}>
-              <div className="flex flex-col items-center">
-                <Image
-                  src={item.image}
-                  alt={item.label}
-                  width={50}
-                  height={50}
-                  className="p-2 rounded-xl"
-                  style={{ backgroundColor: 'rgba(217,217,217,0.4)' }}
-                />
+              <div className="flex flex-col items-center gap-3">
 
-                <p className="text-2xl mt-4 font-bold" style={{ color }}>
+                {/* ICONO MÁS GRANDE Y MODERNO */}
+                <div
+                  className="rounded-2xl flex items-center justify-center shadow-sm"
+                  style={{
+                    backgroundColor: "rgba(0, 0, 0, 0.05)",
+                    width: "60px",
+                  }}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.label}
+                    width={40}
+                    height={40}
+                  />
+                </div>
+
+                {/* NÚMERO */}
+                <p className="text-2xl font-bold" style={{ color }}>
                   {count}
                 </p>
 
-                <p className="text-[10px] text-center">{item.label}</p>
+                {/* TEXTO */}
+                <p className="text-sm text-center opacity-70 leading-tight">
+                  {item.label}
+                </p>
+
               </div>
             </SwiperSlide>
           );
