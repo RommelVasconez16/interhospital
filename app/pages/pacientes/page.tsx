@@ -18,8 +18,7 @@ export default function Pacientes(){
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance text-white">Portal del Paciente</h1>
-                    <p className="text-lg text-white/90 text-pretty">Recursos, formularios y acceso a resultados médicos</p>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance text-white">Documentación</h1>
                 </div>
                 </div>
             </section>

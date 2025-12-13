@@ -1,34 +1,43 @@
+import { Hospital, Car, Stethoscope, HeartHandshake, Microscope, Bandage } from 'lucide-react'
+
 const Info = [
-    {
-        image: "/Images/icon_consultorio.png",
-        numero: "151",
-        label: "Consultorios"
-    },
-    {
-        image: "/Images/icon_parqueadero.png",
-        numero: "600",
-        label: "Parqueaderos"
-    },
-    {
-        image: "/Images/icon_medico.png",
-        numero: "300+",
-        label: "Medicos"
-    },
-    {
-        image: "/Images/icon_especialidades.png",
-        numero: "46+",
-        label: "Especialidades Médicas"
-    },
-    {
-        image: "/Images/icon_imagenes.png",
-        numero: "2",
-        label: "Centros de Imágenes"
-    },
-    {
-        image: "/Images/icon_gastro.png",
-        numero: "1",
-        label: "Centro de Gastroenterología"
-    }
-]
+  {
+    image: Hospital,
+    numero: "151",
+    label: "Consultorios",
+    color: "#0061A6"
+  },
+  {
+    image: Car,
+    numero: "600",
+    label: "Parqueaderos",
+    color: "#008D36"
+  },
+  {
+    image: Stethoscope,
+    numero: "300+",
+    label: "Medicos",
+    color: "#0061A6"
+  },
+  {
+    image: HeartHandshake,
+    numero: "46+",
+    label: "Especialidades Médicas",
+    color: "#008D36"
+  },
+  {
+    image: Microscope,
+    numero: "2",
+    label: "Centros de Imágenes",
+    color: "#0061A6"
+  },
+  {
+    image: Bandage,
+    numero: "1",
+    label: "Centro de Gastroenterología",
+    color: "#008D36"
+  }
+];
+
 
 export default Info;

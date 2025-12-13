@@ -1,14 +1,15 @@
 "use client";
 
+import Image from 'next/image'
+import Link from 'next/link'
 import Forms from "./descargaForms";
 import Portals from "./resultPortals";
 import PopupInstructivo from "./popupinstructivo";
 import PopupPoliticas from "./politicas"
 import { useEffect, useRef, useState } from "react";
 import {
-  FileText,
   Download,
-  ExternalLink
+  ExternalLink,
 } from "lucide-react";
 
 export default function InfoPacientes() {
@@ -57,25 +58,6 @@ export default function InfoPacientes() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Downloadable Forms */}
         <div className="mb-20">
-          <div
-            className={`text-center mb-12 transform transition-all duration-700 ${
-              isVisible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
-            }`}
-          >
-            <div className="inline-flex items-center gap-2 bg-[#008D36]/10 text-[#008D36] px-4 py-2 rounded-full mb-6">
-              <FileText className="w-5 h-5" />
-              <span className="font-semibold">Formularios Descargables</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-              Documentos para <span className="text-[#008D36]">Pacientes</span>
-            </h2>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto text-pretty">
-              Descarga los formularios que necesitas para tus trámites médicos
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto items-stretch h-full">
             {Forms.map((form, index) => (
               <div
@@ -121,7 +103,9 @@ export default function InfoPacientes() {
                             hover:bg-[#0061A6]/5 bg-transparent"
                   style={{ borderColor: `${form.color}30` }}
                 >
-                  <Download className="w-4 h-4 mr-2" />
+                  {form.btnIcon && (
+                    <form.btnIcon className="w-4 h-4 mr-2" />
+                  )}                  
                   {form.textbtn}
                 </button>
 
@@ -159,9 +143,11 @@ export default function InfoPacientes() {
                   className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
                   style={{ backgroundColor: `${portal.color}15` }}
                 >
-                  <portal.icon
-                    className="w-10 h-10"
-                    style={{ color: portal.color }}
+                  <Image
+                    src={portal.icon}
+                    width={50}
+                    height={50}
+                    alt='Icons'
                   />
                 </div>
 
@@ -193,7 +179,9 @@ export default function InfoPacientes() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button className="px-4 py-2 text-white text-sm cursor-pointer font-semibold rounded-full bg-gradient-to-r from-[#0061A6] to-[#008D36] hover:opacity-90">
-                Contactar Soporte
+                <Link href='/pages/contactanos'>
+                  Contáctanos
+                </Link>
               </button>
               <button
                 variant="outline"

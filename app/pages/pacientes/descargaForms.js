@@ -1,4 +1,4 @@
-import { FileText } from "lucide-react";
+import { FileText, Download, View, ExternalLink} from "lucide-react";
 
 const pacientedownload = [
   {
@@ -8,7 +8,8 @@ const pacientedownload = [
     color: "#0061A6",
     textbtn: "Descargar PDF",
     action: "pdf",
-    file: "/SOLICITUD-DE-HISTORIA-CLINICA.pdf"
+    file: "/SOLICITUD-DE-HISTORIA-CLINICA.pdf",
+    btnIcon: Download
   },
   {
     title: "Instrucciones Pre-Quirúrgicas",
@@ -16,7 +17,8 @@ const pacientedownload = [
     icon: FileText,
     color: "#008D36",
     textbtn: "Ver Instructivo",
-    action: "popup-pre"
+    action: "popup-pre",
+    btnIcon: View
   },
   {
     title: "Política de Acceso",
@@ -24,16 +26,18 @@ const pacientedownload = [
     icon: FileText,
     color: "#1D70B7",
     textbtn: "Ver Instructivo",
-    action: "popup-politicas"
+    action: "popup-politicas",
+    btnIcon: View
   },
   {
     title: "Aviso de Privacidad de Datos",
     description: "Política de protección y manejo de información personal",
     icon: FileText,
     color: "#39A935",
-    textbtn: "Ver más Detalles",
+    textbtn: "Ver más",
     action: "link",
-    url: "/pages/pacientes/privacidad-datos"
+    url: "/pages/pacientes/privacidad-datos",
+    btnIcon: ExternalLink
   }
 ];
 

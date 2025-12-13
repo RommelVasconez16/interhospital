@@ -10,7 +10,7 @@ const priceQuirurgicos = [
             "Habitación doble (1 día)",
             "Insumos y medicinas de habitación"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/quirurgicos/COLECISTECTOMIA_LAPAROSCOPICA.webp"
     },
     {
         name: "Apendicectomía Laparoscópica",
@@ -23,7 +23,7 @@ const priceQuirurgicos = [
             "Habitación doble (1 día)",
             "Insumos y medicinas de habitación"
         ],
-        image: "/Images/icon_tiroides.png"
+        image: "/Images/quirurgicos/APENDICECTOMIA_LAPAROSCOPICA.webp"
     },
     {
         name: "Apendicectomía Laparoscópica con armónico",
@@ -36,7 +36,7 @@ const priceQuirurgicos = [
             "Habitación doble (1 día)",
             "Insumos y medicinas de habitación"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/quirurgicos/APENDICECTOMIA_LAPAROSCOPICA_CON_ARMONICO.webp"
     },
     {
         name: "Hernia inguinal abierta con malla",
@@ -49,7 +49,7 @@ const priceQuirurgicos = [
             "Habitación doble (1 día)",
             "Insumos y medicinas de habitación"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/quirurgicos/HERNIA_INGUINAL_ABIERTA_CON_MALLA.webp"
     },
     {
         name: "Hernia inguinal laparoscópica con malla",
@@ -63,7 +63,7 @@ const priceQuirurgicos = [
             "Habitación doble (1 día)",
             "Insumos y medicinas de habitación"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/quirurgicos/HERNIA_INGUINAL_LAPAROSCOPICA.webp"
     }
 ]
 

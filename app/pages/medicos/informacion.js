@@ -201,83 +201,99 @@ export default function InfoMedicos({ medicos }) {
               ← Volver a la lista
             </button>
 
-            <div className="bg-card rounded-3xl overflow-hidden border-2 border-border shadow-xl" style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}>
-              <div className="grid md:grid-cols-2 gap-8 p-8">
-                <div>
+            <div
+              className="bg-card rounded-3xl overflow-hidden border-2 shadow-xl"
+              style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
+            >
+              <div className="grid md:grid-cols-2 gap-6 p-4 sm:p-6 md:p-8">
+
+                {/* ================= IMAGEN ================= */}
+                <div className="relative h-[260px] sm:h-[320px] md:h-full">
                   <img
                     src={getDoctorImage(selectedDoctorData)}
-                    className="rounded-2xl w-full h-auto"
+                    alt="Doctor"
+                    className="w-full h-full object-cover rounded-2xl"
                   />
                 </div>
 
-                <div className="space-y-6">
-                  <h2 className="text-3xl font-bold">
+                {/* ================= INFORMACIÓN ================= */}
+                <div className="space-y-5">
+
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug">
                     {capitalizar(selectedDoctorData?.nombreCompleto || "")}
                   </h2>
 
-                  <p className="text-2xl text-[#008D36] font-semibold">
+                  <p className="text-md sm:text-xl md:text-2xl text-[#008D36] font-semibold">
                     {capitalizar(
                       (selectedDoctorData?.especialidad || []).join(", ")
                     )}
                   </p>
 
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#0061A6]/5">
+                  <div className="space-y-3 sm:space-y-4">
+
+                    {/* Teléfono */}
+                    <div className="flex items-start gap-3 p-3 sm:p-4 rounded-2xl bg-[#0061A6]/5">
                       <Phone className="w-5 h-5 text-[#0061A6]" />
                       <div>
-                        <div className="text-sm text-gray-500 mb-1"> Teléfono</div>
+                        <div className="text-sm text-gray-500 mb-1">Teléfono</div>
                         <a
                           href={`tel:${selectedDoctorData?.numeroContacto}`}
-                          className="font-semibold"
+                          className="font-semibold text-xs md:text-base"
                         >
                           {selectedDoctorData?.numeroContacto}
                         </a>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#008D36]/5">
+                    {/* Horario */}
+                    <div className="flex items-start gap-3 p-3 sm:p-4 rounded-2xl bg-[#008D36]/5">
                       <Clock className="w-5 h-5 text-[#008D36]" />
                       <div>
                         <div className="text-sm text-gray-500 mb-1">Horario de atención</div>
-                        <p className="font-semibold">
+                        <p className="font-semibold text-xs md:text-base">
                           {selectedDoctorData?.horario}
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#1D70B7]/5">
+                    {/* Ubicación */}
+                    <div className="flex items-start gap-3 p-3 sm:p-4 rounded-2xl bg-[#1D70B7]/5">
                       <MapPin className="w-5 h-5 text-[#1D70B7]" />
                       <div>
                         <div className="text-sm text-gray-500 mb-1">Ubicación</div>
-                        <p className="font-semibold">
+                        <p className="font-semibold text-xs md:text-base">
                           Piso {selectedDoctorData?.piso}
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#008D36]/5">
+                    {/* Correo */}
+                    <div className="flex items-start gap-3 p-3 sm:p-4 rounded-2xl bg-[#008D36]/5">
                       <Mail className="w-5 h-5 text-[#008D36]" />
                       <div>
                         <div className="text-sm text-gray-500 mb-1">Correo Electrónico</div>
-                        <p className="font-semibold">
+                        <p className="font-semibold break-all text-xs md:text-base">
                           {selectedDoctorData?.correo}
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#1D70B7]/5">
+                    {/* Consultorio */}
+                    <div className="flex items-start gap-3 p-3 sm:p-4 rounded-2xl bg-[#1D70B7]/5">
                       <Hospital className="w-5 h-5 text-[#1D70B7]" />
                       <div>
                         <div className="text-sm text-gray-500 mb-1">Consultorio</div>
-                        <p className="font-semibold">
+                        <p className="font-semibold text-xs md:text-base">
                           Consultorio {selectedDoctorData?.consultorio}
                         </p>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
+
 
             {/* SIMILARES */}
             {similarDoctors.length > 0 && (

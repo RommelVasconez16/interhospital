@@ -36,20 +36,32 @@ export default function PackageQuirurgicos() {
           Cuida tu salud con nuestros{' '}
           <span style={{ color: 'var(--btn_primary)' }}>paquetes quirúrgicos</span>
         </p>
-        <p className="text-xs" style={{ color: 'var(--textColor)' }}>
+        <p className="text-xs mt-4" style={{ color: 'var(--textColor)' }}>
           Ponemos a su disposición los paquetes quirúrgicos de cirugía general
         </p>
       </div>
 
       {/* CONTENEDOR */}
-      <div className="relative w-full max-w-4xl md:max-w-5xl lg:max-w-7xl flex items-center justify-between mt-6">
+      <div className="relative w-full max-w-4xl md:max-w-5xl lg:max-w-7xl flex items-center justify-between mt-2">
 
-        {/* Flecha izquierda */}
+        {/* Flecha Izquierda */}
         <div
-          className="swiper-button-prev-custom left-[-20px] md:left-[-60px] top-1/2 -translate-y-1/2 z-10
-          rounded-full shadow-md w-10 h-10 flex items-center justify-center border border-gray-300 bg-white cursor-pointer hover:scale-110 transition"
+          className="swiper-button-prev-custom left-2 ml-3 mr-3 sm:left-[-30px] md:left-[-80px]
+          top-1/2 -translate-y-1/2 z-10 rounded-full shadow-md w-10 h-8 sm:w-10 sm:h-10
+          flex items-center justify-center border border-gray-300 bg-white cursor-pointer 
+          transition hover:scale-110"
         >
-          <svg width="16" height="16" stroke="#0061A6" strokeWidth="3" fill="none" viewBox="0 0 24 24">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#0061A6"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <polyline points="15 18 9 12 15 6" />
           </svg>
         </div>
@@ -100,7 +112,7 @@ export default function PackageQuirurgicos() {
                   {/* CONTENIDO */}
                   <div className="flex flex-col p-4 lg:p-6 justify-between">
                     <div className="text-center mb-4">
-                      <h3 className="text-xl sm:text-2xl font-bold mb-2">{pkg.name}</h3>
+                      <h3 className="text-md sm:text-lg font-bold mb-2">{pkg.name}</h3>
                       <p className="text-sm text-gray-600 mb-3 sm:mb-4">{pkg.description}</p>
 
                       <div className="text-3xl sm:text-4xl font-bold" style={{ color }}>
@@ -148,12 +160,24 @@ export default function PackageQuirurgicos() {
           })}
         </Swiper>
 
-        {/* Flecha derecha */}
+        {/* Flecha Derecha */}
         <div
-          className="swiper-button-next-custom right-[-20px] md:right-[-60px] top-1/2 -translate-y-1/2 z-10 
-          rounded-full shadow-md w-10 h-10 flex items-center justify-center border border-gray-300 bg-white cursor-pointer hover:scale-110 transition"
+          className="swiper-button-next-custom right-2 ml-3 mr-3 sm:right-[-30px] md:right-[-80px]
+          top-1/2 -translate-y-1/2 z-10 rounded-full shadow-md w-10 h-8 sm:w-10 sm:h-10
+          flex items-center justify-center border border-gray-300 bg-white cursor-pointer 
+          transition hover:scale-110"
         >
-          <svg width="16" height="16" stroke="#0061A6" strokeWidth="3" fill="none" viewBox="0 0 24 24">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#0061A6"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <polyline points="9 18 15 12 9 6" />
           </svg>
         </div>
@@ -191,7 +215,7 @@ export default function PackageQuirurgicos() {
             <div className="px-6 pb-8 flex flex-col justify-between">
 
               <div className="text-center mb-4">
-                <h3 className="text-2xl font-bold mb-2">{selectedPkg.name}</h3>
+                <h3 className="text-xl font-bold mb-2">{selectedPkg.name}</h3>
 
                 {selectedPkg.description && (
                   <p className="text-sm text-gray-600 mb-3">{selectedPkg.description}</p>

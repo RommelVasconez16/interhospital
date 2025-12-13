@@ -9,7 +9,7 @@ const priceChequeos = [
             "Coproparasitológico",
             "Consulta médica"
         ],
-        image: "/Images/fondo.jpg"
+        image: "/Images/chequeos/CHEQUEO_ESCOLAR.webp"
     },
     {
         name: "Tiroides",
@@ -22,7 +22,7 @@ const priceChequeos = [
             "Anti Tiroglobulina",
             "Ecografía de tiroides"
         ],
-        image: "/Images/icon_tiroides.png"
+        image: "/Images/chequeos/CHEQUEO_TIROIDES.webp"
     },
     {
         name: "Cardiológico",
@@ -41,7 +41,7 @@ const priceChequeos = [
             "Ecocardiograma",
             "Valoración Cardiológica"
         ],
-        image: "/Images/Electrofisiologia-scaled.jpg"
+        image: "/Images/chequeos/CHEQUEO_CARDIOLOGICO.webp"
     },
     {
         name: "Mujer",
@@ -56,7 +56,7 @@ const priceChequeos = [
             "Ecografía abdomen inferior",
             "Consulta Ginecológica"
         ],
-        image: "/Images/chequeos/clinicamujer.jpg"
+        image: "/Images/chequeos/CHEQUEO_DE_LA_MUJER.webp"
     },
     {
         name: "Mujer Plus",
@@ -74,7 +74,7 @@ const priceChequeos = [
             "DMO - Columna y cadera",
             "Consulta médica"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/chequeos/CHEQUEO_DE_LA_MUJER_PLUS.webp"
     },
     {
         name: "Mujer Premium",
@@ -121,7 +121,7 @@ const priceChequeos = [
             "Clínica del día",
             "Coordinación"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/chequeos/CHEQUEO_DE_LA_MUJER_PREMIUM.webp"
     },
     {
         name: "Hombre",
@@ -144,7 +144,7 @@ const priceChequeos = [
             "Ecografía de abdomen superior",
             "Consulta médica"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/chequeos/CHEQUEO_DEL_HOMBRE.webp"
     },
     {
         name: "Hombre Plus",
@@ -169,7 +169,7 @@ const priceChequeos = [
             "PSA Libre",
             "Consulta médico clínico"
         ],
-        image: "/Images/icon_mujer.png"
+        image: "/Images/chequeos/CHEQUEO_DEL_HOMBRE_PLUS.webp"
     },
     {
         name: "Hombre Premium",
@@ -217,8 +217,70 @@ const priceChequeos = [
             "Clínica del día",
             "Coordinación"
         ],
-        image: "/Images/icon_mujer.png"
-    }
+        image: "/Images/chequeos/CHEQUEO_DEL_HOMBRE_PREMIUM.webp"
+    },
+    {
+        name: "Chequeo Intersalud Adolescente",
+        description: "Jóvenes de 13 a 17 Años",
+        price: "$143,99",
+        features: [
+            "Hemograma",
+            "Coproparasitológico",
+            "Urea",
+            "Creatinina",
+            "Glucosa",
+            "TGO",
+            "TGP",
+            "Colesterol",
+            "HDL",
+            "LDL",
+            "Triglicéridos",
+            "Examen de Orina",
+            "Rayos X Tórax",
+            "Ecografía Abdomen Superior",
+            "Consulta Médica"
+        ],
+        image: "/Images/chequeos/CHEQUEO_ADOLESCENTE.webp"
+    },
+    {
+        name: "Chequeo Básico Mujer",
+        description: "",
+        price: "$179,99",
+        features: [
+            "Consulta Ginecológica",
+            "Mamografía Bilateral",
+            "Ecografía de Mamas",
+            "Pap test"
+        ],
+        image: "/Images/chequeos/CHEQUEO_BASICO_MUJER.webp"
+    },
+    {
+        name: "Chequeo Estándar Mujer",
+        description: "",
+        price: "$219,99",
+        features: [
+            "Consulta Ginecológica",
+            "Mamografía Bilateral",
+            "Ecografía de Mamas",
+            "Densitometría Ósea - Cuerpo Total",
+            "Pap test"
+        ],
+        image: "/Images/chequeos/CHEQUEO_ESTANDAR_MUJER.webp"
+    },
+    {
+        name: "Chequeo Completo Mujer",
+        description: "",
+        price: "$259,99",
+        features: [
+            "Consulta Ginecológica",
+            "Mamografía Bilateral",
+            "Ecografía Transvaginal",
+            "Ecografía de Mamas",
+            "Densitometría Ósea - Cuerpo Total",
+            "Pap test"
+        ],
+        image: "/Images/chequeos/CHEQUEO_COMPLETO_MUJER.webp"
+    },
 ]
 
 export default priceChequeos;

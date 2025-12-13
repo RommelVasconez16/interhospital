@@ -20,16 +20,6 @@ export default function InfoContact() {
     <section id="contacto" className="py-24 bg-white">
       <div className="container mx-auto px-4">
 
-        {/* 🟦 TITULAR */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0061A6] mb-4">
-            Contáctanos
-          </h2>
-          <p className="text-gray-600 text-lg">
-            Estamos aquí para atenderte. Escríbenos y te responderemos a la brevedad.
-          </p>
-        </div>
-
         {/* GRID: FORM + INFO */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
 

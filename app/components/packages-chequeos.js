@@ -50,7 +50,7 @@ export default function PackagesChequeos() {
         {/* Flecha Izquierda */}
         <div
           className="swiper-button-prev-custom left-2 ml-3 mr-3 sm:left-[-30px] md:left-[-80px]
-          top-1/2 -translate-y-1/2 z-10 rounded-full shadow-md w-8 h-7 sm:w-10 sm:h-10
+          top-1/2 -translate-y-1/2 z-10 rounded-full shadow-md w-10 h-8 sm:w-10 sm:h-10
           flex items-center justify-center border border-gray-300 bg-white cursor-pointer 
           transition hover:scale-110"
         >
@@ -82,13 +82,7 @@ export default function PackagesChequeos() {
             disableOnInteraction: false,
           }}
           spaceBetween={20}
-          slidesPerView={3}
-          breakpoints={{
-            0: { slidesPerView: 1, spaceBetween: 10 },
-            320: { slidesPerView: 1, spaceBetween: 10 },
-            768: { slidesPerView: 2, spaceBetween: 15 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
-          }}
+          slidesPerView={1}
           className="max-w-5xl w-full"
         >
           {priceChequeos.map((pkg, index) => {
@@ -96,77 +90,73 @@ export default function PackagesChequeos() {
             return (
               <SwiperSlide key={index}>
                 <div
-                  className="flex flex-col relative mt-2 bg-white rounded-3xl border-2 transition-all hover:shadow-2xl hover:-translate-y-2 h-[480px] sm:h-[500px] overflow-hidden"
-                  style={{ borderColor: color }}
+                  className="
+                    relative
+                    h-[420px]
+                    rounded-3xl
+                    overflow-hidden
+                    shadow-lg
+                    transition-all
+                    hover:scale-[1.02]
+                  "
                 >
-                  <div>
-                    {/* ENCABEZADO CARD */}
-                    <div className="text-center">
-                      {/* 🔵 HEADER DE IMAGEN FULL WIDTH */}
-                      <div className="w-full h-[125px] overflow-hidden rounded-t-3xl">
-                        <Image
-                          src={pkg.image}
-                          alt={pkg.name}
-                          width={600}
-                          height={300}
-                          className="w-full h-full object-cover rounded-t-3xl"
-                          style={{
-                            WebkitMaskImage:
-                              "linear-gradient(to bottom, black 70%, transparent 100%)",
-                            maskImage:
-                              "linear-gradient(to bottom, black 70%, transparent 100%)"
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className='flex flex-col p-3 lg:p-5 xl:p-7 justify-between'>
-                    <div className='text-center mb-4'>
-                      <h3 className="text-xl sm:text-2xl font-bold mb-2">
+
+                <Image
+                  src={pkg.image}
+                  alt={pkg.name}
+                  fill
+                  priority={index === 0}
+                  className="
+                    object-cover
+                    object-[center_50%]
+                    sm:object-[center_30%]
+                  "
+                />
+
+                  {/* OVERLAY (degradado) */}
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: `linear-gradient(
+                        to bottom,
+                        rgba(0,0,0,0.15),
+                        rgba(0,0,0,0.75)
+                      )`
+                    }}
+                  />
+
+                  {/* CONTENIDO ENCIMA */}
+                  <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
+
+                    {/* HEADER */}
+                    <div>
+                      <span
+                        className="inline-block px-3 py-1 text-xs rounded-full mb-2"
+                        style={{ backgroundColor: `${color}cc` }}
+                      >
+                        Chequeo Preventivo
+                      </span>
+
+                      <h3 className="text-xl font-bold leading-tight">
                         {pkg.name}
                       </h3>
-                      <div
-                        className="text-3xl sm:text-4xl font-bold"
-                        style={{ color }}
-                      >
+                    </div>
+
+                    {/* FOOTER */}
+                    <div>
+                      <div className="text-3xl font-bold mb-4">
                         {pkg.price}
                       </div>
-                    </div>
-                    {/* FEATURES */}
-                    <ul className="overflow-y-hidden mb-4">
-                      {pkg.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <div
-                            className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                            style={{ backgroundColor: `${color}20` }}
-                          >
-                            <Check className="w-3 h-3" style={{ color }} />
-                          </div>
-                          <span className="text-sm leading-relaxed">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
 
-                    {/* BOTONES */}
-                    <div className="flex flex-col gap-3">
                       <button
+                        className="w-full rounded-full h-10 text-sm font-medium bg-white"
+                        style={{ color }}
                         onClick={() => setSelectedPkg({ ...pkg, color })}
-                        className="w-full rounded-full h-10 border text-sm font-medium"
-                        style={{ borderColor: color, color }}
                       >
                         Ver más
                       </button>
-                      <button
-                        className="w-full rounded-full h-10 text-sm font-medium"
-                        style={{ backgroundColor: color, color: 'white' }}
-                      >
-                        Agendar Ahora
-                      </button>
                     </div>
                   </div>
-
                 </div>
               </SwiperSlide>
             );
@@ -176,7 +166,7 @@ export default function PackagesChequeos() {
         {/* Flecha Derecha */}
         <div
           className="swiper-button-next-custom right-2 ml-3 mr-3 sm:right-[-30px] md:right-[-80px]
-          top-1/2 -translate-y-1/2 z-10 rounded-full shadow-md w-8 h-7 sm:w-10 sm:h-10
+          top-1/2 -translate-y-1/2 z-10 rounded-full shadow-md w-10 h-8 sm:w-10 sm:h-10
           flex items-center justify-center border border-gray-300 bg-white cursor-pointer 
           transition hover:scale-110"
         >

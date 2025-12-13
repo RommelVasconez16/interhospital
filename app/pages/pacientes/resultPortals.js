@@ -1,11 +1,9 @@
-import { TestTube, ImageIcon } from "lucide-react";
-
 const resultsPortals = [
   {
     title: "Resultados de Laboratorio",
     description: "Accede a tus resultados de exámenes de laboratorio clínico",
     url: "https://resultadosgye.interlab.com.ec/",
-    icon: TestTube,
+    icon: "/Images/Interlab.jpg",
     color: "#0061A6",
   },
   {
@@ -13,7 +11,7 @@ const resultsPortals = [
     description:
       "Visualiza tus estudios de imagenología (rayos X, tomografías, resonancias)",
     url: "https://imagenes.interhospital.com.ec/",
-    icon: ImageIcon,
+    icon: "/Images/logovertical.png",
     color: "#008D36",
   },
 ];

@@ -33,16 +33,16 @@ export default function Home() {
           width={1000}
           height={1000}
           alt="Banner Desktop"
-          className="hidden md:block w-full h-[500px] object-cover object-[center_10%]"
+          className="hidden sm:block w-full h-[500px] object-cover object-[center_10%]"
         />
 
         {/* Imagen para mobile */}
         <Image
-          src="/Images/INTERHOSPITAL_REDES_MOBILE.png"
+          src="/Images/REDES_SOCIALES_CELULAR.webp"
           width={600}
           height={600}
           alt="Banner Mobile"
-          className="block md:hidden w-full h-[500px] object-cover object-center"
+          className="block sm:hidden w-full h-[500px] object-cover object-center"
         />
       </>
 

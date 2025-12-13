@@ -3,6 +3,25 @@ import { Facebook, Instagram, Twitter, Linkedin, MapPin, Phone, Clock } from "lu
 import Link from "next/link"
 
 export default function Footer() {
+  
+  const socialLinks = [
+    {
+      icon: Facebook,
+      url: "https://www.facebook.com/InterhospitalEcuador/",
+      label: "Facebook"
+    },
+    {
+      icon: Instagram,
+      url: "https://www.instagram.com/interhospitalec/",
+      label: "Instagram"
+    },
+    {
+      icon: Linkedin,
+      url: "https://ec.linkedin.com/company/interhospital?trk=public_post_feed-actor-image",
+      label: "LinkedIn"
+    }
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-[#0061A6] via-[#1D70B7] to-[#008D36] text-white">
       <section className="container mx-auto px-4 py-12">
@@ -25,18 +44,28 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-3">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, idx) => (
+              {socialLinks.map(({ icon: Icon, url, label}, idx) => (
                 <a
                   key={idx}
-                  href="#"
+                  href={url}
+                  aria-label={label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white hover:text-[#0061A6] flex items-center justify-center transition-colors"
+                  className="
+                    w-10 h-10
+                    rounded-full
+                    bg-white/20
+                    hover:bg-white
+                    hover:text-[#0061A6]
+                    flex items-center justify-center
+                    transition-colors
+                  "
                 >
                   <Icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
+
           </section>
 
           {/* HOSPITAL PRINCIPAL */}
@@ -89,11 +118,12 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 ["Inicio", "/"],
-                ["Nosotros", "/nosotros"],
-                ["Médicos", "/medicos"],
-                ["Servicios", "/servicios"],
-                ["Blog", "/blog"],
-                ["Pacientes", "/pacientes"],
+                ["Nosotros", "/pages/nosotros"],
+                ["Médicos", "/pages/medicos"],
+                ["Servicios", "/pages/servicios"],
+                ["Pacientes", "/pages/pacientes"],
+                ["Contacto", "/pages/contactanos"]
+
               ].map(([name, link], i) => (
                 <li key={i}>
                   <Link href={link} className="text-white/90 hover:text-white transition-colors">
@@ -110,11 +140,8 @@ export default function Footer() {
           <p>© 2025 Interhospital. Todos los derechos reservados.</p>
 
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">
+            <Link href="/pages/pacientes/privacidad-datos" className="hover:text-white transition-colors">
               Política de Privacidad
-            </Link>
-            <Link href="#" className="hover:text-white transition-colors">
-              Términos de Servicio
             </Link>
           </div>
         </section>

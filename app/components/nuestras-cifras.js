@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 export default function NuestrasCifras() {
   return (
-    <section className="flex flex-col justify-center items-center py-16 gap-8 pr-10 pl-10">
+    <section className="flex flex-col justify-center items-center py-16 gap-12 pr-10 pl-10">
 
       <div className="flex flex-col items-center text-center">
         <div
@@ -35,16 +35,16 @@ export default function NuestrasCifras() {
       <Swiper
         modules={[Autoplay]}
         spaceBetween={20}
-        slidesPerView={6}
+        slidesPerView={5}
         autoplay={{ delay: 2000 }}
         breakpoints={{
           0: { slidesPerView: 2 },
           420: { slidesPerView: 3 },
-          640: { slidesPerView: 4 },
-          1024: { slidesPerView: 5 },
-          1200: { slidesPerView: 6 }
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+          1200: { slidesPerView: 5 }
         }}
-        className="pb-10 w-full"
+        className="pb-10 max-w-9/12"
       >
         {Info.map((item, index) => {
           const color = index % 2 === 0 ? '#0061A6' : '#008D36';
@@ -56,19 +56,23 @@ export default function NuestrasCifras() {
               <div className="flex flex-col items-center gap-3">
 
                 {/* ICONO MÁS GRANDE Y MODERNO */}
-                <div
-                  className="rounded-2xl flex items-center justify-center shadow-sm"
+                <div className="rounded-2xl flex items-center justify-center shadow-sm"
                   style={{
                     backgroundColor: "rgba(0, 0, 0, 0.05)",
                     width: "60px",
+                    height: "60px",
                   }}
                 >
-                  <Image
-                    src={item.image}
-                    alt={item.label}
-                    width={40}
-                    height={40}
-                  />
+                  {typeof item.image === "string" ? (
+                    <Image
+                      src={item.image}
+                      alt={item.label}
+                      width={40}
+                      height={40}
+                    />
+                  ) : (
+                    <item.image size={40} color={item.color} />
+                  )}
                 </div>
 
                 {/* NÚMERO */}

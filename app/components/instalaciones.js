@@ -136,18 +136,34 @@ export default function LocationShowcase() {
         {/* VIDEO */}
         <div className="mt-12 md:mt-16 max-w-4xl mx-auto px-1">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video">
-            <video
-              src="/videos/hospital-interior-tour.mp4"
-              className="w-full h-full object-cover"
-              autoPlay loop muted playsInline
+
+            <iframe
+              src="https://www.youtube.com/embed/xiSyZRuHT5g?rel=0&modestbranding=1"
+              title="Recorrido virtual Interhospital"
+              className="absolute inset-0 w-full h-full"
+              frameBorder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share
+              "
+              allowFullScreen
+              loading="lazy"
             />
-            <div className="absolute inset-0 bg-black/20" />
+
+            {/* Overlay sutil opcional */}
+            <div className="pointer-events-none absolute inset-0 bg-black/10" />
           </div>
 
           <p className="text-center mt-6 text-sm sm:text-base md:text-lg text-white/90">
             Conoce nuestras instalaciones en un recorrido virtual
           </p>
         </div>
+
       </div>
     </section>
   );

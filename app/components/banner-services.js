@@ -1,36 +1,44 @@
+'use client';
+
 import Link from "next/link";
 
 export default function BannerServices() {
   return (
     <section
       className="
-        relative 
-        flex flex-col 
-        items-center md:items-start 
-        justify-center 
-        px-6 py-16 
-        md:px-12 md:py-20 
-        lg:px-20 lg:py-28 
-        gap-6 
+        relative
+        overflow-hidden
+        flex flex-col
+        items-center md:items-start
+        justify-center
+        px-6 py-16
+        md:px-12 md:py-20
+        lg:px-20 lg:py-28
+        gap-6
         text-center md:text-left
+        min-h-[420px] md:min-h-[520px]
       "
-      style={{
-        backgroundImage: "url('/Images/fondoservices.png')",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
-      {/* 🔵 Overlay para más contraste */}
-      <div className="absolute inset-0 bg-black/20 md:bg-black/10 lg:bg-transparent -z-10"></div>
+      {/* 🎥 VIDEO DE FONDO */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover object-top -z-20"
+        src="/Videos/VideoService.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
 
-      {/* 🔹 Badge */}
+      {/* 🌫 OVERLAY PARA CONTRASTE */}
+      <div className="absolute inset-0 bg-black/40 md:bg-black/30 -z-10" />
+
+      {/* 🔹 BADGE */}
       <div
         className="
-          flex items-center 
-          gap-1.5 
-          px-3 py-2 
-          rounded-3xl 
+          flex items-center
+          gap-1.5
+          px-3 py-2
+          rounded-3xl
           backdrop-blur-sm
         "
         style={{ backgroundColor: "rgba(128, 159, 181, 0.41)" }}
@@ -56,35 +64,37 @@ export default function BannerServices() {
         </p>
       </div>
 
-      {/* 🔹 Título */}
+      {/* 🔹 TÍTULO */}
       <p
         className="
-          text-xl 
-          md:text-3xl 
-          lg:text-4xl 
-          font-bold 
-          tracking-[-0.03em] 
+          text-lg
+          md:text-2xl
+          lg:text-3xl
+          font-bold
+          tracking-[-0.03em]
           leading-snug
+          text-white
+          max-w-2xl
         "
       >
-        Servicios especializados de salud <br className="hidden md:block" />
-        con tecnología de vanguardia y <br className="hidden md:block" />
+        Servicios especializados de salud
+        con tecnología de vanguardia y
         atención personalizada
       </p>
 
-      {/* 🔹 Botón */}
-      <Link href="/servicios">
+      {/* 🔹 BOTÓN */}
+      <Link href="/pages/servicios">
         <button
           className="
-            text-sm md:text-base 
-            px-6 py-3 
-            rounded-3xl 
-            font-semibold 
-            text-white 
-            shadow-md 
-            hover:shadow-lg 
-            hover:scale-105 
-            transition-all 
+            text-xs md:text-sm
+            px-6 py-3
+            rounded-3xl
+            font-semibold
+            text-white
+            shadow-md
+            hover:shadow-lg
+            hover:scale-105
+            transition-all
             w-max
           "
           style={{ backgroundColor: "var(--text-color-one)" }}

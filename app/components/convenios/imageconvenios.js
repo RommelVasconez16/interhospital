@@ -4,7 +4,7 @@ const convenios = [
     "/Images/convenios/BMI.png",
     "/Images/convenios/bupa.png",
     "/Images/convenios/cinfiamed.png",
-    "/Images/convenios/EcuaSanitas.png",
+    "/Images/convenios/LOGO_ECUASANITAS.webp",
     "/Images/convenios/Humana.png",
     "/Images/convenios/ISSFA.png",
     "/Images/convenios/ISSPOL.jpeg",
