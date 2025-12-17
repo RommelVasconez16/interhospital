@@ -15,7 +15,7 @@ import Footer from './components/footer'
 
 export default function Home() {
   return (
-    <main className="flex flex-col pt-[100px]">
+    <main className="flex flex-col pt-[90px]">
       <Header/>
       <BannerInfo/>
       <ContenedorCard/>

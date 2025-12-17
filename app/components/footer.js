@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* HOSPITAL PRINCIPAL */}
           <section>
-            <h3 className="font-bold mb-4 text-white text-lg">Hospital Principal</h3>
+            <h3 className="font-bold mb-4 text-white text-lg">Hospital</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
@@ -118,10 +118,11 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 ["Inicio", "/"],
+                ["Servicios", "/pages/servicios"],
                 ["Nosotros", "/pages/nosotros"],
                 ["Médicos", "/pages/medicos"],
-                ["Servicios", "/pages/servicios"],
                 ["Pacientes", "/pages/pacientes"],
+                ["Infórmate", "/pages/informate"],
                 ["Contacto", "/pages/contactanos"]
 
               ].map(([name, link], i) => (

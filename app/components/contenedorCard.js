@@ -104,7 +104,7 @@ export default function ContenedorCard() {
         {/* 3 — Slider de Horarios */}
         <div className="p-6 sm:p-8">
         <h3 className="text-lg font-bold text-[#1D70B7] mb-4">
-            Horario de visita y atención
+            Horarios de visita y atención
         </h3>
 
         <Swiper

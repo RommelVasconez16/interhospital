@@ -14,6 +14,7 @@ export default function Navbar() {
     { label: "Nosotros", href: "/pages/nosotros"},
     { label: "Medicos", href: "/pages/medicos"},
     { label: "Pacientes", href: "/pages/pacientes"},
+    { label: "Informate", href: "/pages/informate"},
     { label: "Contacto", href: "/pages/contactanos"}
   ]
 
@@ -49,7 +50,7 @@ export default function Navbar() {
           {/* Emergency Contact */}
         <div className="hidden min-[1106]:flex items-center gap-4">
           <div className="text-right">
-            <p className="text-xs text-muted-foreground">Emergencias 24h</p>
+            <p className="text-xs text-muted-foreground">Emergencia 24h</p>
             <a
               href="tel:+59343750000"
               className="text-lg font-bold text-[#0061A6] hover:text-[#1D70B7] transition-colors flex items-center gap-2"

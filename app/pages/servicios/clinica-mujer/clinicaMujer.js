@@ -12,9 +12,9 @@ import "swiper/css/pagination";
 
 export default function InfoClinicaMujer() {
   const imagenes = [
-    "/Images/hola.jpg",
-    "/Images/hola.jpg",
-    "/Images/hola.jpg",
+    "/Images/servicios/clinica-mujer/Centro-de-imagenes-005.jpg",
+    "/Images/servicios/clinica-mujer/Centro-de-imagenes-006.jpg",
+    "/Images/servicios/clinica-mujer/Clinica-de-la-mujer-h.jpg"
   ];
 
   // Servicios bien estructurados

@@ -51,7 +51,7 @@ export default function InfoIntergastro() {
         {/* IMAGEN PRINCIPAL */}
         <div className="rounded-3xl overflow-hidden shadow-lg mb-14">
           <Image
-            src="/Images/hola.jpg"
+            src="/Images/servicios/intergastro/Intergastro-h.jpg"
             alt="Unidad de gastroenterología"
             width={1600}
             height={800}

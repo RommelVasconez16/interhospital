@@ -18,7 +18,10 @@ export default function InfoHospitalizacion() {
     const habitaciones = [
         {
         titulo: "Habitación Privada",
-        imagenes: ["/Images/privada1.jpg", "/Images/privada2.jpg", "/Images/privada3.jpg"],
+        imagenes: [
+          "/Images/servicios/hospitalizacion/Privada-1.jpg", 
+          "/Images/servicios/hospitalizacion/Privada-2.jpg"
+        ],
         items: [
             "Un solo ambiente",
             "Sillón reclinable de un cuerpo",
@@ -32,7 +35,7 @@ export default function InfoHospitalizacion() {
         },
         {
         titulo: "Habitación Doble",
-        imagenes: ["/Images/doble1.jpg", "/Images/doble2.jpg", "/Images/doble3.jpg"],
+        imagenes: ["/Images/servicios/hospitalizacion/Doble-1.jpg"],
         items: [
             "Dos camas para pacientes",
             "Sillón reclinable / Sofá cama",
@@ -46,7 +49,10 @@ export default function InfoHospitalizacion() {
         },
         {
         titulo: "Habitación Triple",
-        imagenes: ["/Images/triple1.jpg", "/Images/triple2.jpg", "/Images/triple3.jpg"],
+        imagenes: [
+          "/Images/servicios/hospitalizacion/Triple-1.jpg", 
+          "/Images/servicios/hospitalizacion/Triple-2.jpg"
+        ],
         items: [
             "Tres camas para pacientes",
             "Sofá cama de una plaza",
@@ -60,7 +66,9 @@ export default function InfoHospitalizacion() {
         },
         {
         titulo: "Suite Estándar",
-        imagenes: ["/Images/suite1.jpg", "/Images/suite2.jpg", "/Images/suite3.jpg"],
+        imagenes: [
+          "/Images/servicios/hospitalizacion/Suite-2.jpg"
+        ],
         items: [
             "Dos ambientes: habitación y sala",
             "Cama hospitalaria",
@@ -75,7 +83,7 @@ export default function InfoHospitalizacion() {
         },
         {
         titulo: "Suite Ejecutiva",
-        imagenes: ["/Images/ejecutiva1.jpg", "/Images/ejecutiva2.jpg"],
+        imagenes: ["/Images/servicios/hospitalizacion/Suite-1.jpg"],
         items: [
             "Dos ambientes",
             "Cama hospitalaria",
@@ -90,7 +98,11 @@ export default function InfoHospitalizacion() {
         },
         {
         titulo: "Suite Presidencial",
-        imagenes: ["/Images/presidencial1.jpg", "/Images/presidencial2.jpg"],
+        imagenes: [
+          "/Images/servicios/hospitalizacion/Presidencial-1.jpg",
+          "/Images/servicios/hospitalizacion/Presidencial-2.jpg",
+          "/Images/servicios/hospitalizacion/Presidencial-3.jpg",
+        ],
         items: [
             "Dos ambientes",
             "Cama hospitalaria",
@@ -134,7 +146,7 @@ export default function InfoHospitalizacion() {
 
             <div className="rounded-3xl overflow-hidden shadow-lg mb-16">
               <Image
-                src="/Images/hola.jpg"
+                src="/Images/servicios/hospitalizacion/interhospital-habitacion-video.jpg"
                 width={1600}
                 height={700}
                 alt="Hospitalización"

@@ -69,7 +69,7 @@ export default function PageCirugia() {
         {/* IMAGEN PRINCIPAL */}
         <div className="rounded-3xl overflow-hidden shadow-lg mb-14">
           <Image
-            src="/Images/hola.jpg"
+            src="/Images/servicios/cirugia/Cirugia-h1.jpg"
             alt="Área de cirugía Interhospital"
             width={1600}
             height={800}

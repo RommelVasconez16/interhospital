@@ -47,6 +47,24 @@ export default function WhatsAppButton() {
 
   return (
     <>
+      {/* ───────── TOOLTIP ───────── */}
+      {!isOpen && (
+        <div className="fixed bottom-[92px] right-6 z-50 block">
+          <div className="relative bg-white px-4 py-2 rounded-xl shadow-lg border border-gray-200 animate-bounce-slow">
+            <p className="font-semibold text-gray-800 text-sm">
+              ¿Necesitas ayuda?
+            </p>
+            <p className="text-xs text-gray-500">
+              Escríbenos por WhatsApp
+            </p>
+
+            {/* Flechita */}
+            <div className="absolute bottom-[-6px] right-6 w-3 h-3 bg-white border-r border-b border-gray-200 rotate-45"></div>
+          </div>
+        </div>
+      )}
+
+      {/* ───────── POPUP ───────── */}
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-50 w-72 md:w-80 rounded-3xl bg-white shadow-2xl border-2 border-[#008D36]/20 p-4 md:p-6 animate-in slide-in-from-bottom">
 
@@ -91,10 +109,10 @@ export default function WhatsAppButton() {
         </div>
       )}
 
-      {/* Botón flotante */}
+      {/* ───────── BOTÓN FLOTANTE ───────── */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed cursor-pointer bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
+        className="fixed cursor-pointer bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white shadow-2xl hover:scale-110 transition-transform flex items-center justify-center"
       >
         <WhatsAppIcon white size={32} />
       </button>

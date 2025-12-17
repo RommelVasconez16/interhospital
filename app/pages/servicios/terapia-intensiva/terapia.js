@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { CheckCircle, ArrowLeft } from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 // Import styles
 import "swiper/css";
@@ -43,18 +43,17 @@ export default function PageTerapia() {
         {/* SWIPER (3 imágenes automáticas) */}
         <div className="mb-16">
           <Swiper
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay]}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
-            pagination={{ clickable: true }}
             spaceBetween={20}
             slidesPerView={1}
             className="rounded-2xl shadow-lg"
           >
             {[
-              "/Images/image1.jpg",
-              "/Images/image2.jpg",
-              "/Images/image3.jpg"
+              "/Images/servicios/terapia-intensiva/Interhospital-Camilla.jpg",
+              "/Images/servicios/terapia-intensiva/Interhospital-uci.jpg",
+              "/Images/servicios/terapia-intensiva/servicio-hospitalario.jpg"
             ].map((imgSrc, i) => (
               <SwiperSlide key={i}>
                 <div className="overflow-hidden rounded-2xl">

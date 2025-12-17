@@ -2,22 +2,59 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Hospital } from "lucide-react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function SobreNosotros() {
   return (
     <section className="py-20 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-14">
 
-        {/* ───────── IMAGEN ───────── */}
+        {/* ───────── CARRUSEL ───────── */}
         <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="relative">
-            <Image
-              src="/Images/imagenosotros.jpg"
-              width={520}
-              height={360}
-              alt="InterHospital"
-              className="rounded-2xl shadow-xl object-cover"
-            />
+          <div className="relative w-full max-w-[1100px]">
+            <Swiper
+              modules={[Autoplay]}
+              loop
+              spaceBetween={0}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1, // mobile
+                },
+                768: {
+                  slidesPerView: 2, // tablet y desktop
+                },
+              }}
+              className="rounded-2xl shadow-xl"
+            >
+              {[
+                "/Images/inicio/Interhospital-1.jpg",
+                "/Images/inicio/Interhospital-2.jpg",
+                "/Images/inicio/Interhospital-3.jpg",
+                "/Images/inicio/Interhospital-4.jpg",
+                "/Images/inicio/Interhospital-5.jpg",
+                "/Images/inicio/Interhospital-6.jpg",
+              ].map((src, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={src}
+                    width={520}
+                    height={360}
+                    alt="InterHospital"
+                    className="w-full h-[360px] object-cover"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
 
@@ -26,14 +63,18 @@ export default function SobreNosotros() {
 
           {/* Badge */}
           <div
-            className="flex items-center gap-2 px-3 py-1 rounded-full mb-4 text-xs font-semibold"
+            className="flex items-center gap-2 px-3 py-2 rounded-full mb-4 text-xs font-semibold"
             style={{ backgroundColor: "rgba(0, 97, 166, 0.12)", color: "#0061A6" }}
           >
+            <Hospital width={20} height={20} />
             <span>Sobre nosotros</span>
           </div>
 
           {/* Título */}
-          <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-6">
+          <h2
+            className="text-3xl lg:text-4xl font-bold tracking-tight mb-6"
+            style={{ color: "#008D36" }}
+          >
             Somos{" "}
             <span style={{ color: "#0061A6" }}>
               InterHospital
@@ -54,7 +95,7 @@ export default function SobreNosotros() {
               inline-flex
               items-center
               justify-center
-              px-8
+              px-15
               py-2.5
               rounded-full
               text-sm

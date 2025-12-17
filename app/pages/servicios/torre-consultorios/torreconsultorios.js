@@ -38,11 +38,11 @@ export default function InfoTorresConsultorios() {
         {/* IMAGEN PRINCIPAL */}
         <div className="rounded-3xl overflow-hidden shadow-lg mb-20">
           <Image
-            src="/Images/hola.jpg"
+            src="/Images/servicios/consulta-externa/Consulta-externa-s.jpg"
             width={1500}
             height={600}
             alt="Torre de Consultorios Interhospital"
-            className="w-full h-[380px] object-cover"
+            className="w-full h-[380px] object-cover object-bottom"
           />
         </div>
 

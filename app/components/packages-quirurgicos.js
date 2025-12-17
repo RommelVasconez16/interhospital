@@ -98,16 +98,37 @@ export default function PackageQuirurgicos() {
                   hover:shadow-2xl hover:-translate-y-2 h-[480px] sm:h-[500px] overflow-hidden"
                   style={{ borderColor: color }}
                 >
-                  {/* IMAGEN FULL WIDTH */}
-                  <div className="w-full h-[100px] overflow-hidden rounded-t-3xl">
-                    <Image
-                      src={pkg.image}
-                      alt={pkg.name}
-                      width={600}
-                      height={300}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  
+                {/* IMAGEN FULL WIDTH */}
+                <div className="relative w-full overflow-hidden rounded-t-3xl">
+                  <Image
+                    src={pkg.image}
+                    alt={pkg.name}
+                    width={600}
+                    height={300}
+                    className="w-full h-full object-cover"
+                    style={{
+                      WebkitMaskImage: `
+                        linear-gradient(
+                          black 0%,
+                          black 60%,
+                          rgba(0,0,0,0.5) 80%,
+                          transparent 100%
+                        )
+                      `,
+                      maskImage: `
+                        linear-gradient(
+                          black 0%,
+                          black 60%,
+                          rgba(0,0,0,0.5) 80%,
+                          transparent 100%
+                        )
+                      `
+                    }}
+                  />
+                </div>
+
+
 
                   {/* CONTENIDO */}
                   <div className="flex flex-col p-4 lg:p-6 justify-between">

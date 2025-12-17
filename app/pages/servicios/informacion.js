@@ -40,7 +40,7 @@ export default function InfoServicios() {
             {/* Imagen FULL responsive */}
             <div className="w-full h-[180px] sm:h-[200px] md:h-[220px] overflow-hidden">
               <Image
-                src="/Images/fondo.jpg"
+                src={servicio.image}
                 width={300}
                 height={200}
                 alt={servicio.title}

@@ -19,15 +19,29 @@ export default function BannerServices() {
         min-h-[420px] md:min-h-[520px]
       "
     >
-      {/* 🎥 VIDEO DE FONDO */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover object-top -z-20"
-        src="/Videos/VideoService.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      {/* 🎥 CONTENEDOR DE VIDEO */}
+      <div className="absolute inset-0 -z-20 overflow-hidden">
+        <video
+          className="
+            absolute
+            bottom-0
+            left-1/2
+            -translate-x-1/2
+            min-w-full
+            h-150
+            md:min-h-full
+            object-cover
+            object-bottom-right
+            md:object-bottom
+          "
+          src="/Videos/VideoService.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
+
 
       {/* 🌫 OVERLAY PARA CONTRASTE */}
       <div className="absolute inset-0 bg-black/40 md:bg-black/30 -z-10" />
@@ -96,6 +110,7 @@ export default function BannerServices() {
             hover:scale-105
             transition-all
             w-max
+            cursor-pointer
           "
           style={{ backgroundColor: "var(--text-color-one)" }}
         >

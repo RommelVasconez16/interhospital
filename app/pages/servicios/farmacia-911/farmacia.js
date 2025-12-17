@@ -37,11 +37,11 @@ export default function InfoFarmacia() {
         {/* IMAGEN PRINCIPAL */}
         <div className="rounded-3xl overflow-hidden shadow-lg mb-20">
           <Image
-            src="/Images/hola.jpg"
+            src="/Images/servicios/farmacia-911/Farmacias-911-s.jpg"
             width={1500}
             height={600}
             alt="Farmacia Interhospital"
-            className="w-full h-[380px] object-cover"
+            className="w-full h-[380px] object-cover object-top"
           />
         </div>
 

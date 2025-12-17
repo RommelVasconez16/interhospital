@@ -9,19 +9,19 @@ export default function PageHemodinamia() {
   const especialidades = [
     {
       title: "Cardiología Intervencionista",
-      image: "/Images/cardiologia.jpg",
+      image: "/Images/servicios/hemodinamia/cardiologia-intervencionista.jpg",
     },
     {
       title: "Electrofisiología",
-      image: "/Images/electrofisiología.jpg",
+      image: "/Images/servicios/hemodinamia/Electrofisiologia.jpg",
     },
     {
       title: "Neurointervencionismo",
-      image: "/Images/neurointervencionismo.jpg",
+      image: "/Images/servicios/hemodinamia/Neuro.jpg",
     },
     {
       title: "Radiología Intervencionista",
-      image: "/Images/radiologia-intervencionista.jpg",
+      image: "/Images/servicios/hemodinamia/radiologia-intervencionista.jpeg",
     },
   ];
 
@@ -56,7 +56,7 @@ export default function PageHemodinamia() {
         {/* IMAGEN PRINCIPAL */}
         <div className="w-full mb-14 rounded-3xl overflow-hidden shadow-md">
           <Image
-            src="/Images/hola.jpg"
+            src="/Images/servicios/hemodinamia/Hemodinamia-interhospital-01.jpg"
             alt="Hemodinamia Interhospital"
             width={1600}
             height={800}

@@ -38,7 +38,7 @@ export default function InfoInterlab() {
         {/* IMAGEN PRINCIPAL */}
         <div className="rounded-3xl overflow-hidden shadow-lg mb-20">
           <Image
-            src="/Images/hola.jpg"
+            src="/Images/servicios/laboratorio-interlab/Laboratorio-Interlab-h.jpg"
             width={1500}
             height={600}
             alt="Laboratorio Interlab"

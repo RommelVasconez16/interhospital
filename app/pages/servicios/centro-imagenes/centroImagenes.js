@@ -21,9 +21,9 @@ export default function InfoImagenes() {
   ];
 
   const imagenesSlider = [
-    "/Images/hola.jpg",
-    "/Images/hola.jpg",
-    "/Images/hola.jpg",
+    "/Images/servicios/centro-imagenes/Centro-de-imagenes-002.jpg",
+    "/Images/servicios/centro-imagenes/Centro-de-imagenes-003.jpg",
+    "/Images/servicios/centro-imagenes/Centro-de-imagenes-004.jpg",
   ];
 
   const router = useRouter();
@@ -98,7 +98,7 @@ export default function InfoImagenes() {
           {/* IMAGEN LATERAL */}
           <div className="rounded-3xl overflow-hidden shadow-lg">
             <Image
-              src="/Images/hola.jpg"
+              src="/Images/servicios/centro-imagenes/Centro-de-Imagenes-sede-Av.Bolona.jpg"
               width={800}
               height={600}
               alt="Centro de imágenes"

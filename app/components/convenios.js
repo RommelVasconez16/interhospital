@@ -103,7 +103,7 @@ export default function Convenios() {
               <Image
                 src={item}
                 alt="Convenio médico"
-                width={160}
+                width={250}
                 height={80}
                 className="object-contain max-h-[120px]"
               />

@@ -37,7 +37,7 @@ export default function Hospitalario() {
         {/* IMAGEN PRINCIPAL */}
         <div className="rounded-3xl overflow-hidden shadow-lg mb-16">
           <Image
-            src="/Images/hola.jpg"
+            src="/Images/servicios/servicios-hospitalarios/Servicios-Hospitalarios-de-Pediatria-h.jpg"
             alt="Servicios de Pediatría"
             width={1600}
             height={800}
