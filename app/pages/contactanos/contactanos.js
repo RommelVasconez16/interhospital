@@ -2,8 +2,29 @@
 
 import React, { useState } from "react"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function InfoContact() {
+  const ubicaciones = [
+    {
+      title: "Hospital Interhospital",
+      lines: [
+        "Av. del Bomber Km. 6.5 - Vía a la Costa",
+        "Guayaquil, Ecuador"
+      ],
+    },
+    {
+      title: "Centro de Imágenes",
+      lines: [
+        "Av. Francisco Boloña #715",
+        "Guayaquil, Ecuador"
+      ]
+    }
+  ]
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -96,14 +117,22 @@ export default function InfoContact() {
               lines={["serviciocliente@interhospital.com.ec"]}
             />
 
-            <ContactCard
-              icon={<MapPin className="w-6 h-6 text-red-500" />}
-              title="Ubicación"
-              lines={[
-                "Av. Del Bombero Km. 6.5 Vía a la Costa",
-                "Guayaquil, Ecuador",
-              ]}
-            />
+            <Swiper 
+              modules={[Autoplay]}
+              autoplay={{delay: 4500}}
+              loop
+              className="w-full"
+            >
+              {ubicaciones.map((u, i) => (
+                <SwiperSlide key={i}>
+                  <ContactCard
+                    icon={<MapPin className="w-6 h-6 text-red-500" />}
+                    title={u.title}
+                    lines={u.lines}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
             <ContactCard
               icon={<Clock className="w-6 h-6 text-yellow-600" />}
@@ -114,6 +143,13 @@ export default function InfoContact() {
                 "Farmacia y Centro de Imágenes: 24 horas",
               ]}
             />
+            
+            <style jsx global>{`
+              .ubicaciones-swiper .swiper-pagination {
+              position: relative !important;
+              margin-top: 20px;
+              }
+            `}</style>
           </div>
         </div>
 

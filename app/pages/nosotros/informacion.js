@@ -10,27 +10,71 @@ export default function InfoNosotros(){
     return (
         <section className='flex flex-col min-h-screen'>            
 
-            <section className='container grid lg:grid-cols-2 py-20 px-4 gap-12 items-center mx-auto'>
-                <aside>
-                    <div className='inline-flex items-center gap-2 bg-[#0061A6]/10 text-[#0061A6] px-4 py-2 rounded-full mb-6'>
-                        <Building2 className="w-5 h-5" />
-                        <span className="font-semibold">Quiénes Somos</span>
-                    </div>
-                    <h2 className='text-4xl font-bold mb-6 text-balance'>
-                        Líderes en Tecnología Médica Avanzada
-                    </h2>
-                    <p className='text-lg leading-relaxed' style={{color: "var(--textColor)"}}>
-                        Interhospital es una institución de salud ecuatoriana comprometida con brindar servicios médicos de la más alta calidad. Contamos con tecnología de punta y un equipo de profesionales altamente capacitados. <br/> <br/>
-                        Nuestras instalaciones en Guayaquil están equipadas con la última tecnología médica, permitiéndonos ofrecer diagnósticos precisos y tratamientos efectivos en todas nuestras especialidades.
-                    </p>
+            <section className="relative w-full py-16 lg:py-24 overflow-hidden">
+
+            {/* CONTENIDO */}
+            <div className="justify-center text-center lg:text-left lg:justify-normal container mx-auto grid lg:grid-cols-2 px-4 gap-14 items-center">
+                <aside className="max-w-[560px]">
+                <div className="inline-flex items-center gap-2 bg-[#0061A6]/10 text-[#0061A6] px-4 py-2 rounded-full mb-6">
+                    <Building2 className="w-5 h-5" />
+                    <span className="font-semibold text-sm">Quiénes Somos</span>
+                </div>
+
+                <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold mb-6 leading-tight text-balance">
+                    Líderes en Tecnología Médica Avanzada
+                </h2>
+
+                <p
+                    className="text-base sm:text-lg leading-relaxed"
+                    style={{ color: "var(--textColor)" }}
+                >
+                    Interhospital es una institución de salud ecuatoriana comprometida con brindar
+                    servicios médicos de la más alta calidad. Contamos con tecnología de punta y un
+                    equipo de profesionales altamente capacitados.
+                    <br /><br />
+                    Nuestras instalaciones en Guayaquil están equipadas con la última tecnología médica,
+                    permitiéndonos ofrecer diagnósticos precisos y tratamientos efectivos en todas
+                    nuestras especialidades.
+                </p>
                 </aside>
+
+                {/* Placeholder del grid */}
+                <div className="hidden lg:block" />
+            </div>
+
+            <div className="lg:hidden mt-12 px-4">
+                <div
+                className="relative h-80 w-full overflow-hidden rounded-xl"
+                >
                 <Image
                     src="/Images/NosotrosHospital.jpg"
-                    width={500}
-                    height={500}
-                    alt='InterHospital'
-                    className='relative h-[500px] w-auto rounded-3xl overflow-hidden'
+                    alt="InterHospital"
+                    fill
+                    className="object-cover"
+                    priority
                 />
+                </div>
+            </div>
+
+            {/* IMAGEN DESKTOP – ROMPE EL CONTAINER */}
+            <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-[480px] xl:h-[560px] w-[52vw]">
+                <div
+                className="relative h-full w-full overflow-hidden rounded-l-3xl"
+                style={{
+                    WebkitMaskImage: "linear-gradient(to left, black 78%, transparent 100%)",
+                    maskImage: "linear-gradient(to left, black 78%, transparent 100%)",
+                }}
+                >
+                <Image
+                    src="/Images/NosotrosHospital.jpg"
+                    alt="InterHospital"
+                    fill
+                    priority
+                    className="object-cover"
+                />
+                </div>
+            </div>
+
             </section>
 
             <section className='flex py-20 text-center px-4 justify-center from-[#0061A6]/5 to-[#008D36]/5' style={{backgroundColor: "#F2F8F8"}}>

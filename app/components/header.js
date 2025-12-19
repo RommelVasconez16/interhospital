@@ -129,13 +129,6 @@ export default function Navbar() {
 
         </ul>
 
-        <div className='flex flex-col text-sm px-6 py-2 items-center mt-4 border-gray-200 border-t'>
-            <p className='text-sm text-center font-semibold mt-2'> 
-              Centro de Imágenes <br/>
-              Av. Francisco Boloña #715 <br/>
-              Lunes a Viernes 07h00 - 20h00
-            </p>
-        </div>
       </div>
     </header>
     </>

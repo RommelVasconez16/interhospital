@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from './components/header'
 import BannerInfo from './components/banner-info'
 import ContenedorCard from './components/contenedorCard'
@@ -12,6 +11,8 @@ import Instalaciones from './components/instalaciones'
 import Encuentranos from './components/encuentranos'
 import Whatsapp from './components/whatsapp'
 import Footer from './components/footer'
+import RedSocial from './components/redsocial'
+
 
 export default function Home() {
   return (
@@ -26,26 +27,7 @@ export default function Home() {
       <PackageQuirurgicos/>
       <Convenios/>
       <Instalaciones/>
-      <>
-        {/* Imagen para desktop */}
-        <Image
-          src="/Images/INTERHOSPITAL_REDES_WEB.png"
-          width={1000}
-          height={1000}
-          alt="Banner Desktop"
-          className="hidden sm:block w-full h-[500px] object-cover object-[center_10%]"
-        />
-
-        {/* Imagen para mobile */}
-        <Image
-          src="/Images/REDES_SOCIALES_CELULAR.webp"
-          width={600}
-          height={600}
-          alt="Banner Mobile"
-          className="block sm:hidden w-full h-[500px] object-cover object-center"
-        />
-      </>
-
+      <RedSocial/>
       <Footer/>
       <Whatsapp/>
     </main>

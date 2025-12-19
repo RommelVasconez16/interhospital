@@ -79,7 +79,7 @@ export default function WhatsAppButton() {
           {/* Título */}
           <h3 className="text-lg font-bold mb-2">¿Necesitas ayuda?</h3>
           <p className="text-sm text-muted-foreground mb-4">
-            Escríbenos por WhatsApp y te atenderemos de inmediato
+            Escríbenos nacióuestro personal te responderá en la brevedad posible.
           </p>
 
           {/* Lista */}
@@ -102,6 +102,8 @@ export default function WhatsAppButton() {
                 <div>
                   <div className="text-sm font-semibold">{c.name}</div>
                   <div className="text-xs text-muted-foreground">{c.sede}</div>
+                  <div className="text-xs text-muted-foreground">24/7</div>
+
                 </div>
               </a>
             ))}
