@@ -31,7 +31,7 @@ const servicios = [
         url: "/pages/servicios/hospitalarios"
     },
     {
-        image: "/Images/servicios/hospitalizacion/Hospitalizacion-1.jpg",
+        image: "/Images/servicios/hospitalizacion/Hospitalizacion-s.jpg",
         title: "Hospitalización",
         description: "Interhospital cuenta con 50 habitaciones entre suite, dobles, triple y presidencial, diseñadas para proporcionar comodidad al paciente como a sus visitantes",
         url: "/pages/servicios/hospitalizacion"

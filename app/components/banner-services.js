@@ -33,6 +33,8 @@ export default function BannerServices() {
             object-cover
             object-bottom-right
             md:object-bottom
+            scale-130
+            lg:scale-150
           "
           src="/Videos/VideoService.mp4"
           autoPlay

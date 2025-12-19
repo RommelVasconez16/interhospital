@@ -2,17 +2,16 @@
 
 import React, { useState } from "react"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay } from "swiper/modules"
+import "swiper/css"
 
 export default function InfoContact() {
   const ubicaciones = [
     {
       title: "Hospital Interhospital",
       lines: [
-        "Av. del Bomber Km. 6.5 - Vía a la Costa",
+        "Av. del Bombero Km. 6.5 - Vía a la Costa",
         "Guayaquil, Ecuador"
       ],
     },
@@ -38,17 +37,32 @@ export default function InfoContact() {
   }
 
   return (
-    <section id="contacto" className="py-24 bg-white">
+    <section id="contacto" className="py-16 px-4 sm:px-6 md:px-8 lg:px-0 bg-white">
       <div className="container mx-auto px-4">
 
-        {/* GRID: FORM + INFO */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
+        {/* GRID FORM + INFO */}
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-12 mb-16 sm:mb-20">
 
-          {/* 📩 FORMULARIO */}
-          <div className="p-6 md:p-8 rounded-3xl border shadow-sm bg-white" style={{borderColor: "lab(90.952% 0 -.0000119209)"}}>
+          {/* FORMULARIO */}
+          <div
+            className="
+              w-full
+              max-w-none
+              sm:max-w-[420px]
+              lg:max-w-[520px]
+              mx-auto
+              p-4
+              sm:p-6
+              md:p-8
+              rounded-3xl
+              border
+              shadow-sm
+              bg-white
+            "
+            style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
 
-              {/* Nombre */}
               <FormInput
                 label="Nombre Completo"
                 value={formData.name}
@@ -56,7 +70,6 @@ export default function InfoContact() {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
 
-              {/* Correo */}
               <FormInput
                 type="email"
                 label="Correo Electrónico"
@@ -65,7 +78,6 @@ export default function InfoContact() {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
 
-              {/* Teléfono */}
               <FormInput
                 type="tel"
                 label="Teléfono"
@@ -74,7 +86,6 @@ export default function InfoContact() {
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               />
 
-              {/* Mensaje */}
               <div>
                 <label className="block text-sm font-medium mb-1">Mensaje</label>
                 <textarea
@@ -83,13 +94,25 @@ export default function InfoContact() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
-                  className="w-full rounded-xl border px-4 py-3 text-sm min-h-[120px] resize-none focus:ring-2 
-                  focus:ring-[#0061A6]/40 focus:border-[#0061A6] outline-none transition"
-                  style={{borderColor: "lab(90.952% 0 -.0000119209)"}}
+                  className="
+                    w-full
+                    rounded-xl
+                    border
+                    px-4
+                    py-3
+                    text-sm
+                    min-h-[120px]
+                    resize-none
+                    focus:ring-2
+                    focus:ring-[#0061A6]/40
+                    focus:border-[#0061A6]
+                    outline-none
+                    transition
+                  "
+                  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
                 />
               </div>
 
-              {/* Botón */}
               <button
                 type="submit"
                 className="w-full bg-[#0061A6] hover:bg-[#004f85] text-white h-11 rounded-full font-semibold transition"
@@ -99,9 +122,15 @@ export default function InfoContact() {
             </form>
           </div>
 
-          {/* 📍 INFORMACIÓN */}
-          <div className="space-y-6">
-
+          {/* INFORMACIÓN */}
+          <div
+            className="
+              w-full
+              max-w-[520px]
+              mx-auto
+              space-y-6
+            "
+          >
             <ContactCard
               icon={<Phone className="w-6 h-6 text-[#0061A6]" />}
               title="Teléfonos"
@@ -117,9 +146,9 @@ export default function InfoContact() {
               lines={["serviciocliente@interhospital.com.ec"]}
             />
 
-            <Swiper 
+            <Swiper
               modules={[Autoplay]}
-              autoplay={{delay: 4500}}
+              autoplay={{ delay: 3500 }}
               loop
               className="w-full"
             >
@@ -143,21 +172,16 @@ export default function InfoContact() {
                 "Farmacia y Centro de Imágenes: 24 horas",
               ]}
             />
-            
-            <style jsx global>{`
-              .ubicaciones-swiper .swiper-pagination {
-              position: relative !important;
-              margin-top: 20px;
-              }
-            `}</style>
           </div>
         </div>
 
         {/* 🗺 MAPAS —> CONSERVADOS EXACTAMENTE COMO LOS TENÍAS */}
         <div>
-          <h3 className="text-3xl font-bold text-center mb-10 text-[#0061A6]">Encuéntranos</h3>
+          <h3 className="text-3xl font-bold text-center mb-10 text-[#0061A6]">
+            Encuéntranos
+          </h3>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
             {/* 🏥 Hospital Principal */}
             <div className="rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition bg-white">
@@ -207,13 +231,12 @@ export default function InfoContact() {
 
           </div>
         </div>
-
-      </div>
+        </div>
     </section>
   )
 }
 
-/* COMPONENTES REUTILIZABLES */
+/* COMPONENTES */
 
 function FormInput({ label, type = "text", value, placeholder, onChange }) {
   return (
@@ -225,9 +248,21 @@ function FormInput({ label, type = "text", value, placeholder, onChange }) {
         placeholder={placeholder}
         onChange={onChange}
         required
-        className="w-full rounded-xl border px-4 py-2 h-11 text-sm 
-        focus:ring-2 focus:ring-[#0061A6]/40 focus:border-[#0061A6] outline-none transition"
-        style={{borderColor: "lab(90.952% 0 -.0000119209)"}}
+        className="
+          w-full
+          rounded-xl
+          border
+          px-4
+          py-2
+          h-11
+          text-sm
+          focus:ring-2
+          focus:ring-[#0061A6]/40
+          focus:border-[#0061A6]
+          outline-none
+          transition
+        "
+        style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
       />
     </div>
   )
@@ -235,7 +270,10 @@ function FormInput({ label, type = "text", value, placeholder, onChange }) {
 
 function ContactCard({ icon, title, lines }) {
   return (
-    <div className="p-6 border rounded-2xl shadow-sm hover:shadow-lg transition bg-white" style={{borderColor: "lab(90.952% 0 -.0000119209)"}}>
+    <div
+      className="p-6 border rounded-2xl shadow-sm hover:shadow-lg transition bg-white"
+      style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
+    >
       <div className="flex items-start gap-4">
         <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
           {icon}
@@ -243,7 +281,12 @@ function ContactCard({ icon, title, lines }) {
         <div>
           <h3 className="font-bold text-lg mb-1">{title}</h3>
           {lines.map((line, i) => (
-            <p key={i} className="text-gray-600 text-sm">{line}</p>
+            <p
+              key={i}
+              className="text-gray-600 text-sm break-all leading-relaxed"
+            >
+              {line}
+            </p>
           ))}
         </div>
       </div>

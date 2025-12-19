@@ -24,6 +24,7 @@ export default function WhatsAppButton() {
       sede: "Hospital Ceibos",
       link: "593999999999",
       message: "Hola, necesito información sobre Interhospital.",
+      hora: "24/7",
       color: "#008D36",
       bg: "bg-[#008D36]/10 hover:bg-[#008D36]/20",
     },
@@ -32,6 +33,7 @@ export default function WhatsAppButton() {
       sede: "Sede Ceibos",
       link: "593911111111",
       message: "Hola, quiero agendar una cita en Centro de Imágenes Ceibos.",
+      hora: "7am - 7pm",
       color: "#0061A6",
       bg: "bg-[#0061A6]/10 hover:bg-[#0061A6]/20",
     },
@@ -40,6 +42,7 @@ export default function WhatsAppButton() {
       sede: "Sede Kennedy",
       link: "593922222222",
       message: "Hola, me gustaría consultar disponibilidad en la sede Kennedy.",
+      hora: "7am - 7pm",
       color: "#008D36",
       bg: "bg-[#008D36]/10 hover:bg-[#008D36]/20",
     },
@@ -102,7 +105,7 @@ export default function WhatsAppButton() {
                 <div>
                   <div className="text-sm font-semibold">{c.name}</div>
                   <div className="text-xs text-muted-foreground">{c.sede}</div>
-                  <div className="text-xs text-muted-foreground">24/7</div>
+                  <div className="text-xs text-muted-foreground">{c.hora}</div>
 
                 </div>
               </a>
