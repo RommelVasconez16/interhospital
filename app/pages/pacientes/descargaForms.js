@@ -8,7 +8,7 @@ const pacientedownload = [
     color: "#0061A6",
     textbtn: "Descargar PDF",
     action: "pdf",
-    file: "/SOLICITUD-DE-HISTORIA-CLINICA.pdf",
+    file: "/FCS-23 SOLICITUD DE HISTORIA CLINICA.pdf",
     btnIcon: Download
   },
   {
