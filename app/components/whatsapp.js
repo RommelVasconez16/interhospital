@@ -42,7 +42,7 @@ export default function WhatsAppButton() {
       sede: "Sede Kennedy",
       link: "593922222222",
       message: "Hola, me gustaría consultar disponibilidad en la sede Kennedy.",
-      hora: "7am - 7pm",
+      hora: "7am - 8pm",
       color: "#008D36",
       bg: "bg-[#008D36]/10 hover:bg-[#008D36]/20",
     },
@@ -82,7 +82,7 @@ export default function WhatsAppButton() {
           {/* Título */}
           <h3 className="text-lg font-bold mb-2">¿Necesitas ayuda?</h3>
           <p className="text-sm text-muted-foreground mb-4">
-            Escríbenos nacióuestro personal te responderá en la brevedad posible.
+            Escríbenos nuestro personal te responderá en la brevedad posible.
           </p>
 
           {/* Lista */}
