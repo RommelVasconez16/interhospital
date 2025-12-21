@@ -143,7 +143,7 @@ export default function InfoContact() {
             <ContactCard
               icon={<Mail className="w-6 h-6 text-[#008D36]" />}
               title="Email"
-              lines={["serviciocliente@interhospital.com.ec"]}
+              lines={["servicioalcliente@interhospital.com.ec"]}
             />
 
             <Swiper
@@ -167,7 +167,7 @@ export default function InfoContact() {
               icon={<Clock className="w-6 h-6 text-yellow-600" />}
               title="Horarios de Atención"
               lines={[
-                "Emergencias: 24 horas",
+                "Emergencia: 24 horas",
                 "Laboratorio: 24 horas",
                 "Farmacia y Centro de Imágenes: 24 horas",
               ]}

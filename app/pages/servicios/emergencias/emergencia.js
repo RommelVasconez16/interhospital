@@ -81,11 +81,6 @@ export default function PageEmergencia() {
             radiólogos de guardia; además de los médicos del staff en las
             diferentes especialidades y subespecialidades.
           </p>
-
-          <p>
-            Para agilitar la atención del usuario, el área cuenta con 
-            <strong> dos cajas</strong> destinadas a la admisión y alta de pacientes.
-          </p>
         </div>
       </div>
     </section>

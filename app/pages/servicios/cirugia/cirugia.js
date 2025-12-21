@@ -9,6 +9,7 @@ export default function PageCirugia() {
   const quirurgico = [
     "6 quirófanos generales",
     "1 quirófano para parto",
+    "1 quirófano para cirugía robótica",
     "1 sala de labor de parto",
     "1 sala de pre-operatoria",
     "1 sala de post-operatorio",
@@ -86,7 +87,7 @@ export default function PageCirugia() {
               Centro Quirúrgico
             </h3>
             <p className="text-gray-600 mb-4">
-              Contamos con 7 quirófanos equipados con flujo laminar y 
+              Contamos con 8 quirófanos equipados con flujo laminar y 
               presión positiva, diseñados para garantizar la máxima seguridad.
             </p>
 

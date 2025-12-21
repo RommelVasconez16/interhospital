@@ -119,37 +119,38 @@ export default function PopupPoliticas({ open, onClose }) {
             </li>
 
             <li>
-              Horarios de visita Interhospital:
-              <ul className="list-decimal ml-8 space-y-3">
+              Horarios de visita establecidos en INTERHOSPITAL:
 
+              <ul className="list-decimal ml-8 space-y-3">
                 <li>
-                  Hospitalización: 08h00 a 20h00
+                  En las áreas de <strong>HOSPITALIZACIÓN:</strong> 08h00 a 20h00.
                   <ul className="list-disc ml-8 space-y-1">
                     <li>Máximo dos visitantes por paciente.</li>
                     <li>
-                      Menores de 14 años pueden ingresar acompañados y supervisados.  
-                      El paciente <strong>no</strong> puede supervisar al menor.
+                      En caso de pacientes en habitaciones suite, presidencial o maternidad se limitan de dos o cuatros personas
                     </li>
-                    <li>Tiempo de visita para menores: 1 hora.</li>
+                    <li>
+                      <strong><em>En ningún momento podrá ser el paciente el supervisor del menor.</em></strong>
+                      El tiempo de visita para menores de edad es de una hora
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  UCI: Lunes a domingo de 13h00 a 14h00
+                  En las áreas de <strong>TERAPIA INTENSIVA:</strong> Lunes a domingo de 12h30 a 14h00
+                  y 17h30 a 18h30.
                   <ul className="list-disc ml-8 space-y-1">
                     <li>Máximo un visitante por paciente.</li>
-                    <li>No se permiten menores.</li>
+                    <li>No se permiten menores de edad.</li>
                   </ul>
                 </li>
 
                 <li>
-                  UCIN: 12h00–12h30 y 17h00–17h30
+                  En las áreas de UCIN: Lunes a domingo de 12h00 a 12h30 y 17h00 a 17h30
                   <ul className="list-disc ml-8 space-y-1">
                     <li>Plan Canguro: 12h00 a 16h00</li>
                     <li>
                       Lactario: 24 horas.  
-                      Interhospital no se responsabiliza por objetos perdidos.
-                      Contactos: Caja Ext 102-103 – Convenios Ext 101 – Servicio al Cliente Ext 106.
                     </li>
                   </ul>
                 </li>
@@ -160,17 +161,41 @@ export default function PopupPoliticas({ open, onClose }) {
           </ul>
 
           <p>
-            Si tiene alguna queja o sugerencia, escribir a  
-            <strong> servicioalcliente@interhospital.com.ec</strong>.
+            <strong>
+              INTERHOSPITAL no se responsabiliza por objetos perdidos u olvidados dentro o fuera de la habitación
+            </strong>
+          </p>
+          <p>
+            <strong>
+              Para comunicarse con:
+            </strong>
+          </p>
+
+          <ul className="list-decimal ml-8 space-y-3">
+            <li>
+              Caja: Ext. 102-103
+            </li>
+            <li>
+              Convenios y Seguros: Ext. 101
+            </li>
+            <li>
+              Servicio al Cliente: Ext. 106
+            </li>
+          </ul>
+
+          <p>
+            <strong>
+              Si tiene alguna queja o sugerencia, solicitamos nos haga llegar al correo electrónico:{' '}
+              <a
+                href="mailto:servicioalcliente@interhospital.com.ec?subject=Queja o sugerencia&body=Buen día,%0D%0A%0D%0AQuisiera comunicar lo siguiente:"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                servicioalcliente@interhospital.com.ec
+              </a>
+            </strong>
           </p>
 
         </div>
-        <Image 
-            src="/Images/Politica-de-acceso.jpg"
-            width={800}
-            height={800}
-            className="mt-5"
-        />
       </div>
 
 

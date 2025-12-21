@@ -87,7 +87,7 @@ export default function InfoNosotros(){
                         Nuestra razón de ser
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed" style={{color: "var(--textColor)"}}>
-                        Somos una corporación médica vanguardista que ofrece servicios especializados de salud, asegurnado a la comunidad un tratamiento oportuno y eficaz, cumpliendo estándares de calidad con calidez en su atención.
+                        Somos una corporación médica vanguardista que ofrece servicios especializados de salud, asegurando a la comunidad un tratamiento oportuno y eficaz, cumpliendo estándares de calidad con calidez en su atención.
                     </p>
                 </div>
             </section>
@@ -136,7 +136,7 @@ export default function InfoNosotros(){
                         Hacia donde vamos
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed" style={{color: "var(--textColor)"}}>
-                        Ser líderes en innovación y transformación en servicios de salud, convirtiéndonos en un complejo hospitalario con reconomiento nacional e internacional, basados en atención prfesional en busca del bienestar de los pacientes y la comunidad.
+                        Ser líderes en innovación y transformación en servicios de salud, convirtiéndonos en un complejo hospitalario con reconomiento nacional e internacional, basados en atención profesional en busca del bienestar de los pacientes y la comunidad.
                     </p>
                 </div>
             </section>

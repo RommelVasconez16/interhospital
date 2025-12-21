@@ -44,7 +44,6 @@ export default function PopupInstructivo({ open, onClose }) {
 
           <ol className="list-decimal list-inside space-y-1">
             <li>Documento de identidad.</li>
-            <li>Carnet de vacunación de covid-19.</li>
           </ol>
 
           <p>

@@ -26,7 +26,7 @@ const servicios = [
     },
     {
         image: "/Images/servicios/servicios-hospitalarios/servicios-hospitalarios-pediatria.jpg",
-        title: "Servicios Hospitalarios",
+        title: "Servicios de Pediatria",
         description: "Fomenta y protege la salud integrar y el bienestar de los niños y sus familias en cada una de nuestras áreas",
         url: "/pages/servicios/hospitalarios"
     },

@@ -116,16 +116,16 @@ export default function ContenedorCard() {
         >
             <SwiperSlide>
             <div className="text-sm text-gray-700 space-y-2">
-                <p className="font-semibold">Horario de visita hospital</p>
+                <p className="font-semibold">Horarios de visitas</p>
                 <p>Hospitalización: <span className="font-semibold">08h00 a 20h00</span></p>
-                <p>Terapia Intensiva: <span className="font-semibold">13h00 a 13h30</span></p>
+                <p>Terapia Intensiva: <span className="font-semibold">12h30pm - 14h00pm / 17h30pm - 18h30pm</span></p>
                 <p>Terapia Intensiva Neonatal: <span className="font-semibold">12h00 a 12h30 / 17h00 a 17h30</span></p>
             </div>
             </SwiperSlide>
 
             <SwiperSlide>
             <div className="text-sm text-gray-700 space-y-2">
-                <p className="font-semibold">Horario de atención hospital</p>
+                <p className="font-semibold">Hospital</p>
                 <p>Emergencia: <span className="font-semibold">24 horas</span></p>
                 <p>Laboratorio: <span className="font-semibold">24 horas</span></p>
                 <p>Farmacia e Imágenes: <span className="font-semibold">24 horas</span></p>
@@ -134,7 +134,7 @@ export default function ContenedorCard() {
 
             <SwiperSlide>
             <div className="text-sm text-gray-700 space-y-2">
-                <p className="font-semibold">Horario de atención Centro de Imágenes</p>
+                <p className="font-semibold">Centro de Imágenes</p>
                 <p>Av. Francisco Boloña #715</p>
                 <p>Lunes a Viernes:  <span className="font-semibold">07h00 - 20h00</span></p>           
             </div>
