@@ -1,10 +1,12 @@
-export async function getMedicos() {
+const {API_MEDICOS_TOKEN, HOST_INTERHOSPITAL} = process.env
+
+export async function getMedicos(url) {
   try {
-    const res = await fetch("https://interhospital.com.ec/api/medicos", {
+    const res = await fetch(`${HOST_INTERHOSPITAL}/api/${url}`, {
       method: "GET",
       cache: "no-store",
       headers: {
-        Authorization: `Bearer ${process.env.API_MEDICOS_TOKEN}`,
+        Authorization: `Bearer ${API_MEDICOS_TOKEN}`,
       }
     });
 

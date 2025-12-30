@@ -5,13 +5,23 @@ import Info from './informacioncifras/info';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import useCountUp from '../utils/useCountUp';
+import useInViewAnimation from '../utils/useInViewAnimation';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function NuestrasCifras() {
-  return (
-    <section className="flex flex-col justify-center items-center py-16 gap-12 pr-10 pl-10">
+  const { ref, isVisible } = useInViewAnimation();
 
+  return (
+    <section
+      ref={ref}
+      className={`
+        flex flex-col justify-center items-center py-16 gap-12 pr-10 pl-10
+        transition-all duration-1000 ease-out
+        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+      `}
+    >
       <div className="flex flex-col items-center text-center">
         <div
           className="flex flex-row gap-1.5 items-center p-2 rounded-4xl mb-4"

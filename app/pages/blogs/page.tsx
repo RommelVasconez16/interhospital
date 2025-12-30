@@ -2,18 +2,18 @@ export const dynamic = "force-dynamic";
 
 import Header from '../../components/header'
 import Footer from '../../components/footer'
-import { getMedicos } from '../../lib/medicoService';
-import { parseMedicos } from '../../lib/parseMedicos';
-import InfoMedico from './informacion'
+import { Api } from '../../lib/strapiService';
+import { parseArticles } from '../../lib/parseStrapi';
+import Blog from './blog'
 import Whatsapp from '../../components/whatsapp'
 
 export default async function Medicos(){
 
-    const data = await getMedicos("medicos");
-    const medicos = parseMedicos(data);
+    const data = await Api("articles?publicationState=live&populate=imagePrincipal");
+    const blog = parseArticles(data);
 
     return(
-        <section className='flex flex-col'>
+        <section className='flex flex-col pt-[100px]'>
             <Header/>
             <section className="py-20 relative overflow-hidden">
                 <div className="absolute inset-0">
@@ -26,12 +26,12 @@ export default async function Medicos(){
                 </div>
                 <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance text-white">Nuestros Médicos</h1>
-                    <p className="text-lg text-white/90 text-pretty">Equipo de profesionales altamente calificados comprometidos con tu salud</p>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance text-white">Blog de Noticias</h1>
+                    <p className="text-lg text-white/90 text-pretty">"INFORMACION CAMBIAR"</p>
                 </div>
                 </div>
             </section>
-            <InfoMedico medicos={medicos} />
+            <Blog blog={blog} />
             <Footer/>     
             <Whatsapp/>       
         </section>

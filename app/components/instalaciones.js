@@ -85,7 +85,7 @@ export default function LocationShowcase() {
           {/* CARD 1 */}
           <LocationCard
             image="/Images/NosotrosHospital.jpg"
-            title="Hospital Principal - Ceibos"
+            title="Hospital - Ceibos"
             address="Av. del Bombero km 6.5, vía a la costa"
             badge="Abierto 24/7"
             badgeColor="#008D36"

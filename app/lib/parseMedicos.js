@@ -1,6 +1,4 @@
 export function parseMedicos(response) {
-  // Algunas respuestas pueden venir como { data: [...] } y otras directamente como [...]
-  // También puede venir "[]" desde el catch del fetch. Normalizamos a un array siempre.
   const rows = Array.isArray(response?.data)
     ? response.data
     : Array.isArray(response)

@@ -24,7 +24,7 @@ export default function Convenios() {
         className="
           hidden lg:block
           absolute right-0 top-1/2 -translate-y-1/2
-          w-[380px] h-[380px]
+          w-[500px] h-[400px]
           opacity-10
           bg-no-repeat bg-contain
           pointer-events-none
@@ -69,7 +69,7 @@ export default function Convenios() {
         </div>
 
         {/* Texto */}
-        <p className="text-base sm:text-md text-gray-700">
+        <p className="text-base sm:text-md text-gray-700 mb-5">
           Aceptamos las principales aseguradoras y convenios médicos del país,
           brindándote respaldo y tranquilidad.
         </p>
@@ -87,7 +87,7 @@ export default function Convenios() {
           768: { slidesPerView: 4 },
           1024: { slidesPerView: 5 },
         }}
-        className="w-full"
+        className="w-full mb-5"
       >
         {convenios.map((item, index) => (
           <SwiperSlide key={index}>

@@ -155,7 +155,7 @@ export default function InfoMedicos({ medicos }) {
                     <img
                       src={getDoctorImage(doctor)}
                       alt={doctor.nombreCompleto}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
 
@@ -335,7 +335,7 @@ export default function InfoMedicos({ medicos }) {
             {/* ================= SIMILARES ================= */}
             {paginatedSimilarDoctors.length > 0 && (
               <div className="mt-12">
-                <h3 className="text-2xl font-bold mb-6">
+                <h3 className="text-2xl font-bold mb-6" style={{color: "var(--text-color-one)"}}>
                   Especialistas Similares
                 </h3>
 
@@ -351,7 +351,7 @@ export default function InfoMedicos({ medicos }) {
                     >
                       <img
                         src={getDoctorImage(doctor)}
-                        className="aspect-square w-full object-cover"
+                        className="aspect-square w-full object-cover object-top"
                       />
 
                       <div className="p-6">
