@@ -19,6 +19,7 @@ export async function Api(url){
       throw new Error("Error al obtener la información");
     }
 
+    console.log("Exitoso")
     return await res.json();
   } catch (error) {
     console.error("Error fetch del servidor:", error);

@@ -1,8 +1,9 @@
 export function getDoctorImage(doctor) {
-  if (doctor.imagen && doctor.imagen.trim() !== "") {
-    return doctor.imagen;
+  if (doctor.imagen?.url) {
+    return doctor.imagen.url;
   }
 
+  // Fallback por género
   if (doctor.genero === "M") {
     return "/Images/default_masculino.webp";
   }

@@ -3,8 +3,8 @@ import Header from "../../../components/header";
 import Footer from "../../../components/footer";
 import Whatsapp from "../../../components/whatsapp";
 import BlogIndividual from "../../../components/blogOne";
-import { Api } from "../../../lib/strapiService";
-import { parseArticles } from "../../../lib/parseStrapi";
+import { Api } from "../../../lib/connectionService";
+import { parseArticles } from "../../../lib/parseBlog";
 
 export default async function BlogDetail() {
   const headersList = await headers();

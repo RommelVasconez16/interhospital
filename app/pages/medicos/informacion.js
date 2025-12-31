@@ -35,7 +35,7 @@ export default function InfoMedicos({ medicos }) {
      FILTRAR SOLO MÉDICOS ACTIVOS (ESTADO "D")
   ===================================================== */
   const activeDoctors = medicos.filter(
-    (doctor) => doctor.estado === "D"
+    (doctor) => doctor.estado === true
   );
 
   /* =====================================================

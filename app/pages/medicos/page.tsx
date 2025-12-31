@@ -2,15 +2,17 @@ export const dynamic = "force-dynamic";
 
 import Header from '../../components/header'
 import Footer from '../../components/footer'
-import { getMedicos } from '../../lib/medicoService';
+import { Api } from '../../lib/connectionService';
 import { parseMedicos } from '../../lib/parseMedicos';
 import InfoMedico from './informacion'
 import Whatsapp from '../../components/whatsapp'
 
 export default async function Medicos(){
 
-    const data = await getMedicos("medicos");
+    const data = await Api("medicos");
     const medicos = parseMedicos(data);
+
+    console.log("Medicos: {}", medicos)
 
     return(
         <section className='flex flex-col'>

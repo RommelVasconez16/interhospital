@@ -1,27 +1,28 @@
 export function parseMedicos(response) {
-  const rows = Array.isArray(response?.data)
-    ? response.data
-    : Array.isArray(response)
-    ? response
-    : [];
+  const rows = Array.isArray(response?.data) ? response.data : [];
 
   return rows.map((m) => ({
     id: m.id,
-    nombreCompleto: `${m.NOMBRES} ${m.APELLIDOS}`,
-
+    nombreCompleto: `${m.nombres} ${m.apellidos}`,
     especialidad: [
-      m.ESPECIALIDAD_1,
-      m.ESPECIALIDAD_2,
-      m.ESPECIALIDAD_3,
+      m.especialidad_1,
+      m.especialidad_2,
+      m.especialidad_3,
     ].filter(Boolean),
 
-    estado: m.ESTADO,
-    piso: m.PISO,
-    correo: m.CORREO_ELECTRONICO,
-    consultorio: m.CONSULTORIO,
-    numeroContacto: m.NUMERO_CONTACTO,
-    horario: m.HORARIO_ATENCION,
-    imagen: m.IMAGEN,
-    genero: m.GENERO,
+    estado: m.estado,
+    correo: m.email,
+    consultorio: m.consultorio,
+    numeroContacto: m.numero_contacto,
+    horario: m.horario_atencion,
+    genero: m.genero,
+    piso: m.piso,
+
+    imagen: m.imagenUrl
+      ? {
+          url: m.imagenUrl,
+          alt: m.nombreCompleto || "Doctor Interhospital",
+        }
+      : null,
   }));
 }

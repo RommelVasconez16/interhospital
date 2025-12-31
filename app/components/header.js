@@ -14,7 +14,7 @@ export default function Navbar() {
     { label: "Nosotros", href: "/pages/nosotros"},
     { label: "Medicos", href: "/pages/medicos"},
     { label: "Pacientes", href: "/pages/pacientes"},
-    { label: "Informate", href: "/pages/blogs"},
+    /*{ label: "Informate", href: "/pages/blogs"},*/
     { label: "Contacto", href: "/pages/contactanos"}
   ]
 

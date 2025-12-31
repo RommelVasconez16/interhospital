@@ -2,8 +2,8 @@ export const dynamic = "force-dynamic";
 
 import Header from '../../components/header'
 import Footer from '../../components/footer'
-import { Api } from '../../lib/strapiService';
-import { parseArticles } from '../../lib/parseStrapi';
+import { Api } from '../../lib/connectionService';
+import { parseArticles } from '../../lib/parseBlog';
 import Blog from './blog'
 import Whatsapp from '../../components/whatsapp'
 
