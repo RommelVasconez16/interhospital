@@ -1,37 +1,37 @@
 
 const servicios = [
     {
-        image: "/Images/servicios/emergencia/emergencia-001.jpg",
+        image: "/Images/servicios/emergencia/EMERGENCIA-SERVICIOS.webp",
         title: "Emergencias",
         description: "En Interhospital nuestra área de Emergencia brinda atención las 24 horas durante los 365 días del año",
         url: "/pages/servicios/emergencias"
     },
     {
-        image: "/Images/servicios/hemodinamia/Hemodinamia-s.jpg",
+        image: "/Images/servicios/hemodinamia/HEMODINAMIA-SERVICIOS.webp",
         title: "Hemodinamia",
         description: "El Servicio de Hemodinamia contamos con el equipamiento y personal Médico Especializado",
         url: "/pages/servicios/hemodinamia"
     },
     {
-        image: "/Images/servicios/cirugia/Cirugia-s-2.jpg",
+        image: "/Images/servicios/cirugia/CIRUGIA-SERVICIOS.webp",
         title: "Cirugía",
         description: "En Interhospital contamos con la más alta tecnología y personal altamente calificado para ofrecer a nuestro pacientes cirugías de alta complejidad",
         url: "/pages/servicios/cirugia"
     },
     {
-        image: "/Images/servicios/terapia-intensiva/terapiaintensiva.jpg",
+        image: "/Images/servicios/terapia-intensiva/TERAPIA-INTENSIVA-SERVICIOS.webp",
         title: "Terapia Intensiva",
         description: "Los pacientes críticos requieren de una atención médica de alta complejidad",
         url: "/pages/servicios/terapia-intensiva"
     },
     {
-        image: "/Images/servicios/servicios-hospitalarios/servicios-hospitalarios-pediatria.jpg",
+        image: "/Images/servicios/servicios-hospitalarios/SERVICIOS-DE-PEDIATRIA-SERVICIOS.webp",
         title: "Servicios de Pediatria",
         description: "Fomenta y protege la salud integrar y el bienestar de los niños y sus familias en cada una de nuestras áreas",
         url: "/pages/servicios/hospitalarios"
     },
     {
-        image: "/Images/servicios/hospitalizacion/Hospitalizacion-s.jpg",
+        image: "/Images/servicios/hospitalizacion/HOSPITALIZACION-SERVICIOS.webp",
         title: "Hospitalización",
         description: "Interhospital cuenta con 50 habitaciones entre suite, dobles, triple y presidencial, diseñadas para proporcionar comodidad al paciente como a sus visitantes",
         url: "/pages/servicios/hospitalizacion"

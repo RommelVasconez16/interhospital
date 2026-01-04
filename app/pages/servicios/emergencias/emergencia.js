@@ -36,7 +36,7 @@ export default function PageEmergencia() {
         {/* IMAGEN PRINCIPAL */}
         <div className="w-full mb-12 overflow-hidden rounded-3xl shadow-lg">
           <Image
-            src="/Images/servicios/emergencia/Emergencia-3.jpg"
+            src="/Images/servicios/emergencia/EMERGENCIA-CONTENIDO.webp"
             alt="Emergencias Interhospital"
             width={1600}
             height={800}
