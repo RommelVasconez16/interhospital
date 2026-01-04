@@ -120,10 +120,92 @@ export default function PageCirugia() {
           </div>
         </div>
 
+        <div className="mt-20">
+
+          {/* ===================== CIRUGÍA ROBÓTICA ===================== */}
+          <section className="bg-[#F7FAFC] rounded-3xl p-10 md:p-14">
+
+            {/* TÍTULO */}
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0061A6] text-center mb-6">
+              Cirugía Robótica
+            </h2>
+
+            <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-12 leading-relaxed">
+              En INTERHOSPITAL damos un paso firme hacia el futuro de la medicina con la
+              incorporación, desde diciembre de 2024, de la Cirugía Robótica: una
+              tecnología de última generación que permite procedimientos más precisos,
+              mínimamente invasivos y con mejores resultados para nuestros pacientes.
+            </p>
+
+            {/* IMAGEN PRINCIPAL */}
+            <div className="rounded-3xl overflow-hidden shadow-lg mb-14">
+              <Image
+                src="/Images/servicios/cirugia/Cirugia-h1.jpg"
+                alt="Cirugía Robótica Interhospital"
+                width={1600}
+                height={800}
+                className="w-full h-[380px] object-cover"
+              />
+            </div>
+
+            {/* CONTENIDO EN GRID */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+              {/* ¿QUÉ ES? */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  ¿Qué es la cirugía robótica?
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Es una técnica quirúrgica asistida por el sistema robótico
+                  <strong> SSI MANTRA</strong>, controlado en todo momento por el cirujano.
+                  Ofrece una visualización 3D de alta definición y movimientos más finos
+                  que la mano humana, potenciando la precisión del especialista.
+                </p>
+              </div>
+
+              {/* BENEFICIOS */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  Beneficios para el paciente
+                </h3>
+
+                <ul className="space-y-3">
+                  {[
+                    "Menor tiempo de hospitalización",
+                    "Menor sangrado y menor riesgo de complicaciones",
+                    "Cicatrices más pequeñas",
+                    "Menor dolor postoperatorio",
+                    "Recuperación más rápida y retorno temprano a sus actividades",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle className="text-[#0061A6] w-5 h-5 mt-1" />
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* MENSAJE FINAL */}
+            <div className="mt-14 text-center max-w-4xl mx-auto">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                En INTERHOSPITAL, la cirugía robótica representa un compromiso con la
+                innovación, la seguridad y la atención humana. Nuestros especialistas
+                están altamente capacitados para ofrecer intervenciones quirúrgicas más
+                seguras, precisas y efectivas.
+              </p>
+            </div>
+
+          </section>
+        </div>
+x
+
         {/* PAQUETES QUIRÚRGICOS */}
         <div className="mt-20">
           <PackageQuirurgicos />
         </div>
+
       </div>
     </section>
   );

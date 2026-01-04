@@ -49,12 +49,6 @@ const servicios = [
         url: "/pages/servicios/centro-imagenes"
     },
     {
-        image: "/Images/servicios/clinica-mujer/Clinica-de-la-mujer-s.jpg",
-        title: "Clínica de la mujer",
-        description: "Contamos con un espacio diseñado especialmente para la mujer, con diversos servicios",
-        url: "/pages/servicios/clinica-mujer"
-    },
-    {
         image: "/Images/servicios/laboratorio-interlab/Laboratorio-Interlab-s.jpg",
         title: "Laboratorio Interlab",
         description: "Interlab ofrece un servicio de medicina de laboratorio, con las más amplias cartera en servicios de laboratorio clínico",
@@ -62,7 +56,7 @@ const servicios = [
     },
     {
         image: "/Images/servicios/farmacia-911/Farmacias-911-s.jpg",
-        title: "Farmacia 911",
+        title: "Farmacia Externa",
         description: "El centro hospitalario Interhospital ofrece el servicio de una Farmacia Externa que brinda una atención 24 horas diarias, 365 días del año",
         url: "/pages/servicios/farmacia-911"
     },

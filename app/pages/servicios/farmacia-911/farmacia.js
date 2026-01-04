@@ -24,7 +24,7 @@ export default function InfoFarmacia() {
         {/* TÍTULO Y DESCRIPCIÓN */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-[#0061A6] mb-4">
-            Farmacia 911
+            Farmacia Externa
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed">
