@@ -24,6 +24,25 @@ export default function InfoContact() {
     }
   ]
 
+  const horarioAtencion = [
+    {
+      title: "Horarios de visitas",
+      lines: [
+        "Hospitalización: 08h00 a 20h00",
+        "Terapia Intensiva: 12h30pm - 14h00pm / 17h30pm - 18h30pm",
+        "Terapia Intensiva Neonatal: 12h00 a 12h30 / 17h00 a 17h30"
+      ]
+    },
+    {
+      title: "Horarios de Atención",
+      lines: [
+        "Emergencia: 24 horas",
+        "Laboratorio: 24 horas",
+        "Farmacia y Centro de Imágenes: 24 horas",
+      ]
+    }
+  ]
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -163,15 +182,22 @@ export default function InfoContact() {
               ))}
             </Swiper>
 
-            <ContactCard
-              icon={<Clock className="w-6 h-6 text-yellow-600" />}
-              title="Horarios de Atención"
-              lines={[
-                "Emergencia: 24 horas",
-                "Laboratorio: 24 horas",
-                "Farmacia y Centro de Imágenes: 24 horas",
-              ]}
-            />
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{ delay: 3500 }}
+              loop
+              className="w-full"
+            >
+              {horarioAtencion.map((u, i) => (
+                <SwiperSlide key={i}>
+                  <ContactCard
+                    icon={<MapPin className="w-6 h-6 text-yellow-600" />}
+                    title={u.title}
+                    lines={u.lines}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
 

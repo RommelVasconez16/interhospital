@@ -22,7 +22,7 @@ export default function WhatsAppButton() {
     {
       name: "Atención al Cliente",
       sede: "Hospital Ceibos",
-      link: "593999999999",
+      link: "593992291064",
       message: "Hola, necesito información sobre Interhospital.",
       hora: "24/7",
       color: "#008D36",
@@ -31,7 +31,7 @@ export default function WhatsAppButton() {
     {
       name: "Centro de Imágenes",
       sede: "Sede Ceibos",
-      link: "593911111111",
+      link: "593979590886",
       message: "Hola, quiero agendar una cita en Centro de Imágenes Ceibos.",
       hora: "7am - 7pm",
       color: "#0061A6",
@@ -40,7 +40,7 @@ export default function WhatsAppButton() {
     {
       name: "Centro de Imágenes",
       sede: "Sede Kennedy",
-      link: "593922222222",
+      link: "593982900374",
       message: "Hola, me gustaría consultar disponibilidad en la sede Kennedy.",
       hora: "7am - 8pm",
       color: "#008D36",
