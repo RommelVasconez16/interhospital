@@ -11,7 +11,8 @@ export default function MenuAlimenticio(){
             <HeroSection 
                 image="/Images/interhospitalportada.jpg"
                 title="Menu Alimenticio"
-                subtitle=""
+                subtitle="Te presentamos nuestro menú semanal, diseñado para brindar una
+            alimentación equilibrada y saludable."
             />
             <Menu/>
             <Footer/>

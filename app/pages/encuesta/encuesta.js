@@ -5,16 +5,6 @@ export default function Encuesta() {
     <section className="py-10 sm:py-16 bg-[#F7FAFC]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
 
-        {/* ================= TÍTULO ================= */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0061A6] text-center mb-4">
-          Encuesta de Satisfacción CDI
-        </h2>
-
-        <p className="text-sm sm:text-base text-gray-600 text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          Su opinión es muy importante para nosotros. Por favor, complete la
-          siguiente encuesta para ayudarnos a mejorar nuestros servicios.
-        </p>
-
         <form className="space-y-8 sm:space-y-12">
 
           {/* ================= DATOS GENERALES ================= */}
