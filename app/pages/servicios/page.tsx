@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import Header from '../../components/header'
 import Footer from '../../components/footer'
 import InformacionServicios from './informacion'
@@ -9,7 +11,9 @@ export default function Servicios(){
         <section className='flex flex-col'>
             <Header/>
             <HeroSectionService/>
-            <InformacionServicios/>
+            <Suspense fallback={null}>
+                <InformacionServicios/>
+            </Suspense>
             <Footer/>
             <Whatsapp/>
         </section>
