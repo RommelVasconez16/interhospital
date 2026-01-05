@@ -11,7 +11,8 @@ export default function EncuestaSatisfaccion(){
             <HeroSection 
                 image="/Images/pacienteportada.jpg"
                 title="Encuesta de Satisfaccion"
-                subtitle="En Interhospital valoramos su opinión. Por ello, deseamos conocer su experiencia, ya sea en calidad de paciente o como representante del paciente."
+                subtitle="Su opinión es muy importante para nosotros. Por favor, complete la
+          siguiente encuesta para ayudarnos a mejorar nuestros servicios."
             />
             <Encuesta/>
             <Footer/>
