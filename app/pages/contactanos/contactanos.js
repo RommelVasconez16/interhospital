@@ -9,7 +9,7 @@ import "swiper/css"
 export default function InfoContact() {
   const ubicaciones = [
     {
-      title: "Hospital Interhospital",
+      title: "Hospital",
       lines: [
         "Av. del Bombero Km. 6.5 - Vía a la Costa",
         "Guayaquil, Ecuador"
