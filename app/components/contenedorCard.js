@@ -102,54 +102,65 @@ export default function ContenedorCard() {
 
 
         {/* 3 — Slider de Horarios */}
-        <div className="p-6 sm:p-8 text-justify">
-        <h3 className="text-lg font-bold text-[#1D70B7] mb-4">
+        <div className="p-6 sm:p-8">
+          <h3 className="text-lg font-bold text-[#1D70B7] mb-4">
             Horarios de visita y atención
-        </h3>
+          </h3>
 
-        <Swiper
+          <Swiper
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
             autoplay={{ delay: 3300 }}
             loop={true}
             className="w-full horarios-swiper"
-        >
+          >
             <SwiperSlide>
-            <div className="text-sm text-gray-700 space-y-2">
+              <div className="text-sm text-gray-700 space-y-2">
                 <p className="font-semibold">Horarios de visitas</p>
                 <p>Hospitalización: <span className="font-semibold">08h00 a 20h00</span></p>
                 <p>Terapia Intensiva: <span className="font-semibold">12h30pm - 14h00pm / 17h30pm - 18h30pm</span></p>
                 <p>Terapia Intensiva Neonatal: <span className="font-semibold">12h00 a 12h30 / 17h00 a 17h30</span></p>
-            </div>
+              </div>
             </SwiperSlide>
 
             <SwiperSlide>
-            <div className="text-sm text-gray-700 space-y-2">
+              <div className="text-sm text-gray-700 space-y-2">
                 <p className="font-semibold">Hospital</p>
                 <p>Emergencia: <span className="font-semibold">24 horas</span></p>
                 <p>Laboratorio: <span className="font-semibold">24 horas</span></p>
                 <p>Farmacia e Imágenes: <span className="font-semibold">24 horas</span></p>
-            </div>
+              </div>
             </SwiperSlide>
 
             <SwiperSlide>
-            <div className="text-sm text-gray-700 space-y-2">
+              <div className="text-sm text-gray-700 space-y-2">
                 <p className="font-semibold">Centro de Imágenes</p>
                 <p>Av. Francisco Boloña #715</p>
-                <p>Lunes a Viernes:  <span className="font-semibold">07h00 - 20h00</span></p>           
-            </div>
+                <p>Lunes a Viernes: <span className="font-semibold">07h00 - 20h00</span></p>
+              </div>
             </SwiperSlide>
-        </Swiper>
+          </Swiper>
 
-        <style jsx global>{`
-            .horarios-swiper .swiper-pagination {
-            position: relative !important;
-            margin-top: 22px; /* Ajusta la distancia a tu gusto */
+          <style jsx global>{`
+            .horarios-swiper .swiper-wrapper {
+              display: flex;
+              align-items: center;
             }
-        `}</style>
+
+            .horarios-swiper .swiper-slide {
+              display: flex;
+            }
+
+            .horarios-swiper .swiper-pagination {
+              position: relative !important;
+              margin-top: 22px;
+            }
+          `}</style>
         </div>
 
+
       </div>
+
     </section>
   );
 }
