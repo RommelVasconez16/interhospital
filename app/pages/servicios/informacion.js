@@ -3,11 +3,24 @@
 import Image from "next/image";
 import servicios from "./servicios";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function InfoServicios() {
-  const [currentPage, setCurrentPage] = useState(1);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   const ITEMS_PER_PAGE = 6;
+
+  // 1️⃣ Leer página desde la URL
+  const pageFromUrl = Number(searchParams.get("page")) || 1;
+  const [currentPage, setCurrentPage] = useState(pageFromUrl);
+
+  // 2️⃣ Sincronizar estado → URL
+  useEffect(() => {
+    router.replace(`?page=${currentPage}`, { scroll: false });
+  }, [currentPage, router]);
 
   const totalPages = Math.max(1, Math.ceil(servicios.length / ITEMS_PER_PAGE));
   const safePage = Math.min(currentPage, totalPages);
@@ -37,7 +50,6 @@ export default function InfoServicios() {
               borderColor: "lab(90.952% 0 -.0000119209)",
             }}
           >
-            {/* Imagen FULL responsive */}
             <div className="w-full h-[180px] sm:h-[200px] md:h-[220px] overflow-hidden">
               <Image
                 src={servicio.image}
@@ -57,7 +69,6 @@ export default function InfoServicios() {
                 {servicio.description}
               </p>
 
-              {/* Botón centrado */}
               <div className="flex justify-center mt-2">
                 <Link
                   href={servicio.url}
@@ -77,20 +88,18 @@ export default function InfoServicios() {
         ))}
       </div>
 
-      {/* PAGINACIÓN RESPONSIVE */}
+      {/* PAGINACIÓN */}
       {servicios.length > ITEMS_PER_PAGE && (
         <div className="flex flex-row items-center justify-center gap-4 mt-10">
 
           <button
-            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
             disabled={safePage === 1}
-            className={`
-              px-5 py-2 rounded-full border text-sm
+            className={`px-5 py-2 rounded-full border text-sm
               ${safePage === 1 
                 ? "opacity-40 cursor-not-allowed"
                 : "hover:bg-[#0061A6]/10 cursor-pointer"
-              }
-            `}
+              }`}
             style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
           >
             Anterior
@@ -101,15 +110,13 @@ export default function InfoServicios() {
           </span>
 
           <button
-            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
             disabled={safePage === totalPages}
-            className={`
-              px-5 py-2 rounded-full border text-sm
+            className={`px-5 py-2 rounded-full border text-sm
               ${safePage === totalPages 
                 ? "opacity-40 cursor-not-allowed"
                 : "hover:bg-[#0061A6]/10 cursor-pointer"
-              }
-            `}
+              }`}
             style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
           >
             Siguiente
