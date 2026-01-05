@@ -1,6 +1,9 @@
 "use client";
+import { useState } from "react";
 
 export default function Encuesta() {
+  const [mostrarComentarios, setMostrarComentarios] = useState(false);
+
   return (
     <section className="py-10 sm:py-16 bg-[#F7FAFC]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -48,18 +51,6 @@ export default function Encuesta() {
                   type="text"
                   style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
                   placeholder="Ingresa tu apellido"
-                  className="w-full border rounded-xl px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#0061A6]"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Edad
-                </label>
-                <input
-                  type="number"
-                  style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
-                  placeholder="Ej: 35"
                   className="w-full border rounded-xl px-4 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#0061A6]"
                 />
               </div>
@@ -113,10 +104,7 @@ export default function Encuesta() {
 
                   <div className="flex flex-wrap gap-4">
                     {["Excelente", "Bueno", "Regular", "Malo"].map((valor) => (
-                      <label
-                        key={valor}
-                        className="flex items-center gap-2 text-sm text-gray-600"
-                      >
+                      <label key={valor} className="flex items-center gap-2 text-sm text-gray-600">
                         <input
                           type="radio"
                           name={`pregunta-${idx}`}
@@ -147,7 +135,7 @@ export default function Encuesta() {
                 "Trato del personal durante el examen",
                 "Cumplimiento del tiempo para entrega de resultados",
                 "Facilidad para acceder a sus resultados"
-              ].map((pregunta, idx) => (
+              ].map((pregunta, idx, arr) => (
                 <div key={idx}>
                   <p className="font-medium text-gray-700 mb-3 text-sm sm:text-base">
                     {pregunta}
@@ -161,15 +149,18 @@ export default function Encuesta() {
                       "Insatisfecho",
                       "Muy Insatisfecho",
                     ].map((valor) => (
-                      <label
-                        key={valor}
-                        className="flex items-center gap-2 text-sm text-gray-600"
-                      >
+                      <label key={valor} 
+                        className="flex items-center gap-2 text-sm text-gray-600">
                         <input
                           type="radio"
                           name={`experiencia-${idx}`}
                           value={valor}
                           className="accent-[#0061A6] w-4 h-4"
+                          onChange={() => {
+                            if (idx === arr.length - 1) {
+                              setMostrarComentarios(true);
+                            }
+                          }}
                         />
                         {valor}
                       </label>
@@ -180,19 +171,25 @@ export default function Encuesta() {
             </div>
           </div>
 
-          {/* ================= COMENTARIOS ================= */}
-          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-md p-5 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
-              Comentarios adicionales
-            </h3>
+          {/* ================= COMENTARIOS (DINÁMICO) ================= */}
+          <div
+            className={`transition-all duration-500 ease-out overflow-hidden
+              ${mostrarComentarios ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
+            `}
+          >
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-md p-5 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
+                Comentarios adicionales
+              </h3>
 
-            <textarea
-              rows={4}
-              style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
-              placeholder="Si desea, deje aquí sus comentarios o sugerencias adicionales"
-              className="w-full border rounded-xl px-4 py-3 text-sm sm:text-base
-                         focus:outline-none focus:ring-2 focus:ring-[#0061A6]"
-            />
+              <textarea
+                rows={4}
+                placeholder="Si desea, deje aquí sus comentarios o sugerencias adicionales"
+                className="w-full border rounded-xl px-4 py-3 text-sm sm:text-base
+                           focus:outline-none focus:ring-2 focus:ring-[#0061A6]"
+                style={{ borderColor: "lab(90.952% 0 -.0000119209)" }}
+              />
+            </div>
           </div>
 
           {/* ================= BOTÓN ================= */}
