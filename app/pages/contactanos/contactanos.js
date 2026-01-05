@@ -201,7 +201,7 @@ export default function InfoContact() {
           </div>
         </div>
 
-        {/* 🗺 MAPAS —> CONSERVADOS EXACTAMENTE COMO LOS TENÍAS */}
+        {/* MAPAS —> CONSERVADOS EXACTAMENTE COMO LOS TENÍAS */}
         <div>
           <h3 className="text-3xl font-bold text-center mb-10 text-[#0061A6]">
             Encuéntranos
