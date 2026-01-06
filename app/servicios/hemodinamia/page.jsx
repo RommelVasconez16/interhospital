@@ -1,8 +1,8 @@
-import Header from '../../../components/header'
-import Footer from '../../../components/footer'
-import Whatsapp from '../../../components/whatsapp'
+import Header from '../../components/header'
+import Footer from '../../components/footer'
+import Whatsapp from '../../components/whatsapp'
 import InfoHemodinamia from './hemodinamia'
-import HeroSectionService from '../../../components/heroSectionService'
+import HeroSectionService from '../../components/heroSectionService'
 
 export default function Emergencia(){
     return (
