@@ -1,3 +1,5 @@
+"use client";
+
 import Header from './components/header'
 import BannerInfo from './components/banner-info'
 import ContenedorCard from './components/contenedorCard'
