@@ -11,7 +11,7 @@ export default function PoliticasProveedores(){
       <div className="max-w-5xl mx-auto space-y-16">
 
         <button
-          onClick={() => router.push("/pages/pacientes/privacidad-datos")}
+          onClick={() => router.push("/pacientes/privacidad-datos")}
           className="mb-10 inline-flex items-center gap-2 bg-[#0061A6]/10 
                      text-[#0061A6] px-5 py-2 rounded-full font-medium
                      hover:bg-[#0061A6]/20 transition cursor-pointer"

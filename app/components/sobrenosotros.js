@@ -90,7 +90,7 @@ export default function SobreNosotros() {
 
           {/* Botón */}
           <Link
-            href="/pages/nosotros"
+            href="/nosotros"
             className="
               inline-flex
               items-center

@@ -99,7 +99,7 @@ export default function BannerServices() {
       </p>
 
       {/* 🔹 BOTÓN */}
-      <Link href="/pages/servicios">
+      <Link href="/servicios">
         <button
           className="
             text-xs md:text-sm

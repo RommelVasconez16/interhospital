@@ -14,7 +14,7 @@ export default function ContenedorCard() {
 
   const handleSearch = () => {
     if (!searchTerm.trim()) return;
-    router.push(`/pages/medicos?search=${encodeURIComponent(searchTerm)}`);
+    router.push(`/medicos?search=${encodeURIComponent(searchTerm)}`);
   };
 
     const [index, setIndex] = useState(0);

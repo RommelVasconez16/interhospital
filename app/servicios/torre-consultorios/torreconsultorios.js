@@ -109,7 +109,7 @@ export default function InfoTorresConsultorios() {
         {/* BOTÓN FINAL */}
         <div className="text-center">
           <a
-            href="/pages/medicos"
+            href="/medicos"
             className="inline-flex items-center gap-2 bg-gradient-to-r 
                        from-[#0061A6] to-[#008D36] text-white px-8 py-4 
                        rounded-full font-semibold shadow-lg hover:shadow-xl 

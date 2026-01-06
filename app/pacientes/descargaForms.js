@@ -36,7 +36,7 @@ const pacientedownload = [
     color: "#39A935",
     textbtn: "Ver más",
     action: "link",
-    url: "/pages/pacientes/privacidad-datos",
+    url: "/pacientes/privacidad-datos",
     btnIcon: ExternalLink
   }
 ];

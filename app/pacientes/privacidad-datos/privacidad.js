@@ -13,21 +13,21 @@ export default function Privacidad() {
       title: "L.O.P.D PACIENTES",
       description:
         "Este Aviso de Privacidad se pone a disposición de los Pacientes que han entregado datos conforme a la Ley Orgánica de Protección de Datos del Ecuador, antes o después de su vigencia, y solo para los propósitos de los servicios ofrecidos por INTERHOSPITAL S.A.",
-      url: "/pages/pacientes/privacidad-datos/pacientes",
+      url: "/pacientes/privacidad-datos/pacientes",
     },
     {
       image: "/Images/fondoservices.png",
       title: "L.O.P.D PROVEEDORES",
       description:
         "Este Aviso de Privacidad se pone a disposición de los Proveedores que han entregado datos conforme a la Ley Orgánica de Protección de Datos del Ecuador, antes o después de su vigencia, y solo para los propósitos de los servicios ofrecidos por INTERHOSPITAL S.A.",
-      url: "/pages/pacientes/privacidad-datos/proveedores",
+      url: "/pacientes/privacidad-datos/proveedores",
     },
   ];
 
   return (
     <section className="pt-28 pb-20 px-6 md:px-12 lg:px-20 bg-gray-50">
         <button
-          onClick={() => router.push("/pages/pacientes")}
+          onClick={() => router.push("/pacientes")}
           className="mb-10 inline-flex items-center gap-2 bg-[#0061A6]/10 
                      text-[#0061A6] px-5 py-2 rounded-full font-medium
                      hover:bg-[#0061A6]/20 transition cursor-pointer"

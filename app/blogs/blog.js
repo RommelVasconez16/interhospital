@@ -23,7 +23,7 @@ export default function Blog({ blog }) {
               <p className="text-sm text-gray-600 mb-4 line-clamp-3">{item.resumen}</p>
 
               <Link
-                href={`/pages/blogs/${item.slug}`}
+                href={`/blogs/${item.slug}`}
                 className="inline-flex items-center gap-2 font-semibold text-[#0061A6] hover:text-[#008D36]"
               >
                 Ver más <span className="text-lg">→</span>

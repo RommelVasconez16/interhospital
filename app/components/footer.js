@@ -118,12 +118,12 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 ["Inicio", "/"],
-                ["Servicios", "/pages/servicios"],
-                ["Nosotros", "/pages/nosotros"],
-                ["Médicos", "/pages/medicos"],
-                ["Pacientes", "/pages/pacientes"],
-                ["Infórmate", "/pages/informate"],
-                ["Contacto", "/pages/contactanos"]
+                ["Servicios", "/servicios"],
+                ["Nosotros", "/nosotros"],
+                ["Médicos", "/medicos"],
+                ["Pacientes", "/pacientes"],
+                ["Infórmate", "/informate"],
+                ["Contacto", "/contactanos"]
 
               ].map(([name, link], i) => (
                 <li key={i}>
@@ -141,7 +141,7 @@ export default function Footer() {
           <p>© 2025 Interhospital. Todos los derechos reservados.</p>
 
           <div className="flex gap-6">
-            <Link href="/pages/pacientes/privacidad-datos" className="hover:text-white transition-colors">
+            <Link href="/pacientes/privacidad-datos" className="hover:text-white transition-colors">
               Política de Privacidad
             </Link>
           </div>
