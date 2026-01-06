@@ -10,6 +10,8 @@ const inter = Inter({
   display: "swap",
 });
 
+const APP_VERSION = "2026-01-06"
+
 export const metadata: Metadata = {
   title: "InterHospital",
 };
@@ -21,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body data-version={APP_VERSION} className={inter.className}>
         {children}
         <SpeedInsights />
       </body>
