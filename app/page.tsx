@@ -10,28 +10,31 @@ import PackageChequeos from './components/packages-chequeos'
 import PackageQuirurgicos from './components/packages-quirurgicos'
 import Convenios from './components/convenios'
 import Instalaciones from './components/instalaciones'
-import Encuentranos from './components/encuentranos'
 import Whatsapp from './components/whatsapp'
 import Footer from './components/footer'
 import RedSocial from './components/redsocial'
-
+import PopupImagen from './components/popup'
 
 export default function Home() {
   return (
-    <main className="flex flex-col pt-[90px]">
-      <Header/>
-      <BannerInfo/>
-      <ContenedorCard/>
-      <NuestrasCifras/>
-      <Nosotros/>
-      <PackageChequeos/>
-      <BannerServices/>
-      <PackageQuirurgicos/>
-      <Convenios/>
-      <Instalaciones/>
-      <RedSocial/>
-      <Footer/>
-      <Whatsapp/>
-    </main>
+    <>
+      <PopupImagen />
+
+      <main className="flex flex-col pt-[90px]">
+        <Header/>
+        <BannerInfo/>
+        <ContenedorCard/>
+        <NuestrasCifras/>
+        <Nosotros/>
+        <PackageChequeos/>
+        <BannerServices/>
+        <PackageQuirurgicos/>
+        <Convenios/>
+        <Instalaciones/>
+        <RedSocial/>
+        <Footer/>
+        <Whatsapp/>
+      </main>
+    </>
   );
 }
