@@ -3,7 +3,7 @@ const resultsPortals = [
     title: "Resultados de Laboratorio",
     description: "Accede a tus resultados de exámenes de laboratorio clínico",
     url: "https://resultadosgye.interlab.com.ec/",
-    icon: "/Images/Interlab.jpg",
+    icon: "/Images/interlab.jpg",
     color: "#0061A6",
   },
   {
