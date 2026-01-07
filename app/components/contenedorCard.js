@@ -87,13 +87,13 @@ export default function ContenedorCard() {
         </p>
 
         <button
-            onClick={() => router.push("/resultados")}
+            onClick={() => router.push("https://imagenes.interhospital.com.ec/")}
             className="
             w-full px-4 py-2 
             bg-[#008D36] text-white 
             rounded-md font-semibold text-sm
             hover:bg-[#00742c] 
-            transition
+            transition cursor-pointer
             "
         >
             Ver Resultados
