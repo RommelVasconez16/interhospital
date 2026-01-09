@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import React from "react";
 import ClientCacheGuard from "./components/clientcacheguard";
 
@@ -28,7 +27,6 @@ export default function RootLayout({
       <body data-version={APP_VERSION} className={inter.className}>
         <ClientCacheGuard />
         {children}
-        <SpeedInsights />
         <Analytics />
       </body>
     </html>
